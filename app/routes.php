@@ -57,6 +57,7 @@ Route::group(
                 return View::make('layouts/manage-password');
             }
         );
+        Route::get('/charts/vote/{beatmap}/{chart}/{mode}', 'ChartsController@Vote');
         Route::post('/users/pass', 'UsersController@ChangePass');
         Route::get("/charts/view/{id}/{mode?}", 'ChartsController@ViewVoting');
         Route::get(

@@ -29,4 +29,7 @@ class ChartsController extends BaseController {
 
         return View::make('layouts/charts-view')->with('charts', $charts);
     }
+    public function Vote($beatmap, $chart, $mode){
+
+    }
 }

@@ -1,6 +1,7 @@
 @extends('layouts.master')
 
-@section('content')<h1>{{ucfirst($chart->type)}} Chart: {{$chart->name}} - osu!</h1>
+@section('content')
+<h1>{{ucfirst($chart->type)}} Chart: {{$chart->name}} - osu!</h1>
 <div class="btn-group btn-group-justified">
     <a class="btn btn-warning">osu!</a>
     <a class="btn btn-warning">Taiko</a>
@@ -14,13 +15,12 @@
         <th style="width:10px;"></th>
     </tr>
     @foreach($chart->ommaps as $key => $map)
-    <tr>
-        <td>{{$key+1}}</td>
-        <td>{{$map->artist}} - {{$map->title}} ({{$map->creator}})</td>
-        <td>
-            <button type="button" class="btn btn-sm btn-default">Vote</button>
-        </td>
-    </tr>
+        <tr>
+            <td>{{$key+1}}</td>
+            <td>{{$map->artist}} - {{$map->title}} ({{$map->creator}})</td>
+            <td><button type="button" class="btn btn-sm btn-default">Vote</button></td>
+        </tr>
     @endforeach
 
-</table>@stop
+</table>
+@stop
