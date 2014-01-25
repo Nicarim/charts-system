@@ -1,5 +1,4 @@
-@extends('layouts/master')
-@section('content')
+@extends('layouts/master')@section('content')
 <form class="form-signin" role="form" method="post">
     <h2>Add new member</h2>
     @if (Session::has('error'))
@@ -13,6 +12,7 @@
     <label class="radio">
         <input type="radio" value="cat" name="team"> CAT member?
     </label>
+
     <p>Voting ability:</p>
     <label class="checkbox">
         <input type="checkbox" value="yes" name="osu"> osu!
@@ -27,5 +27,4 @@
         <input type="checkbox" value="yes" name="om"> osu!mania
     </label>
     <button class="btn btn-lg btn-primary btn-block" type="submit">Add user</button>
-</form>
-@stop
+</form>@stop
