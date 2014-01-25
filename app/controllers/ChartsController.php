@@ -9,7 +9,10 @@ class ChartsController extends BaseController {
         Auth::user()->touch(); //activity check
         $chart = Chart::find($id);
 
-        return View::make('layouts/charts-vote')->with('chart', $chart);
+        return View::make('layouts/charts-vote')->with(array(
+                "chart" => $chart,
+                "mode" => $mode
+            ));
     }
 
 

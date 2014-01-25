@@ -47,7 +47,36 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
             return true;
         }
     }
-
+    public function allowedMode($mode){
+        if ($mode == "osu")
+        {
+            if ($this->osu == 1)
+                return true;
+            else
+                return false;
+        }
+        if ($mode == "taiko")
+        {
+            if ($this->taiko == 1)
+                return true;
+            else
+                return false;
+        }
+        if ($mode == "ctb")
+        {
+            if ($this->ctb == 1)
+                return true;
+            else
+                return false;
+        }
+        if ($mode == "mania")
+        {
+            if ($this->mania == 1)
+                return true;
+            else
+                return false;
+        }
+    }
 
     /**
      * Get the password for the user.
