@@ -3,15 +3,30 @@
 class ChartsController extends BaseController {
 
     public function ViewVoting($id = NULL, $mode = "osu") {
+        $gamemode = array(
+          "osu" => 0,
+          "taiko" => 1,
+          "ctb" => 2,
+          "mania" => 3,
+        );
+        $gamemodenames = array(
+          "osu" => "osu!",
+          "taiko" => "Taiko",
+          "ctb" => "Catch the Beat",
+          "mania" => "osu!mania"
+        );
         if ($id == NULL) {
             return Redirect::to('/charts');
         }
         Auth::user()->touch(); //activity check
         $chart = Chart::find($id);
+        $votes = Vote::where("gamemode", "=", $gamemode[$mode])->get();
 
         return View::make('layouts/charts-vote')->with(array(
                 "chart" => $chart,
-                "mode" => $mode
+                "mode" => $mode,
+                "nameshelper" => $gamemodenames,
+                "votes" => $votes
             ));
     }
 

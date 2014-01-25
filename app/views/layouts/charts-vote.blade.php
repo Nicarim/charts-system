@@ -2,16 +2,7 @@
 
 @section('content')
 
-<h1>{{ucfirst($chart->type)}} Chart: {{$chart->name}} -
-    @if ($mode == "osu")
-    {{$modename = "osu!"}}
-    @elseif ($mode == "taiko")
-    {{$modename = "Taiko"}}
-    @elseif ($mode == "ctb")
-    {{$modename = "Catch the Beat"}}
-    @elseif ($mode == "mania")
-    {{$modename = "osu!mania"}}
-    @endif</h1>
+<h1>{{ucfirst($chart->type)}} Chart: {{$chart->name}} - {{$nameshelper[$mode]}}</h1>
 @if (Auth::user()->allowedMode($mode))
 <h3 style="color:darkgreen">You have x Votes remaining</h3>
 @else
