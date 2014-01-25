@@ -57,7 +57,7 @@ Route::filter('auth.basic', function()
 
 Route::filter('guest', function()
 {
-	if (Auth::check()) return Redirect::to('/login');
+	if (Auth::check()) return Redirect::to('/login'); //bla
 });
 
 /*
@@ -68,7 +68,7 @@ Route::filter('guest', function()
 | The CSRF filter is responsible for protecting your application against
 | cross-site request forgery attacks. If this special token in a user
 | session does not match the one given in this request, we'll bail.
-|
+| ??s
 */
 
 Route::filter('csrf', function()
