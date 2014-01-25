@@ -14,8 +14,4 @@
         <td>{{$chart->votes->count()}}</td>
     </tr>
     @endforeach
-</table>
-@stop
-@section('title')
-<title>View charts</title>
-@stop
+</table>@stop@section('title')<title>View charts</title>@stop
