@@ -22,7 +22,11 @@ class ChartsController extends BaseController {
             return Redirect::to('/');
         Auth::user()->touch(); //activity check
         $chart = Chart::find($id);
-        $votes = Vote::where("gamemode", "=", $this->gamemode[$mode])->where('user_id', '=', Auth::user()->id)->get();
+        $votes = Vote::where("gamemode", "=", $this->gamemode[$mode])->where('user_id', '=', Auth::user()->id)->where("chart_id",'=',$id)->get();
+        $voteskv = array();
+        foreach ($votes as $vote){
+            $voteskv[$vote->id] = $vote->beatmap_id;
+        }
         if ($mode == "osu")
             $maps = $chart->osumaps;
         else if ($mode == "taiko")
@@ -36,7 +40,7 @@ class ChartsController extends BaseController {
                 "chart" => $chart,
                 "mode" => $mode,
                 "nameshelper" => $gamemodenames,
-                "votes" => $votes,
+                "votes" => $voteskv,
                 "maps" => $maps
             ));
     }

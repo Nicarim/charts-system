@@ -4,7 +4,7 @@
 
 <h1>{{ucfirst($chart->type)}} Chart: {{$chart->name}} - {{$nameshelper[$mode]}}</h1>
 @if (Auth::user()->allowedMode($mode))
-<h3 style="color:darkgreen">You have <b>{{abs($votes->count() - 3)}}</b> votes remaining</h3>
+<h3 style="color:darkgreen">You have <b>{{abs(count($votes)- 3)}}</b> votes remaining</h3>
 @else
 <h3 style="color:darkred">You are not allowed to vote in this mode</h3>
 @endif
