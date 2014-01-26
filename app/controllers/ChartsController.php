@@ -22,7 +22,7 @@ class ChartsController extends BaseController {
             return Redirect::to('/');
         Auth::user()->touch(); //activity check
         $chart = Chart::find($id);
-        $votes = Vote::where("gamemode", "=", $this->gamemode[$mode])->get();
+        $votes = Vote::where("gamemode", "=", $this->gamemode[$mode])->where('user_id', '=', Auth::user()->id)->get();
         if ($mode == "osu")
             $maps = $chart->osumaps;
         else if ($mode == "taiko")
@@ -58,20 +58,17 @@ class ChartsController extends BaseController {
 
         return View::make('charts/view')->with("charts",$charts);
     }
-    public function Vote($beatmap, $chart, $mode, $type){
-        if($type == "add")
-        {
-            $vote = new Vote;
-            $vote->user_id = Auth::user()->id;
-            $vote->chart_id = $chart;
-            $vote->beatmap_id = $chart;
-            $vote->gamemode = $this->gamemode[$mode];
-            $vote->save();
-            return Redirect::to("/charts/view/".$chart."/".$mode);
-        }else if($type == "remove"){
-
-        }else{
-            return Redirect::to("/");
-        }
+    public function addVote($beatmap, $chart, $mode){
+        $vote = new Vote;
+        $vote->user_id = Auth::user()->id;
+        $vote->chart_id = $chart;
+        $vote->beatmap_id = $beatmap;
+        $vote->gamemode = $this->gamemode[$mode];
+        $vote->save();
+        return Redirect::to("/charts/view/".$chart."/".$mode);
+    }
+    public function removeVote($id){
+        $vote = Vote::find($id);
+        $vote->delete();
     }
 }

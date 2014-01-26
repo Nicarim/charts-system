@@ -7,7 +7,7 @@
  * Time: 17:28
  */
 class Vote extends Eloquent {
-
+    protected $fillable = array('chart_id','user_id','beatmap_id','gamemode');
     protected $table = "votes";
     public function Chart(){
         return $this->belongsTo("Chart");

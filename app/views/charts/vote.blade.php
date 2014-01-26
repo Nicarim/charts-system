@@ -4,7 +4,7 @@
 
 <h1>{{ucfirst($chart->type)}} Chart: {{$chart->name}} - {{$nameshelper[$mode]}}</h1>
 @if (Auth::user()->allowedMode($mode))
-<h3 style="color:darkgreen">You have <b>{{abs(Auth::user()->votes()->count() - 3)}}</b> votes remaining</h3>
+<h3 style="color:darkgreen">You have <b>{{abs($votes->count() - 3)}}</b> votes remaining</h3>
 @else
 <h3 style="color:darkred">You are not allowed to vote in this mode</h3>
 @endif
@@ -39,7 +39,7 @@
             </td>
             <td>
                 @if (Auth::user()->allowedMode($mode))
-                <button type="button" onclick="window.location.href='/charts/vote/{{$map->id}}/{{$chart->id}}/{{$mode}}/add'" class="btn btn-xs btn-default">Vote</button>
+                <button type="button" onclick="window.location.href='/charts/vote/add/{{$map->id}}/{{$chart->id}}/{{$mode}}'" class="btn btn-xs btn-default">Vote</button>
                 @endif
             </td>
         </tr>
