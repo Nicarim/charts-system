@@ -1,9 +1,10 @@
 @extends('master')
 @section('content')
-@if
-(Auth::guest())<h1>Please log in to see the future!</h1>
+@if (Auth::guest())
+    <h1>Please log in to see the future!</h1>
 @else
-@if (Auth::user()->isAdmin()) <h1>Hi my lord</h1> @endif
+    <h1>Hi <b>{{Auth::user()->username}}</b>, welcome to... uh... something done by <a href="https://osu.ppy.sh/u/Marcin">me</a>. Hope its helpful.</h1>
+    @if (Auth::user()->isAdmin()) <h3>Hi my lord</h3> @endif
 @endif
 
 @stop

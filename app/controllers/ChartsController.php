@@ -2,6 +2,7 @@
 
 class ChartsController extends BaseController {
     public $layout = "master";
+    public $apikey = "459fc9f4860d2966cd935c9ecd66d7caf5bf9f13";
     public $gamemode = array(
         "osu" => 0,
         "taiko" => 1,
@@ -49,14 +50,39 @@ class ChartsController extends BaseController {
     public function Create() {
         $data = array(
             "name" => Input::get("title"),
-            "type" => Input::get('type')
+            "type" => Input::get('type'),
+            "beatmapids" => Input::get("beatmapids")
         );
         $chart = Chart::create($data);
+        $beatmaps = explode(",",$data['beatmapids']);
+        foreach($beatmaps as $beatmapid)
+        {
+            $beatmap = new Beatmap;
+            $jsondata = json_decode(file_get_contents("https://osu.ppy.sh/api/get_beatmaps?k=".$this->apikey."&s=".$beatmapid));
+            $beatmap->id = $jsondata[0]->beatmapset_id;
+            $beatmap->artist = $jsondata[0]->artist;
+            $beatmap->title = $jsondata[0]->title;
+            $beatmap->creator = $jsondata[0]->creator;
+            $beatmap->chart_id = $chart->id;
+            foreach($jsondata as $mode){
+                if ($mode->mode == "0"){
+                    $beatmap->osumode = 1;
+                }
+                if ($mode->mode == "1"){
+                    $beatmap->taikomode = 1;
+                }
+                if ($mode->mode == "2"){
+                    $beatmap->ctbmode = 1;
+                }
+                if ($mode->mode == "3"){
+                    $beatmap->maniamode = 1;
+                }
+            }
+            $beatmap->save();
 
+        }
         return Redirect::to("/charts/add");
     }
-
-
     public function View() {
         $charts = Chart::all();
 

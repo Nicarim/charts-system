@@ -11,6 +11,7 @@
         <div class="form-group">
             <label for="start-time">Beatmapset Ids:</label>
             <input type="text" class="form-control" name="beatmapids" placeholder="123,12421,294820,1337 etc.">
+            <p>remember, sets, not freaking beatmaps</p>
         </div>
         <div class="form-group"> Type of Chart</div>
         <label class="checkbox">
