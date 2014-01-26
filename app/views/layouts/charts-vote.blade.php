@@ -37,11 +37,38 @@
         <th>Map Name (creator)</th>
         <th style="width:10px;"></th>
     </tr>
-
-    @foreach($chart->ommaps as $key => $map)
+    @foreach($maps as $key => $map)
         <tr>
             <td>{{$key+1}}</td>
             <td>{{$map->artist}} - {{$map->title}} ({{$map->creator}})</td>
+            <td>
+                @if ($map->osumode == 1)
+                <b class="osuactive"></b>
+                @else
+                <b class="osuinactive"></b>
+                @endif
+            </td>
+            <td>
+                @if ($map->taikomode == 1)
+                <b class="taikoactive"></b>
+                @else
+                <b class="taikoinactive"></b>
+                @endif
+            </td>
+            <td>
+                @if ($map->ctbmode == 1)
+                <b class="ctbactive"></b>
+                @else
+                <b class="ctbinactive"></b>
+                @endif
+            </td>
+            <td>
+                @if ($map->maniamode == 1)
+                <b class="maniaactive"></b>
+                @else
+                <b class="maniainactive"></b>
+                @endif
+            </td>
             <td>
                 @if (Auth::user()->allowedMode($mode))
                 <button type="button" onclick="window.location.href='/charts/vote/{{$map->id}}/{{$chart->id}}/1'" class="btn btn-xs btn-default">Vote</button>

@@ -23,12 +23,21 @@ class ChartsController extends BaseController {
         Auth::user()->touch(); //activity check
         $chart = Chart::find($id);
         $votes = Vote::where("gamemode", "=", $gamemode[$mode])->get();
+        if ($mode == "osu")
+            $maps = $chart->osumaps;
+        else if ($mode == "taiko")
+            $maps = $chart->taikomaps;
+        else if ($mode == "ctb")
+            $maps = $chart->ctbmaps;
+        else if ($mode == "mania")
+            $maps = $chart->ommaps;
 
         return View::make('layouts/charts-vote')->with(array(
                 "chart" => $chart,
                 "mode" => $mode,
                 "nameshelper" => $gamemodenames,
                 "votes" => $votes,
+                "maps" => $maps
             ));
     }
 

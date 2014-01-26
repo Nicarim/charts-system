@@ -32,7 +32,6 @@ class Chart extends Eloquent {
         return $this->hasMany('Beatmap')->orderBy("maniamode", 'desc');
     }
 
-
     public function votes() {
         return $this->hasMany('Vote');
     }
