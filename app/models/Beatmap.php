@@ -9,4 +9,7 @@
 class Beatmap extends Eloquent {
 
     protected $table = "beatmaps";
+    function votes($mode){
+        return $this->hasMany('vote')->where('gamemode','=',$mode);
+    }
 } 

@@ -18,6 +18,8 @@ class ChartsController extends BaseController {
         if ($id == NULL) {
             return Redirect::to('/charts');
         }
+        if (array_search($mode, array_flip($gamemode)) === false)
+            return Redirect::to('/');
         Auth::user()->touch(); //activity check
         $chart = Chart::find($id);
         $votes = Vote::where("gamemode", "=", $gamemode[$mode])->get();
@@ -26,7 +28,7 @@ class ChartsController extends BaseController {
                 "chart" => $chart,
                 "mode" => $mode,
                 "nameshelper" => $gamemodenames,
-                "votes" => $votes
+                "votes" => $votes,
             ));
     }
 

@@ -42,7 +42,11 @@
         <tr>
             <td>{{$key+1}}</td>
             <td>{{$map->artist}} - {{$map->title}} ({{$map->creator}})</td>
-            <td><button type="button" onclick="window.location.href='/charts/vote/{{$map->id}}/{{$chart->id}}/1'" class="btn btn-xs btn-default">Vote</button></td>
+            <td>
+                @if (Auth::user()->allowedMode($mode))
+                <button type="button" onclick="window.location.href='/charts/vote/{{$map->id}}/{{$chart->id}}/1'" class="btn btn-xs btn-default">Vote</button>
+                @endif
+            </td>
         </tr>
     @endforeach
 
