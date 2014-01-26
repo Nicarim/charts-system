@@ -7,7 +7,7 @@
             <span style="color:darkred"><b>{{Session::get('error')}}</b></span>
         @endif
         <input type="text" class="form-control" placeholder="osu! Username" name="username">
-        <input type="password" class="form-control" placeholder="Password (admin pass:gay)" name="password">
+        <input type="password" class="form-control" placeholder="Password" name="password">
         <label class="checkbox">
             <input type="checkbox" value="remember-me"> Remember me
         </label>
