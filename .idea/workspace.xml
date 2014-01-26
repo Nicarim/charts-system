@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed63836d-738c-4746-a9e7-161be9a0bde1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/manage/login.blade.php" afterPath="$PROJECT_DIR$/app/views/manage/login.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/navbar.blade.php" afterPath="$PROJECT_DIR$/app/views/navbar.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="laravel.iws" />
@@ -44,10 +44,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.blade.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="login.blade.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/manage/login.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="87" selection-start="650" selection-end="650" vertical-scroll-proportion="0.4185606" vertical-offset="0" max-vertical-offset="528">
+            <state line="16" column="5" selection-start="815" selection-end="815" vertical-scroll-proportion="-10.461538" vertical-offset="0" max-vertical-offset="374">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="navbar.blade.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/navbar.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="39" column="13" selection-start="1969" selection-end="1969" vertical-scroll-proportion="0.74242425" vertical-offset="271" max-vertical-offset="799">
               <folding />
             </state>
           </provider>
@@ -97,24 +106,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state line="40" column="29" selection-start="762" selection-end="762" vertical-scroll-proportion="-0.65384614" vertical-offset="510" max-vertical-offset="1139">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="adduser.blade.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/manage/adduser.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="10" selection-start="10" selection-end="10" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="612">
-              <folding>
-                <marker date="1390736002314" expanded="true" signature="90:1164" placeholder="..." />
-                <marker date="1390736002314" expanded="false" signature="169:182" placeholder="..." />
-                <marker date="1390736002314" expanded="true" signature="437:515" placeholder="..." />
-                <marker date="1390736002314" expanded="true" signature="541:619" placeholder="..." />
-                <marker date="1390736002314" expanded="true" signature="675:748" placeholder="..." />
-                <marker date="1390736002314" expanded="true" signature="777:853" placeholder="..." />
-                <marker date="1390736002314" expanded="true" signature="882:965" placeholder="..." />
-                <marker date="1390736002314" expanded="true" signature="994:1071" placeholder="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -184,6 +175,7 @@
         <option value="$PROJECT_DIR$/app/controllers/ChartsController.php" />
         <option value="$PROJECT_DIR$/app/views/charts/vote.blade.php" />
         <option value="$PROJECT_DIR$/app/views/manage/login.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/navbar.blade.php" />
       </list>
     </option>
   </component>
@@ -537,7 +529,11 @@
       <created>1390757898688</created>
       <updated>1390757898688</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="changed stupid placeholder in login.">
+      <created>1390758085485</created>
+      <updated>1390758085485</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -562,7 +558,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32247558" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -570,7 +566,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277439" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28172207" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28172207" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.260574" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32410422" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
@@ -614,7 +610,8 @@
     <MESSAGE value="Votes per mode done&#10;&#10;Vote removage left." />
     <MESSAGE value="Made votes a key (id) =&gt; value (beatmapid) array" />
     <MESSAGE value="VOTING FINALLY WORKS o/" />
-    <option name="LAST_COMMIT_MESSAGE" value="VOTING FINALLY WORKS o/" />
+    <MESSAGE value="changed stupid placeholder in login." />
+    <option name="LAST_COMMIT_MESSAGE" value="changed stupid placeholder in login." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -793,13 +790,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/navbar.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="31" selection-start="959" selection-end="959" vertical-scroll-proportion="-1.9615384" vertical-offset="204" max-vertical-offset="799">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/css/icons.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="5" selection-start="527" selection-end="527" vertical-scroll-proportion="0.0" vertical-offset="181" max-vertical-offset="748">
@@ -855,14 +845,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="10" selection-start="10" selection-end="10" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="612">
           <folding>
-            <marker date="1390736002314" expanded="true" signature="90:1164" placeholder="..." />
-            <marker date="1390736002314" expanded="false" signature="169:182" placeholder="..." />
-            <marker date="1390736002314" expanded="true" signature="437:515" placeholder="..." />
-            <marker date="1390736002314" expanded="true" signature="541:619" placeholder="..." />
-            <marker date="1390736002314" expanded="true" signature="675:748" placeholder="..." />
-            <marker date="1390736002314" expanded="true" signature="777:853" placeholder="..." />
-            <marker date="1390736002314" expanded="true" signature="882:965" placeholder="..." />
-            <marker date="1390736002314" expanded="true" signature="994:1071" placeholder="..." />
+            <marker date="1390736002314" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1390736002314" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1390736002314" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1390736002314" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1390736002314" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1390736002314" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1390736002314" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1390736002314" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -935,7 +925,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/manage/login.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="87" selection-start="650" selection-end="650" vertical-scroll-proportion="0.4185606" vertical-offset="0" max-vertical-offset="528">
+        <state line="16" column="5" selection-start="815" selection-end="815" vertical-scroll-proportion="-10.461538" vertical-offset="0" max-vertical-offset="374">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/navbar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="13" selection-start="1969" selection-end="1969" vertical-scroll-proportion="0.74242425" vertical-offset="271" max-vertical-offset="799">
           <folding />
         </state>
       </provider>

@@ -35,7 +35,7 @@
             </li>
             <li><a href="/logout">Logout</a></li>
             @else
-            <li><button type="button" onclick="window.location.href='/login'" class="btn btn-default navbar-btn">Sign in</button></li>
+            <li><button type="button" onclick="window.location.href='/login'" class="btn btn-default navbar-btn">Log in</button></li>
             @endif
         </ul>
     </div>
