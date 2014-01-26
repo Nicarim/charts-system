@@ -39,7 +39,17 @@
             </td>
             <td>
                 @if (Auth::user()->allowedMode($mode))
-                <button type="button" onclick="window.location.href='/charts/vote/add/{{$map->id}}/{{$chart->id}}/{{$mode}}'" class="btn btn-xs btn-default">Vote</button>
+                    @if ((count($votes) - 3) != 0)
+                        @if (!isset($votes[$map->id]))
+                        <button type="button" onclick="window.location.href='/charts/vote/add/{{$map->id}}/{{$chart->id}}/{{$mode}}'" class="btn btn-xs btn-default">Vote</button>
+                        @else
+                        <button type="button" onclick="window.location.href='/charts/vote/remove/{{$votes[$map->id]}}'" class="btn btn-xs btn-default">Unvote</button>
+                        @endif
+                    @else
+                        @if (isset($votes[$map->id]))
+                            <button type="button" onclick="window.location.href='/charts/vote/remove/{{$votes[$map->id]}}'" class="btn btn-xs btn-default">Unvote</button>
+                        @endif
+                    @endif
                 @endif
             </td>
         </tr>

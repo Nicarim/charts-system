@@ -25,7 +25,7 @@ class ChartsController extends BaseController {
         $votes = Vote::where("gamemode", "=", $this->gamemode[$mode])->where('user_id', '=', Auth::user()->id)->where("chart_id",'=',$id)->get();
         $voteskv = array();
         foreach ($votes as $vote){
-            $voteskv[$vote->id] = $vote->beatmap_id;
+            $voteskv[$vote->beatmap_id] = $vote->id;
         }
         if ($mode == "osu")
             $maps = $chart->osumaps;
@@ -73,6 +73,9 @@ class ChartsController extends BaseController {
     }
     public function removeVote($id){
         $vote = Vote::find($id);
+        $chart = $vote->chart_id;
+        $mode = array_flip($this->gamemode)[$vote->gamemode];
         $vote->delete();
+        return Redirect::to("/charts/view/".$chart."/".$mode);
     }
 }
