@@ -5,7 +5,7 @@ Route::get(
     array(
         "as" => "home",
         function () {
-            return View::make('layouts/home');
+            return View::make('home');
         }
     )
 );
@@ -17,7 +17,7 @@ Route::group(
         Route::get(
             '/users/add',
             function () {
-                return View::make('layouts/manage-adduser');
+                return View::make('manage/adduser');
             }
         );
         Route::post('/users/add', 'UsersController@AddUser');
@@ -26,7 +26,7 @@ Route::group(
         Route::get(
             '/charts/add',
             function () {
-                return View::make('layouts/charts-add');
+                return View::make('charts/add');
             }
         );
         Route::post('/charts/add', 'ChartsController@Create');
@@ -40,7 +40,7 @@ Route::group(
             array(
                 "as" => "login",
                 function () {
-                    return View::make('layouts/manage-login');
+                    return View::make('manage/login');
                 }
             )
         );
@@ -54,7 +54,7 @@ Route::group(
         Route::get(
             '/users/pass',
             function () {
-                return View::make('layouts/manage-password');
+                return View::make('manage/password');
             }
         );
         Route::get('/charts/vote/{beatmap}/{chart}/{mode}', 'ChartsController@Vote');

@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('master')
 
 @section('content')
 <h1>Create new chart!</h1>
@@ -9,10 +9,8 @@
             <input type="text" class="form-control" id="chart-name" name="title" placeholder="Input name of chart...">
         </div>
         <div class="form-group">
-            <label for="start-time">Maps since:</label>
-            <input type="datetime" class="form-control" id="start-time" name="start" placeholder="Please use 01-10-2014 format...">
-            <label for="end-time">until:</label>
-            <input type="datetime" class="form-control" id="end-time" name="end" placeholder="Please use 01-10-2014 format...">
+            <label for="start-time">Beatmapset Ids:</label>
+            <input type="text" class="form-control" name="beatmapids" placeholder="123,12421,294820,1337 etc.">
         </div>
         <div class="form-group"> Type of Chart</div>
         <label class="checkbox">

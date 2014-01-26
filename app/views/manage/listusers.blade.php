@@ -1,4 +1,4 @@
-@extends('layouts/master')
+@extends('master')
 @section('content')
 <table class="table table-hover">
     <tr>

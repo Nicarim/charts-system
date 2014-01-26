@@ -1,4 +1,4 @@
-@extends('layouts/master')
+@extends('master')
 @section('content')
 @if
 (Auth::guest())<h1>Please log in to see the future!</h1>

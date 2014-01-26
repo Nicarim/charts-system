@@ -1,4 +1,4 @@
-@extends('layouts/master')
+@extends('master')
 @section('content')
 <form class="form-signin" role="form" method="post">
     <h2>Change password!</h2>

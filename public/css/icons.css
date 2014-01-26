@@ -1,0 +1,39 @@
+.taiko{
+	display: inline-block;
+	background-image:url("../icons/Insane-t.png");
+	width: 16px;
+	height: 16px;
+	
+}
+.taiko.off{
+	background-image:url("../icons/Insane-tb.png");
+}
+.osu{
+	display: inline-block;
+	background-image:url("../icons/Insane-s.png");
+	width: 16px;
+	height: 16px;
+	
+}
+.osu.off{
+	background-image:url("../icons/Insane-sb.png");
+}
+.mania{
+	display: inline-block;
+	background-image:url("../icons/Insane-m.png");
+	width: 16px;
+	height: 16px;
+}
+.mania.off{
+	background-image:url("../icons/Insane-mb.png");
+}
+.ctb{
+	display: inline-block;
+	background-image:url("../icons/Insane-f.png");
+	width: 16px;
+	height: 16px;
+	
+}
+.ctb.off{
+	background-image:url("../icons/Insane-fb.png");
+}

@@ -41,7 +41,7 @@ class UsersController extends BaseController {
 
 
     public function ListUsers() {
-        return View::make('layouts/manage-listusers')->with('users', User::withTrashed()->get());
+        return View::make('manage/listusers')->with('users', User::withTrashed()->get());
     }
 
 

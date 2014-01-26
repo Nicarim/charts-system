@@ -1,7 +1,7 @@
 <?php
 
 class ChartsController extends BaseController {
-
+    public $layout = "master";
     public function ViewVoting($id = NULL, $mode = "osu") {
         $gamemode = array(
           "osu" => 0,
@@ -32,7 +32,7 @@ class ChartsController extends BaseController {
         else if ($mode == "mania")
             $maps = $chart->ommaps;
 
-        return View::make('layouts/charts-vote')->with(array(
+        return View::make('charts/vote')->with(array(
                 "chart" => $chart,
                 "mode" => $mode,
                 "nameshelper" => $gamemodenames,
@@ -56,9 +56,9 @@ class ChartsController extends BaseController {
     public function View() {
         $charts = Chart::all();
 
-        return View::make('layouts/charts-view')->with('charts', $charts);
+        return View::make('charts/view')->with("charts",$charts);
     }
     public function Vote($beatmap, $chart, $mode){
-
+        $vote = new Vote;
     }
 }
