@@ -4,16 +4,16 @@
 
 <h1>{{ucfirst($chart->type)}} Chart: {{$chart->name}} - {{$nameshelper[$mode]}}</h1>
 @if (Auth::user()->allowedMode($mode))
-<h3 style="color:darkgreen">You have x Votes remaining</h3>
+<h3 style="color:darkgreen">You have <b>{{abs(Auth::user()->votes()->count() - 3)}}</b> votes remaining</h3>
 @else
 <h3 style="color:darkred">You are not allowed to vote in this mode</h3>
 @endif
 
 <div class="btn-group btn-group-justified">
-    <a class="btn btn-warning {{{ $mode == 'osu' ? 'active' : '' }}}" href='/charts/view/{{$chart->id}}/osu' >osu!</a>
-    <a class="btn btn-warning {{{ $mode == 'taiko' ? 'active' : '' }}}" href='/charts/view/{{$chart->id}}/taiko'>Taiko</a>
-    <a class="btn btn-warning {{{ $mode == 'ctb' ? 'active' : '' }}}" href='/charts/view/{{$chart->id}}/ctb'>Catch the Beat</a>
-    <a class="btn btn-warning {{{ $mode == 'mania' ? 'active' : '' }}}" href='/charts/view/{{$chart->id}}/mania'>osu!mania</a>
+    <a class="btn {{{Auth::user()->allowedMode('osu') ? 'btn-success' : 'btn-danger'}}} {{{ $mode == 'osu' ? 'active' : '' }}}" href='/charts/view/{{$chart->id}}/osu' >osu!</a>
+    <a class="btn {{{Auth::user()->allowedMode('taiko') ? 'btn-success' : 'btn-danger'}}} {{{ $mode == 'taiko' ? 'active' : '' }}}" href='/charts/view/{{$chart->id}}/taiko'>Taiko</a>
+    <a class="btn {{{Auth::user()->allowedMode('ctb') ? 'btn-success' : 'btn-danger'}}} {{{ $mode == 'ctb' ? 'active' : '' }}}" href='/charts/view/{{$chart->id}}/ctb'>Catch the Beat</a>
+    <a class="btn {{{Auth::user()->allowedMode('mania') ? 'btn-success' : 'btn-danger'}}} {{{ $mode == 'mania' ? 'active' : '' }}}" href='/charts/view/{{$chart->id}}/mania'>osu!mania</a>
 </div>
 <table class="table table-hover">
     <tr>
@@ -24,7 +24,7 @@
     @foreach($maps as $key => $map)
         <tr>
             <td>{{$key+1}}</td>
-            <td>{{$map->artist}} - {{$map->title}} ({{$map->creator}})</td>
+            <td><a href="https://osu.ppy.sh/s/{{$map->id}}" target="blank"> {{$map->artist}} - {{$map->title}} ({{$map->creator}})</a></td>
             <td>
                 <b class="osu {{{ !$map->osumode ? 'off' : '' }}}"></b>
             </td>
@@ -39,7 +39,7 @@
             </td>
             <td>
                 @if (Auth::user()->allowedMode($mode))
-                <button type="button" oncsslick="window.location.href='/charts/vote/{{$map->id}}/{{$chart->id}}/{{$mode}}'" class="btn btn-xs btn-default">Vote</button>
+                <button type="button" onclick="window.location.href='/charts/vote/{{$map->id}}/{{$chart->id}}/{{$mode}}/add'" class="btn btn-xs btn-default">Vote</button>
                 @endif
             </td>
         </tr>

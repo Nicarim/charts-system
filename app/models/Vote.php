@@ -9,4 +9,13 @@
 class Vote extends Eloquent {
 
     protected $table = "votes";
+    public function Chart(){
+        return $this->belongsTo("Chart");
+    }
+    public function User(){
+        return $this->belongsTo("User");
+    }
+    public function Map(){
+        return $this->belongsTo("Map");
+    }
 }

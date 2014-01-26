@@ -30,6 +30,22 @@ class UsersController extends BaseController {
             'password' => Hash::make(Input::get('password')),
             'team' => Input::get('team')
         );
+        if (Input::get('osu') == "yes")
+        {
+            $data['osu'] = 1;
+        }
+        if (Input::get('taiko') == "yes")
+        {
+            $data['taiko'] = 1;
+        }
+        if (Input::get('ctb') == "yes")
+        {
+            $data['ctb'] = 1;
+        }
+        if (Input::get('mania') == "yes")
+        {
+            $data['mania'] = 1;
+        }
         $validator = Validator::make($data, array('username' => 'unique:users,username'));
         if ($validator->fails()) {
             return Redirect::to('/users/add')->with('error', $data['username'] . ' already exists!');
