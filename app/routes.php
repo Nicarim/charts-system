@@ -24,14 +24,12 @@ Route::group(
         Route::post('/users/add', 'UsersController@AddUser');
         Route::get('/users', 'UsersController@ListUsers');
         Route::get('/users/delete/{id}/{type}', 'UsersController@DeleteOrRestoreUser');
-        Route::get(
-            '/charts/add',
-            function () {
+        Route::get('/charts/add', function () {
                 return View::make('charts/add');
             }
         );
         Route::post('/charts/add', 'ChartsController@Create');
-		Route::get('/charts/delete/{$id}','ChartsController@Delete');
+		Route::get('/charts/delete/{id}','ChartsController@Delete');
     }
 );
 Route::group(
