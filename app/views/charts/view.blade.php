@@ -11,7 +11,7 @@
     @foreach ($charts as $key => $chart)
     <tr>
         <td>{{$key+1}}</td>
-        <td><a href="">{{ucfirst($chart->type)}} Chart - {{$chart->name}}</a></td>
+        <td><a href="/charts/view/{{$chart->id}}">{{ucfirst($chart->type)}} Chart - {{$chart->name}}</a></td>
 		<td>
 			@if (Auth::user()->isAdmin())
 				<button type="button" onclick="window.location.href='/charts/delete/{{$chart->id}}'" class="btn btn-danger">Remove?</button> 
