@@ -89,6 +89,12 @@ class ChartsController extends BaseController {
 		foreach ($maps as $map)
 		{
 			$map->delete();
+            $votes = Vote::where("beatmap_id", "=", $map->id);
+            if (count($votes) > 0){
+                foreach ($votes as $vote){
+                    $vote->delete();
+                }
+            }
 		}
 		$chart->delete();
         return Redirect::to("/charts");
