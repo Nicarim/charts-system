@@ -5,12 +5,18 @@
     <tr>
         <th style="width:40px">#</th>
         <th>Chart name</th>
+		<th></th>
         <th style="width:40px">Votes</th>
     </tr>
     @foreach ($charts as $key => $chart)
     <tr>
         <td>{{$key+1}}</td>
-        <td>{{ucfirst($chart->type)}} Chart - {{$chart->name}}</td>
+        <td><a href="">{{ucfirst($chart->type)}} Chart - {{$chart->name}}</a></td>
+		<td>
+			@if (Auth::user()->isAdmin())
+				<button type="button" onclick="window.location.href='/charts/delete/{{$chart->id}}'" class="btn btn-danger">Remove?</button> 
+			@endif
+		</td>
         <td>{{$chart->votes->count()}}</td>
     </tr>
     @endforeach
