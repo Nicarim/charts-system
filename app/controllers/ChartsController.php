@@ -91,6 +91,7 @@ class ChartsController extends BaseController {
 			$map->delete();
 		}
 		$chart->delete();
+        return Redirect::to("/charts");
 	}
     public function View() {
         $charts = Chart::all();

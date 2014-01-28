@@ -31,7 +31,7 @@ Route::group(
             }
         );
         Route::post('/charts/add', 'ChartsController@Create');
-		Route::get('/charts/remove/{$id}','ChartsController@Delete');
+		Route::get('/charts/delete/{$id}','ChartsController@Delete');
     }
 );
 Route::group(
