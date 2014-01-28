@@ -13,9 +13,11 @@
         <td>{{$key+1}}</td>
         <td><a href="/charts/view/{{$chart->id}}">{{ucfirst($chart->type)}} Chart - {{$chart->name}}</a></td>
 		<td>
-			@if (Auth::user()->isAdmin() && !Auth::guest())
+            @if (!Auth::guest())
+			@if (Auth::user()->isAdmin())
 				<button type="button" onclick="window.location.href='/charts/delete/{{$chart->id}}'" class="btn btn-danger">Remove?</button> 
 			@endif
+            @endif
 		</td>
         <td>{{$chart->votes->count()}}</td>
     </tr>

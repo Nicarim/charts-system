@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed63836d-738c-4746-a9e7-161be9a0bde1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/ChartsController.php" afterPath="$PROJECT_DIR$/app/controllers/ChartsController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/charts/view.blade.php" afterPath="$PROJECT_DIR$/app/views/charts/view.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -27,10 +26,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ChartsController.php" pinned="true" current="true" current-in-tab="true">
+      <file leaf-file-name="ChartsController.php" pinned="true" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/ChartsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="96" column="13" selection-start="3287" selection-end="3287" vertical-scroll-proportion="2.154717" vertical-offset="490" max-vertical-offset="2193">
+            <state line="48" column="0" selection-start="1592" selection-end="1592" vertical-scroll-proportion="-8.615385" vertical-offset="592" max-vertical-offset="2193">
               <folding />
             </state>
           </provider>
@@ -81,10 +80,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="view.blade.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="view.blade.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/charts/view.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="45" selection-start="444" selection-end="444" vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="544">
+            <state line="19" column="18" selection-start="632" selection-end="632" vertical-scroll-proportion="0.61174244" vertical-offset="0" max-vertical-offset="578">
               <folding />
             </state>
           </provider>
@@ -503,7 +502,11 @@
       <created>1390918815960</created>
       <updated>1390918815960</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Remove votes alongside with chart&#10;&#10;Fixed view for guests.">
+      <created>1390934814180</created>
+      <updated>1390934814180</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -530,6 +533,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32247558" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32415903" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277439" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -545,7 +549,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32810047" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -565,7 +568,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Reorganized code, grouped up routes." />
     <MESSAGE value="Added UsersController&#10;&#10;Seperated user related actions from chart related actions" />
     <MESSAGE value="Added UsersController&#10;&#10;Seperated user related actions from chart related actions&#10;" />
     <MESSAGE value="Don't touch my views ever again nanashi thanks :)" />
@@ -590,7 +592,8 @@
     <MESSAGE value="Fixed redirect to chart deletion&#10;&#10;Fixed redirection in that function itself (._.)" />
     <MESSAGE value="Fixed redirection in that function itself (._.) *yet again wtf*&#10;" />
     <MESSAGE value="Fixed typo in function name." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed typo in function name." />
+    <MESSAGE value="Remove votes alongside with chart&#10;&#10;Fixed view for guests." />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove votes alongside with chart&#10;&#10;Fixed view for guests." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -863,16 +866,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/charts/view.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/controllers/ChartsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="45" selection-start="444" selection-end="444" vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="544">
+        <state line="48" column="0" selection-start="1592" selection-end="1592" vertical-scroll-proportion="-8.615385" vertical-offset="592" max-vertical-offset="2193">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/ChartsController.php">
+    <entry file="file://$PROJECT_DIR$/app/views/charts/view.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="13" selection-start="3287" selection-end="3287" vertical-scroll-proportion="2.154717" vertical-offset="490" max-vertical-offset="2193">
+        <state line="19" column="18" selection-start="632" selection-end="632" vertical-scroll-proportion="0.61174244" vertical-offset="0" max-vertical-offset="578">
           <folding />
         </state>
       </provider>
