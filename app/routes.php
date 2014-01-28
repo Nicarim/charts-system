@@ -30,6 +30,7 @@ Route::group(
             }
         );
         Route::post('/charts/add', 'ChartsController@Create');
+		Route::get('/users/group/{id}/{mode}', 'UsersController@ChangeGroup');
     }
 );
 Route::group(

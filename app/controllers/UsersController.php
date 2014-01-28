@@ -91,4 +91,35 @@ class UsersController extends BaseController {
             return Redirect::to('/users/pass')->with('error', 'First password is different than second');
         }
     }
+	public function ChangeGroup($id,$mode){
+		$user = User::find($id);
+		switch ($mode)
+		{
+			case "osu":
+				if ($user->allowedMode($mode) == 1)
+					$user->osu = 0;
+				else
+					$user->osu = 1;
+			break;
+			case "taiko":
+				if ($user->allowedMode($mode) == 1)
+					$user->taiko = 0;
+				else
+					$user->taiko = 1;
+			break;
+			case "ctb":
+				if ($user->allowedMode($mode) == 1)
+					$user->ctb = 0;
+				else
+					$user->ctb = 1;
+			break;
+			case "mania":
+				if ($user->allowedMode($mode) == 1)
+					$user->mania = 0;
+				else
+					$user->mania = 1;
+			break;
+		}
+		$user->save();
+	}
 } 
