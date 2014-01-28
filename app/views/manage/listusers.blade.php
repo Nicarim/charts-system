@@ -14,11 +14,11 @@
         <td>{{$user->id}}</td>
         <td>{{$user->username}}</td>
 		<td>
-		<div class="btn-group">
-			<button type="button" onclick="window.location.href='/users/group/{{$user->id}}/osu'" class="btn-sm {{$user->allowedMode('osu') ? 'btn-success' : 'btn-danger'}}">osu!</button> 
-			<button type="button" onclick="window.location.href='/users/group/{{$user->id}}/taiko'" class="btn-sm {{$user->allowedMode('taiko') ? 'btn-success' : 'btn-danger'}}">Taiko</button> 
-			<button type="button" onclick="window.location.href='/users/group/{{$user->id}}/ctb'" class="btn-sm {{$user->allowedMode('ctb') ? 'btn-success' : 'btn-danger'}}">CtB</button> 
-			<button type="button" onclick="window.location.href='/users/group/{{$user->id}}/mania'" class="btn-sm {{$user->allowedMode('mania') ? 'btn-success' : 'btn-danger'}}">o!m</button> 
+		<div class="btn-group btn-group-sm">
+			<button type="button" onclick="window.location.href='/users/group/{{$user->id}}/osu'" class="btn {{$user->allowedMode('osu') ? 'btn-success' : 'btn-danger'}}">osu!</button>
+			<button type="button" onclick="window.location.href='/users/group/{{$user->id}}/taiko'" class="btn {{$user->allowedMode('taiko') ? 'btn-success' : 'btn-danger'}}">Taiko</button>
+			<button type="button" onclick="window.location.href='/users/group/{{$user->id}}/ctb'" class="btn {{$user->allowedMode('ctb') ? 'btn-success' : 'btn-danger'}}">CtB</button>
+			<button type="button" onclick="window.location.href='/users/group/{{$user->id}}/mania'" class="btn {{$user->allowedMode('mania') ? 'btn-success' : 'btn-danger'}}">o!m</button>
 		</div>
 		</td>
         <td><b>{{strtoupper($user->team)}}</b></td>

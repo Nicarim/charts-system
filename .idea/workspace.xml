@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed63836d-738c-4746-a9e7-161be9a0bde1" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/UsersController.php" afterPath="$PROJECT_DIR$/app/controllers/UsersController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/manage/listusers.blade.php" afterPath="$PROJECT_DIR$/app/views/manage/listusers.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="laravel.iws" />
@@ -28,7 +30,7 @@
       <file leaf-file-name="ChartsController.php" pinned="true" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/ChartsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="17" selection-start="2611" selection-end="2611" vertical-scroll-proportion="0.0" vertical-offset="1224" max-vertical-offset="2074">
+            <state line="101" column="28" selection-start="3346" selection-end="3346" vertical-scroll-proportion="-36.0" vertical-offset="781" max-vertical-offset="2074">
               <folding />
             </state>
           </provider>
@@ -82,7 +84,7 @@
       <file leaf-file-name="UsersController.php" pinned="true" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/UsersController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="0" selection-start="1421" selection-end="1421" vertical-scroll-proportion="0.6266174" vertical-offset="562" max-vertical-offset="2227">
+            <state line="123" column="31" selection-start="3259" selection-end="3259" vertical-scroll-proportion="0.74861366" vertical-offset="1686" max-vertical-offset="2244">
               <folding />
             </state>
           </provider>
@@ -91,9 +93,10 @@
       <file leaf-file-name="listusers.blade.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/manage/listusers.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="27" selection-start="147" selection-end="147" vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="663">
+            <state line="16" column="42" selection-start="405" selection-end="405" vertical-scroll-proportion="-10.461538" vertical-offset="0" max-vertical-offset="663">
               <folding>
                 <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#1;n#tr#0;n#table#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -172,8 +175,8 @@
         <option value="$PROJECT_DIR$/app/views/charts/add.blade.php" />
         <option value="$PROJECT_DIR$/app/models/Beatmap.php" />
         <option value="$PROJECT_DIR$/app/controllers/ChartsController.php" />
-        <option value="$PROJECT_DIR$/app/controllers/UsersController.php" />
         <option value="$PROJECT_DIR$/app/views/manage/listusers.blade.php" />
+        <option value="$PROJECT_DIR$/app/controllers/UsersController.php" />
       </list>
     </option>
   </component>
@@ -547,7 +550,11 @@
       <created>1390917557463</created>
       <updated>1390917557463</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Tried to fix up style&#10;">
+      <created>1390917566496</created>
+      <updated>1390917566496</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -628,7 +635,8 @@
     <MESSAGE value="fixed name of log in button&#10;" />
     <MESSAGE value="beatmapsets are now added!&#10;" />
     <MESSAGE value="Tried to fix up style" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tried to fix up style" />
+    <MESSAGE value="Tried to fix up style&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tried to fix up style&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -880,26 +888,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/ChartsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="17" selection-start="2611" selection-end="2611" vertical-scroll-proportion="0.0" vertical-offset="254" max-vertical-offset="1921">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/manage/login.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="5" selection-start="815" selection-end="815" vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="374">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/manage/listusers.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="27" selection-start="147" selection-end="147" vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="663">
-          <folding>
-            <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -910,9 +902,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/manage/listusers.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="42" selection-start="405" selection-end="405" vertical-scroll-proportion="-10.461538" vertical-offset="0" max-vertical-offset="663">
+          <folding>
+            <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#1;n#tr#0;n#table#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/ChartsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="101" column="28" selection-start="3346" selection-end="3346" vertical-scroll-proportion="-36.0" vertical-offset="781" max-vertical-offset="2074">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/UsersController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="0" selection-start="1421" selection-end="1421" vertical-scroll-proportion="0.6266174" vertical-offset="562" max-vertical-offset="2227">
+        <state line="123" column="31" selection-start="3259" selection-end="3259" vertical-scroll-proportion="0.74861366" vertical-offset="1686" max-vertical-offset="2244">
           <folding />
         </state>
       </provider>
