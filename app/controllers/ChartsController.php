@@ -83,6 +83,10 @@ class ChartsController extends BaseController {
         }
         return Redirect::to("/charts/add");
     }
+	public function Remove($id){
+		$chart = Chart::find($id);
+		$chart->delete();
+	}
     public function View() {
         $charts = Chart::all();
 
