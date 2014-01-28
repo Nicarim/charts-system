@@ -121,6 +121,6 @@ class UsersController extends BaseController {
 			break;
 		}
 		$user->save();
-        Redirect::to("/users");
+        return Redirect::to("/users");
 	}
 } 
