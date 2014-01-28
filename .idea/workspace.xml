@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed63836d-738c-4746-a9e7-161be9a0bde1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/UsersController.php" afterPath="$PROJECT_DIR$/app/controllers/UsersController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="laravel.iws" />
@@ -557,7 +556,11 @@
       <created>1390917755499</created>
       <updated>1390917755499</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="&#10;Fixed redirect after user allowed mode change. *yet again*&#10;">
+      <created>1390918104616</created>
+      <updated>1390918104616</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -640,7 +643,8 @@
     <MESSAGE value="Tried to fix up style" />
     <MESSAGE value="Tried to fix up style&#10;" />
     <MESSAGE value="Fixed up styling *yet again*&#10;Fixed redirect after user allowed mode change." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed up styling *yet again*&#10;Fixed redirect after user allowed mode change." />
+    <MESSAGE value="&#10;Fixed redirect after user allowed mode change. *yet again*&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&#10;Fixed redirect after user allowed mode change. *yet again*&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
