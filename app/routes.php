@@ -20,6 +20,7 @@ Route::group(
                 return View::make('manage/adduser');
             }
         );
+		Route::get('/users/group/{id}/{mode}', 'UsersController@ChangeGroup');
         Route::post('/users/add', 'UsersController@AddUser');
         Route::get('/users', 'UsersController@ListUsers');
         Route::get('/users/delete/{id}/{type}', 'UsersController@DeleteOrRestoreUser');
@@ -30,7 +31,6 @@ Route::group(
             }
         );
         Route::post('/charts/add', 'ChartsController@Create');
-		Route::get('/users/group/{id}/{mode}', 'UsersController@ChangeGroup');
     }
 );
 Route::group(
