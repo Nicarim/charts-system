@@ -85,6 +85,11 @@ class ChartsController extends BaseController {
     }
 	public function Remove($id){
 		$chart = Chart::find($id);
+		$maps = Chart::where("chart_id", "=", $id);
+		foreach ($maps as $map)
+		{
+			$map->delete();
+		}
 		$chart->delete();
 	}
     public function View() {
