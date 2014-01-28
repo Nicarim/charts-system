@@ -19,7 +19,7 @@ class UsersController extends BaseController {
 
         return Redirect::route('login')->with(
             'error',
-            'Your username/password was wrong, are you sure you have account?'
+            'Your username/password was wrong, are you sure you have an account?'
         );
     }
 

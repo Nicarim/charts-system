@@ -3,7 +3,7 @@
 <table class="table table-hover">
     <tr>
         <th style="width:40px">#</th>
-        <th style="width:65%">Username</th>
+        <th style="width:40%">Username</th>
 		<th></th>
         <th>Team</th>
         <th>Last Active</th>
