@@ -83,7 +83,7 @@ class ChartsController extends BaseController {
         }
         return Redirect::to("/charts/add");
     }
-	public function Remove($id){
+	public function Delete($id){
 		$chart = Chart::find($id);
 		$maps = Chart::where("chart_id", "=", $id);
 		foreach ($maps as $map)
