@@ -1,5 +1,8 @@
 @extends('master')
 @section('content')
+@if (!$banned)
+<button type="button" onclick="window.location.href='/users/banned'" >Show deleted users?</button>
+@endif
 <table class="table table-hover">
     <tr>
         <th style="width:40px">#</th>

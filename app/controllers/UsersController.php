@@ -56,8 +56,20 @@ class UsersController extends BaseController {
     }
 
 
-    public function ListUsers() {
-        return View::make('manage/listusers')->with('users', User::withTrashed()->get());
+    public function ListUsers($banned = false) {
+        if ($banned = "banned")
+        {
+            return View::make('manage/listusers')->with(array(
+                    'users' => User::withTrashed()->get(),
+                    'banned' => $banned
+                ));
+        }elseif($banned){
+            return View::make('manage/listusers')->with(array(
+                    'users' => User::all(),
+                    'banned' => $banned
+                ));
+        }
+
     }
 
 
