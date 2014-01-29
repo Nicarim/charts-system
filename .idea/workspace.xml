@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed63836d-738c-4746-a9e7-161be9a0bde1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/UsersController.php" afterPath="$PROJECT_DIR$/app/controllers/UsersController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/manage/listusers.blade.php" afterPath="$PROJECT_DIR$/app/views/manage/listusers.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -102,7 +101,7 @@
       <file leaf-file-name="listusers.blade.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/manage/listusers.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="48" selection-start="579" selection-end="579" vertical-scroll-proportion="0.5151515" vertical-offset="0" max-vertical-offset="714">
+            <state line="3" column="79" selection-start="139" selection-end="139" vertical-scroll-proportion="0.07727273" vertical-offset="0" max-vertical-offset="714">
               <folding>
                 <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#th#1;n#tr#0;n#table#0;n#!!top" expanded="true" />
@@ -574,7 +573,11 @@
       <created>1390988076759</created>
       <updated>1390988076759</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Fix show users &gt;.&gt;">
+      <created>1390988377978</created>
+      <updated>1390988377978</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -636,7 +639,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="I need to clean up my code ;~;&#10;Made modes names more dynamic&#10;Basic retrieve of votes (yey)&#10;" />
     <MESSAGE value="Charts fixes:&#10;- Remove vote button from charts to which user is unable to vote&#10;- Redirect upon undefined gamemode" />
     <MESSAGE value="Charts fixes:&#10;- Mode icons&#10;- Sorting by mode upon selecting it" />
     <MESSAGE value="Folder hierarchy fixed yey. I still don't feel like using $layout" />
@@ -661,7 +663,8 @@
     <MESSAGE value="Show banned users only upon request." />
     <MESSAGE value="Fixed iteration on users list." />
     <MESSAGE value="Fixed iteration on users list.&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed iteration on users list.&#10;" />
+    <MESSAGE value="Fix show users &gt;.&gt;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix show users &gt;.&gt;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -941,7 +944,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/manage/listusers.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="48" selection-start="579" selection-end="579" vertical-scroll-proportion="0.5151515" vertical-offset="0" max-vertical-offset="714">
+        <state line="3" column="79" selection-start="139" selection-end="139" vertical-scroll-proportion="0.07727273" vertical-offset="0" max-vertical-offset="714">
           <folding>
             <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#th#1;n#tr#0;n#table#0;n#!!top" expanded="true" />
