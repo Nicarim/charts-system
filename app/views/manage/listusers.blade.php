@@ -12,9 +12,9 @@
         <th>Last Active</th>
         <th></th>
     </tr>
-    @foreach($users as $user)
+    @foreach($users as $key => $user)
     <tr>
-        <td>{{$user->id}}</td>
+        <td>{{$key}}</td>
         <td>{{$user->username}}</td>
 		<td>
 		<div class="btn-group btn-group-sm">
