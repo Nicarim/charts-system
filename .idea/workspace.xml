@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed63836d-738c-4746-a9e7-161be9a0bde1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/UsersController.php" afterPath="$PROJECT_DIR$/app/controllers/UsersController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/manage/listusers.blade.php" afterPath="$PROJECT_DIR$/app/views/manage/listusers.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="laravel.iws" />
@@ -89,19 +89,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UsersController.php" pinned="true" current="true" current-in-tab="true">
+      <file leaf-file-name="UsersController.php" pinned="true" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/UsersController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="31" selection-start="1597" selection-end="1597" vertical-scroll-proportion="0.5230312" vertical-offset="651" max-vertical-offset="2448">
+            <state line="59" column="30" selection-start="1596" selection-end="1596" vertical-scroll-proportion="-5.6923075" vertical-offset="855" max-vertical-offset="2448">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="listusers.blade.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="listusers.blade.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/manage/listusers.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="6" selection-start="45" selection-end="45" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="714">
+            <state line="16" column="20" selection-start="443" selection-end="443" vertical-scroll-proportion="0.4121212" vertical-offset="0" max-vertical-offset="714">
               <folding>
                 <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#th#1;n#tr#0;n#table#0;n#!!top" expanded="true" />
@@ -174,8 +174,8 @@
         <option value="$PROJECT_DIR$/app/controllers/ChartsController.php" />
         <option value="$PROJECT_DIR$/app/views/charts/view.blade.php" />
         <option value="$PROJECT_DIR$/app/routes.php" />
-        <option value="$PROJECT_DIR$/app/views/manage/listusers.blade.php" />
         <option value="$PROJECT_DIR$/app/controllers/UsersController.php" />
+        <option value="$PROJECT_DIR$/app/views/manage/listusers.blade.php" />
       </list>
     </option>
   </component>
@@ -565,7 +565,11 @@
       <created>1390987890216</created>
       <updated>1390987890216</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Fixed iteration on users list.&#10;">
+      <created>1390988061419</created>
+      <updated>1390988061419</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -923,20 +927,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/UsersController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="30" selection-start="1596" selection-end="1596" vertical-scroll-proportion="-5.6923075" vertical-offset="855" max-vertical-offset="2448">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/manage/listusers.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="6" selection-start="45" selection-end="45" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="714">
+        <state line="16" column="20" selection-start="443" selection-end="443" vertical-scroll-proportion="0.4121212" vertical-offset="0" max-vertical-offset="714">
           <folding>
             <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#th#1;n#tr#0;n#table#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/UsersController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="31" selection-start="1597" selection-end="1597" vertical-scroll-proportion="0.5230312" vertical-offset="651" max-vertical-offset="2448">
-          <folding />
         </state>
       </provider>
     </entry>

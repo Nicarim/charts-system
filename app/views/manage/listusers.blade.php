@@ -14,7 +14,7 @@
     </tr>
     @foreach($users as $key => $user)
     <tr>
-        <td>{{$key}}</td>
+        <td>{{$key+1}}</td>
         <td>{{$user->username}}</td>
 		<td>
 		<div class="btn-group btn-group-sm">
