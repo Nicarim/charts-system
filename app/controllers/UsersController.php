@@ -57,7 +57,7 @@ class UsersController extends BaseController {
 
 
     public function ListUsers($banned = false) {
-        if ($banned = "banned")
+        if ($banned == "banned")
         {
             return View::make('manage/listusers')->with(array(
                     'users' => User::withTrashed()->get(),

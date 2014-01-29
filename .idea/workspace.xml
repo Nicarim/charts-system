@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed63836d-738c-4746-a9e7-161be9a0bde1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/manage/listusers.blade.php" afterPath="$PROJECT_DIR$/app/views/manage/listusers.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/UsersController.php" afterPath="$PROJECT_DIR$/app/controllers/UsersController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="laravel.iws" />
@@ -56,7 +56,7 @@
       <file leaf-file-name="navbar.blade.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/navbar.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="21" selection-start="1716" selection-end="1716" vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="799">
+            <state line="33" column="21" selection-start="1716" selection-end="1716" vertical-scroll-proportion="-16.23077" vertical-offset="139" max-vertical-offset="799">
               <folding />
             </state>
           </provider>
@@ -92,7 +92,7 @@
       <file leaf-file-name="UsersController.php" pinned="true" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/UsersController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="9" selection-start="1383" selection-end="1383" vertical-scroll-proportion="-2.3461537" vertical-offset="806" max-vertical-offset="2448">
+            <state line="63" column="39" selection-start="1770" selection-end="1770" vertical-scroll-proportion="-16.076923" vertical-offset="653" max-vertical-offset="2448">
               <folding />
             </state>
           </provider>
@@ -101,7 +101,7 @@
       <file leaf-file-name="listusers.blade.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/manage/listusers.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="79" selection-start="139" selection-end="139" vertical-scroll-proportion="0.07727273" vertical-offset="0" max-vertical-offset="714">
+            <state line="2" column="20" selection-start="59" selection-end="59" vertical-scroll-proportion="0.05151515" vertical-offset="0" max-vertical-offset="714">
               <folding>
                 <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#th#1;n#tr#0;n#table#0;n#!!top" expanded="true" />
@@ -577,7 +577,11 @@
       <created>1390988377978</created>
       <updated>1390988377978</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Fix show users &gt;.&gt;&#10;">
+      <created>1390988448568</created>
+      <updated>1390988448568</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -639,7 +643,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Charts fixes:&#10;- Remove vote button from charts to which user is unable to vote&#10;- Redirect upon undefined gamemode" />
     <MESSAGE value="Charts fixes:&#10;- Mode icons&#10;- Sorting by mode upon selecting it" />
     <MESSAGE value="Folder hierarchy fixed yey. I still don't feel like using $layout" />
     <MESSAGE value="Icons" />
@@ -664,7 +667,8 @@
     <MESSAGE value="Fixed iteration on users list." />
     <MESSAGE value="Fixed iteration on users list.&#10;" />
     <MESSAGE value="Fix show users &gt;.&gt;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix show users &gt;.&gt;" />
+    <MESSAGE value="Fix show users &gt;.&gt;&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix show users &gt;.&gt;&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -900,13 +904,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/navbar.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="21" selection-start="1716" selection-end="1716" vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="799">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="147" selection-start="258" selection-end="258" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="255">
@@ -937,14 +934,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/UsersController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="9" selection-start="1383" selection-end="1383" vertical-scroll-proportion="-2.3461537" vertical-offset="806" max-vertical-offset="2448">
+        <state line="63" column="39" selection-start="1770" selection-end="1770" vertical-scroll-proportion="-16.076923" vertical-offset="653" max-vertical-offset="2448">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/navbar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="21" selection-start="1716" selection-end="1716" vertical-scroll-proportion="-16.23077" vertical-offset="139" max-vertical-offset="799">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/manage/listusers.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="79" selection-start="139" selection-end="139" vertical-scroll-proportion="0.07727273" vertical-offset="0" max-vertical-offset="714">
+        <state line="2" column="20" selection-start="59" selection-end="59" vertical-scroll-proportion="0.05151515" vertical-offset="0" max-vertical-offset="714">
           <folding>
             <element signature="n#style#0;n#th#0;n#tr#0;n#table#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#th#1;n#tr#0;n#table#0;n#!!top" expanded="true" />
