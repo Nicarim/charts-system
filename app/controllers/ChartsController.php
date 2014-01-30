@@ -56,7 +56,7 @@ class ChartsController extends BaseController {
             "end_time" => Input::get("date")
         );
         $chart = Chart::create($data);
-        $beatmaps = explode(",",$data['beatmapsetids']);
+        $beatmaps = explode(",",$data['beatmapids']);
         foreach($beatmaps as $beatmapid)
         {
             $beatmap = new Beatmap;
