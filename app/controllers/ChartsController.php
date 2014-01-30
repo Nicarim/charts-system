@@ -106,7 +106,8 @@ class ChartsController extends BaseController {
         return View::make('charts/view')->with("charts",$charts);
     }
     public function addVote($beatmap, $chart, $mode){
-        if (count(Auth::user()->votes) <= $chart->max_votes){
+        $chartmodel = Chart::find($chart);
+        if (Auth::user()->votes->count() <= $chartmodel->max_votes){
             $vote = new Vote;
             $vote->user_id = Auth::user()->id;
             $vote->chart_id = $chart;

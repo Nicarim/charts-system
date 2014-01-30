@@ -29,7 +29,7 @@
       <file leaf-file-name="ChartsController.php" pinned="true" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/ChartsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="108" column="41" selection-start="3696" selection-end="3696" vertical-scroll-proportion="0.42045453" vertical-offset="1614" max-vertical-offset="2244">
+            <state line="101" column="39" selection-start="3464" selection-end="3464" vertical-scroll-proportion="0.19507575" vertical-offset="1614" max-vertical-offset="2261">
               <folding />
             </state>
           </provider>
@@ -620,7 +620,11 @@
       <created>1391103040802</created>
       <updated>1391103040802</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="Fixed voting.">
+      <created>1391103424432</created>
+      <updated>1391103424432</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -682,7 +686,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="VOTING FINALLY WORKS o/" />
     <MESSAGE value="changed stupid placeholder in login." />
     <MESSAGE value="fixed name of log in button&#10;" />
     <MESSAGE value="beatmapsets are now added!&#10;" />
@@ -707,7 +710,8 @@
     <MESSAGE value="Don't cheat plox.&#10;Fixed mania priv." />
     <MESSAGE value="Fixed chart creation." />
     <MESSAGE value="Fixed link to beatmap on voting page." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed link to beatmap on voting page." />
+    <MESSAGE value="Fixed voting." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed voting." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -997,7 +1001,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/ChartsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="108" column="41" selection-start="3696" selection-end="3696" vertical-scroll-proportion="0.42045453" vertical-offset="1614" max-vertical-offset="2244">
+        <state line="101" column="39" selection-start="3464" selection-end="3464" vertical-scroll-proportion="0.19507575" vertical-offset="1614" max-vertical-offset="2261">
           <folding />
         </state>
       </provider>
