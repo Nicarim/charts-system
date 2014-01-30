@@ -103,16 +103,17 @@ class ChartsController extends BaseController {
 	}
     public function View() {
         $charts = Chart::all();
-
         return View::make('charts/view')->with("charts",$charts);
     }
     public function addVote($beatmap, $chart, $mode){
-        $vote = new Vote;
-        $vote->user_id = Auth::user()->id;
-        $vote->chart_id = $chart;
-        $vote->beatmap_id = $beatmap;
-        $vote->gamemode = $this->gamemode[$mode];
-        $vote->save();
+        if (Auth::user()->votes->count() <= $chart->max_votes){
+            $vote = new Vote;
+            $vote->user_id = Auth::user()->id;
+            $vote->chart_id = $chart;
+            $vote->beatmap_id = $beatmap;
+            $vote->gamemode = $this->gamemode[$mode];
+            $vote->save();
+        }
         return Redirect::to("/charts/view/".$chart."/".$mode);
     }
     public function removeVote($id){

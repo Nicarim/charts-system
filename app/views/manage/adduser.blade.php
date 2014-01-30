@@ -24,7 +24,7 @@
         <input type="checkbox" value="yes" name="ctb"> Catch the Beat
     </label>
     <label class="checkbox">
-        <input type="checkbox" value="yes" name="om"> osu!mania
+        <input type="checkbox" value="yes" name="mania"> osu!mania
     </label>
     <button class="btn btn-lg btn-primary btn-block" type="submit">Add user</button>
 </form>
