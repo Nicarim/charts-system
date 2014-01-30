@@ -24,7 +24,7 @@
     @foreach($maps as $key => $map)
         <tr>
             <td>{{$key+1}}</td>
-            <td><a href="https://osu.ppy.sh/s/{{$map->id}}" target="blank"> {{$map->artist}} - {{$map->title}} by {{$map->creator}}</a></td>
+            <td><a href="https://osu.ppy.sh/s/{{$map->beatmapset_id}}" target="blank"> {{$map->artist}} - {{$map->title}} by {{$map->creator}}</a></td>
             <td>
                 <b class="osu {{{ !$map->osumode ? 'off' : '' }}}"></b>
             </td>
