@@ -9,9 +9,17 @@
             <input type="text" class="form-control" id="chart-name" name="title" placeholder="Input name of chart...">
         </div>
         <div class="form-group">
-            <label for="start-time">Beatmapset Ids:</label>
-            <input type="text" class="form-control" name="beatmapids" placeholder="123,12421,294820,1337 etc.">
+            <label for="beatmaps">Beatmapset Ids:</label>
+            <input type="text" class="form-control" id="beatmaps" name="beatmapsetids" placeholder="123,12421,294820,1337 etc.">
             <p>remember, sets, not freaking beatmaps</p>
+        </div>
+        <div class="form-group">
+            <label for="votes-count">Votes Available:</label>
+            <input type="text" class="form-control" id="votes-count" name="votescount" placeholder="default: 3">
+        </div>
+        <div class="form-group">
+            <label for="date">Vote ending time:</label>
+            <input type="datetime" class="form-control" id="date" name="date" placeholder="yyyy-mm-dd hh:mm:ss">
         </div>
         <div class="form-group"> Type of Chart</div>
         <label class="checkbox">

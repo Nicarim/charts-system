@@ -84,7 +84,7 @@ class UsersController extends BaseController {
             return Redirect::to('/users');
         }
 
-        return Redirect::to('/users');
+        return Redirect::to('/users/banned');
     }
 
 

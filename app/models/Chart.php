@@ -10,7 +10,7 @@ class Chart extends Eloquent {
 
     protected $table = "charts";
 
-    protected $fillable = array("name", "type");
+    protected $fillable = array("name", "type", "max_votes", "end_time");
 
 
     public function osumaps() {

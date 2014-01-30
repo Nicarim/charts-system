@@ -51,15 +51,17 @@ class ChartsController extends BaseController {
         $data = array(
             "name" => Input::get("title"),
             "type" => Input::get('type'),
-            "beatmapids" => Input::get("beatmapids")
+            "beatmapids" => Input::get("beatmapsetids"),
+            "max_votes" => Input::get("votescount"),
+            "end_time" => Input::get("date")
         );
         $chart = Chart::create($data);
-        $beatmaps = explode(",",$data['beatmapids']);
+        $beatmaps = explode(",",$data['beatmapsetids']);
         foreach($beatmaps as $beatmapid)
         {
             $beatmap = new Beatmap;
             $jsondata = json_decode(file_get_contents("https://osu.ppy.sh/api/get_beatmaps?k=".$this->apikey."&s=".$beatmapid));
-            $beatmap->id = $jsondata[0]->beatmapset_id;
+            $beatmap->beatmapset_id = $jsondata[0]->beatmapset_id;
             $beatmap->artist = $jsondata[0]->artist;
             $beatmap->title = $jsondata[0]->title;
             $beatmap->creator = $jsondata[0]->creator;
