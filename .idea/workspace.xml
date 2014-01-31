@@ -96,7 +96,7 @@
       <file leaf-file-name="Chart.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/Chart.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="96" selection-start="636" selection-end="636" vertical-scroll-proportion="0.63825756" vertical-offset="105" max-vertical-offset="748">
+            <state line="31" column="98" selection-start="805" selection-end="805" vertical-scroll-proportion="0.79924244" vertical-offset="105" max-vertical-offset="748">
               <folding />
             </state>
           </provider>
@@ -697,7 +697,11 @@
       <created>1391197414187</created>
       <updated>1391197414187</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="Trying once again:&#10;- Removed non-standard non-modespecific maps from listing for these modes.&#10;">
+      <created>1391197634302</created>
+      <updated>1391197634302</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1080,7 +1084,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/Chart.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="96" selection-start="636" selection-end="636" vertical-scroll-proportion="0.63825756" vertical-offset="105" max-vertical-offset="748">
+        <state line="31" column="98" selection-start="805" selection-end="805" vertical-scroll-proportion="0.79924244" vertical-offset="105" max-vertical-offset="748">
           <folding />
         </state>
       </provider>

@@ -29,7 +29,7 @@ class Chart extends Eloquent {
 
 
     public function ommaps() {
-        return $this->hasMany('Beatmap')->where("osumode","=","1")->orderBy("maniamode", 'desc');
+        return $this->hasMany('Beatmap')->whereRaw("beatmaps.osumode = 1 or beatmaps.maniamode = 1")->orderBy("maniamode", 'desc');
     }
 
     public function votes() {
