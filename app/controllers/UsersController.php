@@ -81,10 +81,10 @@ class UsersController extends BaseController {
             $user = User::find($id);
             $user->delete();
         } else {
-            return Redirect::to('/users/list');
+            return Redirect::route('userslist');
         }
 
-        return Redirect::to('/users/list/banned');
+        return Redirect::route('userslist');
     }
 
 
@@ -133,6 +133,6 @@ class UsersController extends BaseController {
 			break;
 		}
 		$user->save();
-        return Redirect::to("/users");
+        return Redirect::route("userslist");
 	}
 } 
