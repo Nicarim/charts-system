@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ed63836d-738c-4746-a9e7-161be9a0bde1" name="Default" comment="Added red button for unvoting.&#10;">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/ChartsController.php" afterPath="$PROJECT_DIR$/app/controllers/ChartsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes.php" afterPath="$PROJECT_DIR$/app/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/charts/vote.blade.php" afterPath="$PROJECT_DIR$/app/views/charts/vote.blade.php" />
+    <list default="true" id="ed63836d-738c-4746-a9e7-161be9a0bde1" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Chart.php" afterPath="$PROJECT_DIR$/app/models/Chart.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="laravel.iws" />
@@ -28,10 +26,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ChartsController.php" pinned="true" current="true" current-in-tab="true">
+      <file leaf-file-name="ChartsController.php" pinned="true" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/ChartsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="140" column="22" selection-start="5159" selection-end="5159" vertical-scroll-proportion="0.65758294" vertical-offset="1825" max-vertical-offset="2771">
+            <state line="6" column="19" selection-start="200" selection-end="200" vertical-scroll-proportion="82.34615" vertical-offset="2243" max-vertical-offset="2771">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.blade.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/home.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="5" selection-start="338" selection-end="338" vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="255">
               <folding />
             </state>
           </provider>
@@ -82,19 +89,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Chart.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Chart.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/Chart.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="0" selection-start="339" selection-end="339" vertical-scroll-proportion="-12.307693" vertical-offset="3" max-vertical-offset="748">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="0" selection-start="137" selection-end="137" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
+            <state line="22" column="5" selection-start="477" selection-end="477" vertical-scroll-proportion="0.49722737" vertical-offset="105" max-vertical-offset="748">
               <folding />
             </state>
           </provider>
@@ -162,11 +160,9 @@
         <option value="$PROJECT_DIR$/app/models/User.php" />
         <option value="$PROJECT_DIR$/app/models/Vote.php" />
         <option value="$PROJECT_DIR$/app/views/manage/login.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/home.blade.php" />
         <option value="$PROJECT_DIR$/app/models/Beatmap.php" />
         <option value="$PROJECT_DIR$/app/views/charts/view.blade.php" />
         <option value="$PROJECT_DIR$/app/views/master.blade.php" />
-        <option value="$PROJECT_DIR$/app/models/Chart.php" />
         <option value="$PROJECT_DIR$/app/views/charts/add.blade.php" />
         <option value="$PROJECT_DIR$/app/views/manage/adduser.blade.php" />
         <option value="$PROJECT_DIR$/app/views/navbar.blade.php" />
@@ -176,15 +172,17 @@
         <option value="$PROJECT_DIR$/app/routes.php" />
         <option value="$PROJECT_DIR$/app/views/charts/vote.blade.php" />
         <option value="$PROJECT_DIR$/app/controllers/ChartsController.php" />
+        <option value="$PROJECT_DIR$/app/views/home.blade.php" />
+        <option value="$PROJECT_DIR$/app/models/Chart.php" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="1358" />
-    <option name="y" value="-451" />
-    <option name="width" value="1696" />
-    <option name="height" value="1026" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -667,7 +665,11 @@
       <created>1391184748795</created>
       <updated>1391184748795</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="Add beatmap to current chart.">
+      <created>1391185615876</created>
+      <updated>1391185615876</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -691,7 +693,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1358" y="-451" width="1696" height="1026" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -700,7 +702,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277439" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24786325" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30664653" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.260574" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32410422" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
@@ -729,7 +731,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Fixed typo in function name." />
     <MESSAGE value="Remove votes alongside with chart&#10;&#10;Fixed view for guests." />
     <MESSAGE value="&#10;Fixed view for guests.&#10;" />
     <MESSAGE value="Show banned users only upon request." />
@@ -754,7 +755,8 @@
     <MESSAGE value="Added alias to users/list route.&#10;&#10;Changed from Redirect::to to Redirect::route for easier management." />
     <MESSAGE value="Fixed votes applying to all modes instead to specific mode." />
     <MESSAGE value="Added red button for unvoting." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added red button for unvoting." />
+    <MESSAGE value="Add beatmap to current chart." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add beatmap to current chart." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -915,11 +917,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="391" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="147" selection-start="258" selection-end="258" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="255" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/charts/view.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="18" selection-start="613" selection-end="613" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="578" />
@@ -1000,13 +997,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Chart.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="339" selection-end="339" vertical-scroll-proportion="-12.307693" vertical-offset="3" max-vertical-offset="748">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/Vote.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="5" selection-start="5" selection-end="5" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="459">
@@ -1042,9 +1032,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="5" selection-start="338" selection-end="338" vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="255">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/ChartsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="140" column="22" selection-start="5159" selection-end="5159" vertical-scroll-proportion="0.65758294" vertical-offset="1825" max-vertical-offset="2771">
+        <state line="6" column="19" selection-start="200" selection-end="200" vertical-scroll-proportion="82.34615" vertical-offset="2243" max-vertical-offset="2771">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Chart.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="5" selection-start="477" selection-end="477" vertical-scroll-proportion="0.49722737" vertical-offset="105" max-vertical-offset="748">
           <folding />
         </state>
       </provider>

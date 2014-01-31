@@ -14,7 +14,7 @@ class Chart extends Eloquent {
 
 
     public function osumaps() {
-        return $this->hasMany('Beatmap')->orderBy("osumode", 'desc');
+        return $this->hasMany('Beatmap')->where("osumode","=","1")->orderBy("osumode", 'desc');
     }
 
 
