@@ -81,10 +81,10 @@ class UsersController extends BaseController {
             $user = User::find($id);
             $user->delete();
         } else {
-            return Redirect::to('/users');
+            return Redirect::to('/users/list');
         }
 
-        return Redirect::to('/users/banned');
+        return Redirect::to('/users/list/banned');
     }
 
 
