@@ -24,7 +24,7 @@ class Chart extends Eloquent {
 
 
     public function ctbmaps() {
-        return $this->hasMany('Beatmap')->where("osumode","=","1")->orderBy("ctbmode", 'desc');
+        return $this->hasMany('Beatmap')->whereRaw("beatmaps.osumode = 1 or beatmaps.ctbmode = 1")->orderBy("ctbmode", 'desc');
     }
 
 

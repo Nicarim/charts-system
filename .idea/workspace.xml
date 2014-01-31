@@ -96,7 +96,7 @@
       <file leaf-file-name="Chart.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/Chart.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="66" selection-start="741" selection-end="741" vertical-scroll-proportion="0.780037" vertical-offset="105" max-vertical-offset="748">
+            <state line="26" column="96" selection-start="636" selection-end="636" vertical-scroll-proportion="0.63825756" vertical-offset="105" max-vertical-offset="748">
               <folding />
             </state>
           </provider>
@@ -693,7 +693,11 @@
       <created>1391197320668</created>
       <updated>1391197320668</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="Trying once again:&#10;- Removed non-standard non-modespecific maps from listing for these modes.&#10;">
+      <created>1391197414187</created>
+      <updated>1391197414187</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -755,7 +759,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Fix show users &gt;.&gt;" />
     <MESSAGE value="Fix show users &gt;.&gt;&#10;" />
     <MESSAGE value="LAST FIX TO SHOW USER LIST" />
     <MESSAGE value="Added google analytics. yey." />
@@ -780,7 +783,8 @@
     <MESSAGE value="Fixed taiko :/" />
     <MESSAGE value="Trying once again:&#10;- Removed non-standard non-taiko maps from taiko listing." />
     <MESSAGE value="Trying once again:&#10;- Removed non-standard non-taiko maps from taiko listing.&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Trying once again:&#10;- Removed non-standard non-taiko maps from taiko listing.&#10;" />
+    <MESSAGE value="Trying once again:&#10;- Removed non-standard non-modespecific maps from listing for these modes.&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Trying once again:&#10;- Removed non-standard non-modespecific maps from listing for these modes.&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1076,7 +1080,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/Chart.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="66" selection-start="741" selection-end="741" vertical-scroll-proportion="0.780037" vertical-offset="105" max-vertical-offset="748">
+        <state line="26" column="96" selection-start="636" selection-end="636" vertical-scroll-proportion="0.63825756" vertical-offset="105" max-vertical-offset="748">
           <folding />
         </state>
       </provider>
