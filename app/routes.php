@@ -22,7 +22,7 @@ Route::group(
         );
 		Route::get('/users/group/{id}/{mode}', 'UsersController@ChangeGroup');
         Route::post('/users/add', 'UsersController@AddUser');
-        Route::get('/users/type/{banned?}', 'UsersController@ListUsers');
+        Route::get('/users/list/{banned?}', 'UsersController@ListUsers');
         Route::get('/users/delete/{id}/{type}', 'UsersController@DeleteOrRestoreUser');
         Route::get('/charts/add', function () {
                 return View::make('charts/add');

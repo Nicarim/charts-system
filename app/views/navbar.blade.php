@@ -26,7 +26,7 @@
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Accounts <b class="caret"></b></a>
                 <ul class="dropdown-menu">
                     @if (Auth::user()->isAdmin())
-                    <li><a href="/users">List of users</a></li>
+                    <li><a href="/users/list">List of users</a></li>
                     <li><a href="/users/add">Add user</a></li>
                     <li class="divider"></li>
                     @endif
