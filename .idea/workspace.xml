@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ed63836d-738c-4746-a9e7-161be9a0bde1" name="Default" comment="">
+    <list default="true" id="ed63836d-738c-4746-a9e7-161be9a0bde1" name="Default" comment="Removed non-taiko and non-standard maps from taiko view.&#10;">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Chart.php" afterPath="$PROJECT_DIR$/app/models/Chart.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -96,7 +96,7 @@
       <file leaf-file-name="Chart.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/Chart.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="96" selection-start="496" selection-end="496" vertical-scroll-proportion="0.47727272" vertical-offset="105" max-vertical-offset="748">
+            <state line="21" column="70" selection-start="470" selection-end="470" vertical-scroll-proportion="0.46580407" vertical-offset="105" max-vertical-offset="748">
               <folding />
             </state>
           </provider>
@@ -677,7 +677,11 @@
       <created>1391196190246</created>
       <updated>1391196190246</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="Removed non-taiko and non-standard maps from taiko view.">
+      <created>1391196676954</created>
+      <updated>1391196676954</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -739,7 +743,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="&#10;Fixed view for guests.&#10;" />
     <MESSAGE value="Show banned users only upon request." />
     <MESSAGE value="Fixed iteration on users list." />
     <MESSAGE value="Fixed iteration on users list.&#10;" />
@@ -764,7 +767,8 @@
     <MESSAGE value="Added red button for unvoting." />
     <MESSAGE value="Add beatmap to current chart." />
     <MESSAGE value="Removed non-standard beatmaps from standard voting page." />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed non-standard beatmaps from standard voting page." />
+    <MESSAGE value="Removed non-taiko and non-standard maps from taiko view." />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed non-taiko and non-standard maps from taiko view." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1060,7 +1064,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/Chart.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="96" selection-start="496" selection-end="496" vertical-scroll-proportion="0.47727272" vertical-offset="105" max-vertical-offset="748">
+        <state line="21" column="70" selection-start="470" selection-end="470" vertical-scroll-proportion="0.46580407" vertical-offset="105" max-vertical-offset="748">
           <folding />
         </state>
       </provider>
