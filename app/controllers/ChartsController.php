@@ -125,4 +125,33 @@ class ChartsController extends BaseController {
         $vote->delete();
         return Redirect::to("/charts/view/".$chart."/".$mode);
     }
+    function AddBeatmap($id){
+        $data = Input::get("beatmapids");
+        $beatmaps = explode(',',$data);
+        foreach($beatmaps as $beatmapid){
+            $beatmap = new Beatmap;
+            $jsondata = json_decode(file_get_contents("https://osu.ppy.sh/api/get_beatmaps?k=".$this->apikey."&s=".$beatmapid));
+            $beatmap->beatmapset_id = $jsondata[0]->beatmapset_id;
+            $beatmap->artist = $jsondata[0]->artist;
+            $beatmap->title = $jsondata[0]->title;
+            $beatmap->creator = $jsondata[0]->creator;
+            $beatmap->chart_id = $id;
+            foreach($jsondata as $mode){
+                if ($mode->mode == "0"){
+                    $beatmap->osumode = 1;
+                }
+                if ($mode->mode == "1"){
+                    $beatmap->taikomode = 1;
+                }
+                if ($mode->mode == "2"){
+                    $beatmap->ctbmode = 1;
+                }
+                if ($mode->mode == "3"){
+                    $beatmap->maniamode = 1;
+                }
+            }
+            $beatmap->save();
+        }
+        return Redirect::to("/charts/view/".$id);
+    }
 }

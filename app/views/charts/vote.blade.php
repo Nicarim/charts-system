@@ -1,8 +1,17 @@
 @extends('master')
 
 @section('content')
+@if (Auth::user()->isAdmin())
+<form class="form-inline" method="post" action="/charts/add_beatmap/{{$chart->id}}">
+    <div class="form-group">
+        <input type="text" name="beatmapids" class="form-control" placeholder="Beatmapset Ids">
+    </div>
+    <input type="submit" class="btn btn-default" value="Add Beatmaps">
 
+</form>
+@endif
 <h1>{{ucfirst($chart->type)}} Chart: {{$chart->name}} - {{$nameshelper[$mode]}}</h1>
+
 @if (Auth::user()->allowedMode($mode))
 <h3 style="color:darkgreen">You have <b>{{abs(count($votes)- $chart->max_votes)}}</b> votes remaining</h3>
 @else

@@ -33,6 +33,7 @@ Route::group(
         );
         Route::post('/charts/add', 'ChartsController@Create');
 		Route::get('/charts/delete/{id}','ChartsController@Delete');
+        Route::post('/charts/add_beatmap/{id}', 'ChartsController@AddBeatmap');
     }
 );
 Route::group(
