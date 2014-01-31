@@ -43,11 +43,11 @@
                         @if (!isset($votes[$map->id]))
                         <button type="button" onclick="window.location.href='/charts/vote/add/{{$map->id}}/{{$chart->id}}/{{$mode}}'" class="btn btn-xs btn-default">Vote</button>
                         @else
-                        <button type="button" onclick="window.location.href='/charts/vote/remove/{{$votes[$map->id]}}'" class="btn btn-xs btn-default">Unvote</button>
+                        <button type="button" onclick="window.location.href='/charts/vote/remove/{{$votes[$map->id]}}'" class="btn btn-xs btn-default btn-danger">Unvote</button>
                         @endif
                     @else
                         @if (isset($votes[$map->id]))
-                            <button type="button" onclick="window.location.href='/charts/vote/remove/{{$votes[$map->id]}}'" class="btn btn-xs btn-default">Unvote</button>
+                            <button type="button" onclick="window.location.href='/charts/vote/remove/{{$votes[$map->id]}}'" class="btn btn-xs btn-default btn-danger">Unvote</button>
                         @endif
                     @endif
                 @endif
