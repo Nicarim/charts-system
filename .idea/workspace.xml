@@ -96,7 +96,7 @@
       <file leaf-file-name="Chart.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/Chart.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="68" selection-start="468" selection-end="468" vertical-scroll-proportion="0.46580407" vertical-offset="105" max-vertical-offset="748">
+            <state line="31" column="66" selection-start="741" selection-end="741" vertical-scroll-proportion="0.780037" vertical-offset="105" max-vertical-offset="748">
               <folding />
             </state>
           </provider>
@@ -689,7 +689,11 @@
       <created>1391197240275</created>
       <updated>1391197240275</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="Trying once again:&#10;- Removed non-standard non-taiko maps from taiko listing.&#10;">
+      <created>1391197320668</created>
+      <updated>1391197320668</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -751,7 +755,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Fixed iteration on users list.&#10;" />
     <MESSAGE value="Fix show users &gt;.&gt;" />
     <MESSAGE value="Fix show users &gt;.&gt;&#10;" />
     <MESSAGE value="LAST FIX TO SHOW USER LIST" />
@@ -776,7 +779,8 @@
     <MESSAGE value="Removed non-taiko and non-standard maps from taiko view." />
     <MESSAGE value="Fixed taiko :/" />
     <MESSAGE value="Trying once again:&#10;- Removed non-standard non-taiko maps from taiko listing." />
-    <option name="LAST_COMMIT_MESSAGE" value="Trying once again:&#10;- Removed non-standard non-taiko maps from taiko listing." />
+    <MESSAGE value="Trying once again:&#10;- Removed non-standard non-taiko maps from taiko listing.&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Trying once again:&#10;- Removed non-standard non-taiko maps from taiko listing.&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1072,7 +1076,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/Chart.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="68" selection-start="468" selection-end="468" vertical-scroll-proportion="0.46580407" vertical-offset="105" max-vertical-offset="748">
+        <state line="31" column="66" selection-start="741" selection-end="741" vertical-scroll-proportion="0.780037" vertical-offset="105" max-vertical-offset="748">
           <folding />
         </state>
       </provider>

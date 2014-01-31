@@ -24,12 +24,12 @@ class Chart extends Eloquent {
 
 
     public function ctbmaps() {
-        return $this->hasMany('Beatmap')->orderBy("ctbmode", 'desc');
+        return $this->hasMany('Beatmap')->where("osumode","=","1")->orderBy("ctbmode", 'desc');
     }
 
 
     public function ommaps() {
-        return $this->hasMany('Beatmap')->orderBy("maniamode", 'desc');
+        return $this->hasMany('Beatmap')->where("osumode","=","1")->orderBy("maniamode", 'desc');
     }
 
     public function votes() {
