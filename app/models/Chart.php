@@ -19,7 +19,7 @@ class Chart extends Eloquent {
 
 
     public function taikomaps() {
-        return $this->hasMany('Beatmap')->orderBy("taikomode", 'desc');
+        return $this->hasMany('Beatmap')->where("taikomode","=","1")->orWhere("оsumode","=","1")->orderBy("taikomode", 'desc');
     }
 
 
