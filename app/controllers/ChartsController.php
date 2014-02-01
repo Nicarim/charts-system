@@ -47,10 +47,30 @@ class ChartsController extends BaseController {
     }
     public function ViewResults($id,$mode="osu"){
         $beatmaps = Beatmap::where("chart_id","=",$id)->get();
+        $beatmapsvar = array();
+        foreach($beatmaps as $beatmap){
+            $beatmapsvar[] = array(
+                "name" => $beatmap->artist." - ".$beatmap->title." by ".$beatmap->creator,
+                "votes" => $beatmap->votes()->mode($this->gamemode[$mode])->count()
+            );
+        }
+        $sortArray = array();
+        foreach($beatmapsvar as $beatmap){
+            foreach($beatmap as $key => $value){
+                if(!isset($sortArray[$key])){
+                    $sortArray[$key] = array();
+                }
+                $sortArray[$key][] = $value;
+            }
+        }
+
+        $orderby = "votes"; //variable to sort by
+
+        array_multisort($sortArray[$orderby],SORT_DESC,$beatmapsvar);
         return View::make('charts/results')->with(array(
                 "id" => $id,
                 "mode" => $this->gamemode[$mode],
-                "beatmaps" => $beatmaps
+                "beatmapslist" => $beatmapsvar
             ));
 
     }
