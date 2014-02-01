@@ -18,4 +18,9 @@ class Vote extends Eloquent {
     public function Map(){
         return $this->belongsTo("Map");
     }
+    public function scopeMode($query, $mode) {
+        return $query->where("gamemode", "=", $mode)
+            ->select(DB::raw("count(votes) as vote_count"), ...$)
+            ->orderBy("vote_count", "desc");
+    }
 }

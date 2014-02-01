@@ -17,7 +17,7 @@
     <tr>
         <td>{{$key+1}}</td>
         <td>{{$beatmap->artist}} - {{$beatmap->title}} by {{$beatmap->creator}}</td>
-        <td>{{$beatmap->votes()->where("gamemode",$mode)->count()}}</td>
+        <td>{{$beatmap->votes->mode($mode)->vote_count}}</td>
     </tr>
     @endforeach
 </table>
