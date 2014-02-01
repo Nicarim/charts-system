@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ed63836d-738c-4746-a9e7-161be9a0bde1" name="Default" comment="WRONG FILE LOL&#10;">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Beatmap.php" afterPath="$PROJECT_DIR$/app/models/Beatmap.php" />
+    <list default="true" id="ed63836d-738c-4746-a9e7-161be9a0bde1" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/charts/results.blade.php" afterPath="$PROJECT_DIR$/app/views/charts/results.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="laravel.iws" />
@@ -83,7 +83,7 @@
       <file leaf-file-name="results.blade.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/charts/results.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="63" selection-start="967" selection-end="967" vertical-scroll-proportion="0.6439394" vertical-offset="0" max-vertical-offset="528">
+            <state line="20" column="12" selection-start="932" selection-end="932" vertical-scroll-proportion="0.6439394" vertical-offset="0" max-vertical-offset="528">
               <folding />
             </state>
           </provider>
@@ -730,7 +730,11 @@
       <created>1391261927464</created>
       <updated>1391261927464</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="Thanks chitose, fixed probably result list.">
+      <created>1391262098404</created>
+      <updated>1391262098404</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -792,7 +796,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Fixed chart creation." />
     <MESSAGE value="Fixed link to beatmap on voting page." />
     <MESSAGE value="Fixed voting." />
     <MESSAGE value="Fixed voting yet again." />
@@ -817,7 +820,8 @@
     <MESSAGE value="Tried to fix beatmap results list." />
     <MESSAGE value="WRONG FILE LOL" />
     <MESSAGE value="WRONG FILE LOL&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="WRONG FILE LOL&#10;" />
+    <MESSAGE value="Thanks chitose, fixed probably result list." />
+    <option name="LAST_COMMIT_MESSAGE" value="Thanks chitose, fixed probably result list." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1101,7 +1105,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/charts/results.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="63" selection-start="967" selection-end="967" vertical-scroll-proportion="0.6439394" vertical-offset="0" max-vertical-offset="528">
+        <state line="20" column="12" selection-start="932" selection-end="932" vertical-scroll-proportion="0.6439394" vertical-offset="0" max-vertical-offset="528">
           <folding />
         </state>
       </provider>

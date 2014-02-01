@@ -14,11 +14,11 @@
         <th>Beatmap</th>
         <th style="width:40px">Votes</th>
     </tr>
-    @foreach ($beatmaps as $key => $map)
+    @foreach ($beatmaps as $key => $beatmap)
     <tr>
         <td>{{$key+1}}</td>
-        <td>{{$map->artist}} - {{$map->title}} by {{$map->creator}}</td>
-        <td>{{$map->votes()->where("gamemode",$mode)->count()}}</td>
+        <td>{{$beatmap->artist}} - {{$beatmap->title}} by {{$beatmap->creator}}</td>
+        <td></td>
     </tr>
     @endforeach
 </table>
