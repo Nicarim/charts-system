@@ -20,6 +20,7 @@ class Vote extends Eloquent {
     }
     public function scopeMode($query, $mode) {
         return $query->where("gamemode", "=", $mode)
-            ->selectRaw("count(votes) as vote_count")->orderBy("vote_count", "desc");
+            ->selectRaw("count(votes) as vote_count")
+            ->orderBy("vote_count", "desc");
     }
 }
