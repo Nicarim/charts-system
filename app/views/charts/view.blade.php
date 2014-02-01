@@ -19,7 +19,7 @@
 			@endif
             @endif
 		</td>
-        <td><a href="/charts/result/{{$chart->id}}">{{$chart->votes->count()}}</a></td>
+        <td><a href="/charts/results/{{$chart->id}}">{{$chart->votes->count()}}</a></td>
     </tr>
     @endforeach
 </table>
