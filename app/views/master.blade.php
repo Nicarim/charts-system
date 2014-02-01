@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="/css/signin.css" />
         <link rel="stylesheet" href="/css/icons.css" />
         <script src="/js/jquery-2.0.3.min.js"></script>
+        <script src="/js/jquery.timeago.js"></script>
         <script src="/js/bootstrap.min.js"></script>
         <script src="/js/bootstrap.datepicker.js"></script>
         <script>
