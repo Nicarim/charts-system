@@ -2,12 +2,11 @@
 
 @section('content')
 <div class="btn-group btn-group-justified">
-    <a class="btn btn-default {{{ $mode == 'osu' ? 'active' : '' }}}" href='/charts/results/{{$id}}/osu' >osu!</a>
-    <a class="btn btn-default {{{ $mode == 'taiko' ? 'active' : '' }}}" href='/charts/results/{{$id}}/taiko'>Taiko</a>
-    <a class="btn btn-default {{{ $mode == 'ctb' ? 'active' : '' }}}" href='/charts/results/{{$id}}/ctb'>Catch the Beat</a>
-    <a class="btn btn-default {{{ $mode == 'mania' ? 'active' : '' }}}" href='/charts/results/{{$id}}/mania'>osu!mania</a>
+    <a class="btn btn-default {{{ $mode == '0' ? 'active' : '' }}}" href='/charts/results/{{$id}}/osu' >osu!</a>
+    <a class="btn btn-default {{{ $mode == '1' ? 'active' : '' }}}" href='/charts/results/{{$id}}/taiko'>Taiko</a>
+    <a class="btn btn-default {{{ $mode == '2' ? 'active' : '' }}}" href='/charts/results/{{$id}}/ctb'>Catch the Beat</a>
+    <a class="btn btn-default {{{ $mode == '3' ? 'active' : '' }}}" href='/charts/results/{{$id}}/mania'>osu!mania</a>
 </div>
-{{$beatmaps->count()}}
 <table class="table table-hover">
     <tr>
         <th style="width:40px">#</th>
@@ -18,7 +17,7 @@
     <tr>
         <td>{{$key+1}}</td>
         <td>{{$beatmap->artist}} - {{$beatmap->title}} by {{$beatmap->creator}}</td>
-        <td></td>
+        <td>{{$beatmap->votes()->where("gamemode",$mode)->count()}}</td>
     </tr>
     @endforeach
 </table>

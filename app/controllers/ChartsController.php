@@ -46,7 +46,7 @@ class ChartsController extends BaseController {
             ));
     }
     public function ViewResults($id,$mode="osu"){
-        $beatmaps = Beatmap::where("chart_id","=",$id);
+        $beatmaps = Beatmap::where("chart_id","=",$id)->get();
         return View::make('charts/results')->with(array(
                 "id" => $id,
                 "mode" => $this->gamemode[$mode],
