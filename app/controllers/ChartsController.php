@@ -45,7 +45,15 @@ class ChartsController extends BaseController {
                 "maps" => $maps
             ));
     }
+    public function ViewResults($id,$mode="osu"){
+        $beatmaps = Beatmap::where("chart_id","=",$id);
+        return View::make('charts/results')->with(array(
+                "id" => $id,
+                "mode" => $this->gamemode[$mode],
+                "beatmaps" => $beatmaps
+            ));
 
+    }
 
     public function Create() {
         $data = array(
