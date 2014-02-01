@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed63836d-738c-4746-a9e7-161be9a0bde1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Beatmap.php" afterPath="$PROJECT_DIR$/app/models/Beatmap.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/charts/view.blade.php" afterPath="$PROJECT_DIR$/app/views/charts/view.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/charts/results.blade.php" afterPath="$PROJECT_DIR$/app/views/charts/results.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="laravel.iws" />
@@ -30,7 +29,7 @@
       <file leaf-file-name="ChartsController.php" pinned="true" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/ChartsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="36" selection-start="1536" selection-end="1536" vertical-scroll-proportion="-6.5384617" vertical-offset="561" max-vertical-offset="2907">
+            <state line="43" column="36" selection-start="1536" selection-end="1536" vertical-scroll-proportion="-4.576923" vertical-offset="612" max-vertical-offset="2907">
               <folding />
             </state>
           </provider>
@@ -81,19 +80,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="results.blade.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="results.blade.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/charts/results.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="27" selection-start="807" selection-end="807" vertical-scroll-proportion="-11.115385" vertical-offset="0" max-vertical-offset="493">
+            <state line="9" column="22" selection-start="594" selection-end="594" vertical-scroll-proportion="0.28977272" vertical-offset="0" max-vertical-offset="528">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="view.blade.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="view.blade.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/charts/view.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="93" selection-start="734" selection-end="734" vertical-scroll-proportion="0.6306818" vertical-offset="24" max-vertical-offset="578">
+            <state line="21" column="24" selection-start="665" selection-end="665" vertical-scroll-proportion="-12.807693" vertical-offset="24" max-vertical-offset="578">
               <folding />
             </state>
           </provider>
@@ -173,9 +172,9 @@
         <option value="$PROJECT_DIR$/app/models/Chart.php" />
         <option value="$PROJECT_DIR$/app/routes.php" />
         <option value="$PROJECT_DIR$/app/controllers/ChartsController.php" />
-        <option value="$PROJECT_DIR$/app/views/charts/results.blade.php" />
         <option value="$PROJECT_DIR$/app/models/Beatmap.php" />
         <option value="$PROJECT_DIR$/app/views/charts/view.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/charts/results.blade.php" />
       </list>
     </option>
   </component>
@@ -715,7 +714,15 @@
       <created>1391261339167</created>
       <updated>1391261339167</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="Tried to fix beatmap results list.">
+      <created>1391261551467</created>
+      <updated>1391261551467</updated>
+    </task>
+    <task id="LOCAL-00069" summary="WRONG FILE LOL">
+      <created>1391261676415</created>
+      <updated>1391261676415</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -777,8 +784,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Added google analytics. yey." />
-    <MESSAGE value="Fixed chart creation (feel free to create new one)&#10;Added few values to chart creation&#10;Fixed duplicate key (all tables gone [*])&#10;Changed redirect to banned users upon deleting." />
     <MESSAGE value="Don't cheat plox.&#10;Fixed mania priv." />
     <MESSAGE value="Fixed chart creation." />
     <MESSAGE value="Fixed link to beatmap on voting page." />
@@ -802,7 +807,9 @@
     <MESSAGE value="Trying once again:&#10;- Removed non-standard non-modespecific maps from listing for these modes.&#10;" />
     <MESSAGE value="Added experimental support for results." />
     <MESSAGE value="Fixed typo in view." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed typo in view." />
+    <MESSAGE value="Tried to fix beatmap results list." />
+    <MESSAGE value="WRONG FILE LOL" />
+    <option name="LAST_COMMIT_MESSAGE" value="WRONG FILE LOL" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1036,30 +1043,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/ChartsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="36" selection-start="1536" selection-end="1536" vertical-scroll-proportion="-6.5384617" vertical-offset="561" max-vertical-offset="2907">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/charts/results.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="27" selection-start="807" selection-end="807" vertical-scroll-proportion="-11.115385" vertical-offset="0" max-vertical-offset="493">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/routes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="32" column="10" selection-start="932" selection-end="932" vertical-scroll-proportion="-11.538462" vertical-offset="244" max-vertical-offset="1428">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/charts/vote.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="142" selection-start="1799" selection-end="1854" vertical-scroll-proportion="-7.3076925" vertical-offset="405" max-vertical-offset="1241">
           <folding />
         </state>
       </provider>
@@ -1078,9 +1064,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/charts/vote.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="142" selection-start="1799" selection-end="1854" vertical-scroll-proportion="-7.3076925" vertical-offset="405" max-vertical-offset="1241">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/ChartsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="36" selection-start="1536" selection-end="1536" vertical-scroll-proportion="-4.576923" vertical-offset="612" max-vertical-offset="2907">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/charts/view.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="93" selection-start="734" selection-end="734" vertical-scroll-proportion="0.6306818" vertical-offset="24" max-vertical-offset="578">
+        <state line="21" column="24" selection-start="665" selection-end="665" vertical-scroll-proportion="-12.807693" vertical-offset="24" max-vertical-offset="578">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/charts/results.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="22" selection-start="594" selection-end="594" vertical-scroll-proportion="0.28977272" vertical-offset="0" max-vertical-offset="528">
           <folding />
         </state>
       </provider>

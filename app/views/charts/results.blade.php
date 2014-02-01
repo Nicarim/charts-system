@@ -7,6 +7,7 @@
     <a class="btn btn-default {{{ $mode == 'ctb' ? 'active' : '' }}}" href='/charts/results/{{$id}}/ctb'>Catch the Beat</a>
     <a class="btn btn-default {{{ $mode == 'mania' ? 'active' : '' }}}" href='/charts/results/{{$id}}/mania'>osu!mania</a>
 </div>
+{{$beatmaps->count()}}
 <table class="table table-hover">
     <tr>
         <th style="width:40px">#</th>
