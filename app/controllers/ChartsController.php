@@ -113,6 +113,7 @@ class ChartsController extends BaseController {
     }
     public function addVote($beatmap, $chart, $mode){
         $chartmodel = Chart::find($chart);
+        $vote_id = 0;
         $votes = Vote::where("user_id", "=", Auth::user()->id)->where("gamemode", "=", $this->gamemode[$mode])->where("chart_id","=",$chart)->count();
         if ($votes < $chartmodel->max_votes){
             $vote = new Vote;
@@ -121,15 +122,18 @@ class ChartsController extends BaseController {
             $vote->beatmap_id = $beatmap;
             $vote->gamemode = $this->gamemode[$mode];
             $vote->save();
+            $vote_id = $vote->id;
+            return $vote_id;
         }
-        return Redirect::to("/charts/view/".$chart."/".$mode);
+        return "false";
     }
     public function removeVote($id){
         $vote = Vote::find($id);
         $chart = $vote->chart_id;
         $mode = array_flip($this->gamemode)[$vote->gamemode];
+        $beatmap_id = $vote->beatmap_id;
         $vote->delete();
-        return Redirect::to("/charts/view/".$chart."/".$mode);
+        return $chart.",".$beatmap_id.",".$mode;
     }
     public function AddBeatmap($id){
         $data = Input::get("beatmapids");

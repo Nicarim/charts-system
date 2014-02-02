@@ -13,7 +13,7 @@
 <h1>{{ucfirst($chart->type)}} Chart: {{$chart->name}} - {{$nameshelper[$mode]}}</h1>
 <h2 class="text-center"><b>Deadline:</b> <time class="timeago" datetime="{{$chart->end_time}}"></time></h2>
 @if (Auth::user()->allowedMode($mode))
-<h3 style="color:darkgreen">You have <b>{{abs(count($votes)- $chart->max_votes)}}</b> votes remaining</h3>
+<h3 style="color:darkgreen">You have <b id="votes_available">{{abs(count($votes)- $chart->max_votes)}}</b> votes remaining</h3>
 @else
 <h3 style="color:darkred">You are not allowed to vote in this mode</h3>
 @endif
@@ -50,13 +50,15 @@
                 @if (Auth::user()->allowedMode($mode))
                     @if ((count($votes) - $chart->max_votes) != 0)
                         @if (!isset($votes[$map->id]))
-                        <button type="button" onclick="window.location.href='/charts/vote/add/{{$map->id}}/{{$chart->id}}/{{$mode}}'" class="btn btn-xs btn-default">Vote</button>
+                        <button type="button" onclick="VoteFunc(this,'add',{{$map->id}},{{$chart->id}},'{{$mode}}')" class="btn btn-xs btn-default vote">Vote</button>
                         @else
-                        <button type="button" onclick="window.location.href='/charts/vote/remove/{{$votes[$map->id]}}'" class="btn btn-xs btn-default btn-danger">Unvote</button>
+                        <button type="button" onclick="VoteFunc(this,'remove',{{$votes[$map->id]}})" class="btn btn-xs btn-default btn-danger unvote">Unvote</button>
                         @endif
                     @else
                         @if (isset($votes[$map->id]))
-                            <button type="button" onclick="window.location.href='/charts/vote/remove/{{$votes[$map->id]}}'" class="btn btn-xs btn-default btn-danger">Unvote</button>
+                            <button type="button" onclick="VoteFunc(this,'remove',{{$votes[$map->id]}})" class="btn btn-xs btn-default btn-danger unvote">Unvote</button>
+                        @else
+                            <button type="button" onclick="VoteFunc(this,'add',{{$map->id}},{{$chart->id}},'{{$mode}}')" class="btn btn-xs btn-default vote" disabled="disabled">Vote</button>
                         @endif
                     @endif
                 @endif
