@@ -63,7 +63,7 @@ Route::filter(
 Route::filter(
     'access',
     function () {
-        if (Auth::check() && Auth::user()->power < 2) {
+        if (Auth::check() || Auth::user()->power < 2 || Auth::guest()) {
             return Redirect::to('/');
         }
     }
