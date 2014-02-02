@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ed63836d-738c-4746-a9e7-161be9a0bde1" name="Default" comment="Organized repititive code a little bit better.&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/ChartsController.php" afterPath="$PROJECT_DIR$/app/controllers/ChartsController.php" />
+    <list default="true" id="ed63836d-738c-4746-a9e7-161be9a0bde1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/filters.php" afterPath="$PROJECT_DIR$/app/filters.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/jquery.timeago.js" afterPath="$PROJECT_DIR$/public/js/jquery.timeago.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/master.blade.php" afterPath="$PROJECT_DIR$/app/views/master.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/charts/vote.blade.php" afterPath="$PROJECT_DIR$/app/views/charts/vote.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="laravel.iws" />
@@ -67,10 +62,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="filters.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="filters.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/filters.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="11" selection-start="572" selection-end="572" vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="1394">
+            <state line="32" column="9" selection-start="670" selection-end="670" vertical-scroll-proportion="0.43541202" vertical-offset="0" max-vertical-offset="1190">
               <folding />
             </state>
           </provider>
@@ -94,10 +89,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jquery.timeago.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="jquery.timeago.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/jquery.timeago.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="33" selection-start="1356" selection-end="1356" vertical-scroll-proportion="0.49675325" vertical-offset="357" max-vertical-offset="3587">
+            <state line="57" column="8" selection-start="1614" selection-end="1614" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="3587">
               <folding />
             </state>
           </provider>
@@ -176,12 +171,12 @@
         <option value="$PROJECT_DIR$/app/models/Beatmap.php" />
         <option value="$PROJECT_DIR$/app/views/charts/results.blade.php" />
         <option value="$PROJECT_DIR$/app/models/Vote.php" />
-        <option value="$PROJECT_DIR$/app/filters.php" />
         <option value="$PROJECT_DIR$/app/controllers/ChartsController.php" />
         <option value="$PROJECT_DIR$/app/views/master.blade.php" />
         <option value="$PROJECT_DIR$/public/js/main.js" />
         <option value="$PROJECT_DIR$/app/views/charts/vote.blade.php" />
         <option value="$PROJECT_DIR$/public/js/jquery.timeago.js" />
+        <option value="$PROJECT_DIR$/app/filters.php" />
       </list>
     </option>
   </component>
@@ -845,7 +840,11 @@
       <created>1391344057569</created>
       <updated>1391344057569</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="Added bunch of cool featuers (front-end is now javascript based, no more refresh yey)">
+      <created>1391374103324</created>
+      <updated>1391374103324</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -872,6 +871,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32247558" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32415903" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277439" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -887,7 +887,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32810047" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -907,7 +906,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Fixed users list." />
     <MESSAGE value="Fixed redirections." />
     <MESSAGE value="Fixed show banned users." />
     <MESSAGE value="Added alias to users/list route.&#10;&#10;Changed from Redirect::to to Redirect::route for easier management." />
@@ -932,7 +930,8 @@
     <MESSAGE value="Trying to fix critical bug, which allows access to admin-level functions" />
     <MESSAGE value="Trying to fix critical bug, which allows access to admin-level functions&#10;" />
     <MESSAGE value="Organized repititive code a little bit better." />
-    <option name="LAST_COMMIT_MESSAGE" value="Organized repititive code a little bit better." />
+    <MESSAGE value="Added bunch of cool featuers (front-end is now javascript based, no more refresh yey)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added bunch of cool featuers (front-end is now javascript based, no more refresh yey)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1172,13 +1171,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/filters.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="11" selection-start="572" selection-end="572" vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="1394">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/ChartsController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="136" column="5" selection-start="4721" selection-end="4721" vertical-scroll-proportion="-13.615385" vertical-offset="1958" max-vertical-offset="3009">
@@ -1216,7 +1208,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/jquery.timeago.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="33" selection-start="1356" selection-end="1356" vertical-scroll-proportion="0.49675325" vertical-offset="357" max-vertical-offset="3587">
+        <state line="57" column="8" selection-start="1614" selection-end="1614" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="3587">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/filters.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="9" selection-start="670" selection-end="670" vertical-scroll-proportion="0.43541202" vertical-offset="0" max-vertical-offset="1190">
           <folding />
         </state>
       </provider>

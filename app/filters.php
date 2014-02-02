@@ -31,9 +31,6 @@ Route::filter(
         if (Auth::guest()) {
             return Redirect::guest('/');
         }
-        if (Auth::check() && Auth::user()->power < 2){
-            return "Voting Temprorary unavailable, please check soon.";
-        }
     }
 );
 
