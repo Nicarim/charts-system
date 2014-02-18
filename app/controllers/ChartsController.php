@@ -36,44 +36,64 @@ class ChartsController extends BaseController {
             $maps = $chart->ctbmaps;
         else if ($mode == "mania")
             $maps = $chart->ommaps;
-
-        return View::make('charts/vote')->with(array(
-                "chart" => $chart,
-                "mode" => $mode,
-                "nameshelper" => $gamemodenames,
-                "votes" => $voteskv,
-                "maps" => $maps
-            ));
+        if (strtotime($chart->end_time) <= time())
+        {
+            return View::make('charts/vote')->with(array(
+                    "chart" => $chart,
+                    "mode" => $mode,
+                    "nameshelper" => $gamemodenames,
+                    "votes" => $voteskv,
+                    "maps" => $maps,
+                    "theend" => true
+                ));
+        }
+        else
+        {
+            return View::make('charts/vote')->with(array(
+                    "chart" => $chart,
+                    "mode" => $mode,
+                    "nameshelper" => $gamemodenames,
+                    "votes" => $voteskv,
+                    "maps" => $maps,
+                    "theend" => false
+                ));
+        }
     }
     public function ViewResults($id,$mode="osu"){
         $beatmaps = Beatmap::where("chart_id","=",$id)->get();
-        $beatmapsvar = array();
-        foreach($beatmaps as $beatmap){
-            $beatmapsvar[] = array(
-                "name" => $beatmap->artist." - ".$beatmap->title." by ".$beatmap->creator,
-                "votes" => $beatmap->votes()->mode($this->gamemode[$mode])->count()
-            );
-        }
-        $sortArray = array();
-        foreach($beatmapsvar as $beatmap){
-            foreach($beatmap as $key => $value){
-                if(!isset($sortArray[$key])){
-                    $sortArray[$key] = array();
-                }
-                $sortArray[$key][] = $value;
+        $chart = Chart::find($id);
+        if (strtotime($chart->end_time) <= time() || Auth::user()->isAdmin())
+        {
+            $beatmapsvar = array();
+            foreach($beatmaps as $beatmap){
+                $beatmapsvar[] = array(
+                    "name" => $beatmap->artist." - ".$beatmap->title." by ".$beatmap->creator,
+                    "votes" => $beatmap->votes()->mode($this->gamemode[$mode])->count()
+                );
             }
+            $sortArray = array();
+            foreach($beatmapsvar as $beatmap){
+                foreach($beatmap as $key => $value){
+                    if(!isset($sortArray[$key])){
+                        $sortArray[$key] = array();
+                    }
+                    $sortArray[$key][] = $value;
+                }
+            }
+
+            $orderby = "votes"; //variable to sort by
+
+            array_multisort($sortArray[$orderby],SORT_DESC,$beatmapsvar);
+            return View::make('charts/results')->with(array(
+                    "id" => $id,
+                    "mode" => $this->gamemode[$mode],
+                    "beatmapslist" => $beatmapsvar
+                ));
         }
-
-        $orderby = "votes"; //variable to sort by
-
-        array_multisort($sortArray[$orderby],SORT_DESC,$beatmapsvar);
-        return View::make('charts/results')->with(array(
-                "id" => $id,
-                "mode" => $this->gamemode[$mode],
-                "beatmapslist" => $beatmapsvar
-            ));
-
+        else
+            return Redirect::to("/");
     }
+
 
     public function Create() {
         $data = array(
@@ -115,15 +135,18 @@ class ChartsController extends BaseController {
         $chartmodel = Chart::find($chart);
         $vote_id = 0;
         $votes = Vote::where("user_id", "=", Auth::user()->id)->where("gamemode", "=", $this->gamemode[$mode])->where("chart_id","=",$chart)->count();
-        if ($votes < $chartmodel->max_votes){
-            $vote = new Vote;
-            $vote->user_id = Auth::user()->id;
-            $vote->chart_id = $chart;
-            $vote->beatmap_id = $beatmap;
-            $vote->gamemode = $this->gamemode[$mode];
-            $vote->save();
-            $vote_id = $vote->id;
-            return $vote_id;
+        if (strtotime($chartmodel->end_time) >= time())
+        {
+            if ($votes < $chartmodel->max_votes){
+                $vote = new Vote;
+                $vote->user_id = Auth::user()->id;
+                $vote->chart_id = $chart;
+                $vote->beatmap_id = $beatmap;
+                $vote->gamemode = $this->gamemode[$mode];
+                $vote->save();
+                $vote_id = $vote->id;
+                return $vote_id;
+            }
         }
         return "false";
     }

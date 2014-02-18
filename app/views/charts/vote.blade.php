@@ -11,11 +11,15 @@
 </form>
 @endif
 <h1>{{ucfirst($chart->type)}} Chart: {{$chart->name}} - {{$nameshelper[$mode]}}</h1>
-<h2 class="text-center"><b>Deadline:</b> <time class="timeago" datetime="{{$chart->end_time}}"></time></h2>
-@if (Auth::user()->allowedMode($mode))
-<h3 style="color:darkgreen">You have <b id="votes_available">{{abs(count($votes)- $chart->max_votes)}}</b> votes remaining</h3>
+@if (!$theend)
+    <h2 class="text-center"><b>Deadline:</b> <time class="timeago" datetime="{{$chart->end_time}}"></time></h2>
 @else
-<h3 style="color:darkred">You are not allowed to vote in this mode</h3>
+    <h2 class="text-center">Results: <a href="/charts/results/{{$chart->id}}">Click here for results!</a></h2>
+@endif
+@if (Auth::user()->allowedMode($mode))
+    <h3 style="color:darkgreen">You have <b id="votes_available">{{abs(count($votes)- $chart->max_votes)}}</b> votes remaining</h3>
+@else
+    <h3 style="color:darkred">You are not allowed to vote in this mode</h3>
 @endif
 
 <div class="btn-group btn-group-justified">
