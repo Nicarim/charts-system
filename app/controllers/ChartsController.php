@@ -98,7 +98,8 @@ class ChartsController extends BaseController {
             {
                 return View::make('charts/results')->with(array(
                         "id" => $id,
-                        "mode" => $this->gamemode[$mode],
+                        "modeid" => $this->gamemode[$mode],
+                        "mode" => $mode,
                         "beatmapslist" => $beatmapsvar
                     ));
             }elseif ($csv == "csv" && Auth::user()->isAdmin()){
