@@ -51,7 +51,7 @@
                 <b class="mania {{{ !$map->maniamode ? 'off' : '' }}}"></b>
             </td>
             <td>
-                @if (Auth::user()->allowedMode($mode))
+                @if (Auth::user()->allowedMode($mode) && !$theend)
                     @if ((count($votes) - $chart->max_votes) != 0)
                         @if (!isset($votes[$map->id]))
                         <button type="button" onclick="VoteFunc(this,'add',{{$map->id}},{{$chart->id}},'{{$mode}}')" class="btn btn-xs btn-default vote">Vote</button>
