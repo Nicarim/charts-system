@@ -29,7 +29,7 @@
       <file leaf-file-name="ChartsController.php" pinned="true" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/ChartsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="107" column="126" selection-start="4159" selection-end="4159" vertical-scroll-proportion="0.6458333" vertical-offset="1478" max-vertical-offset="3893">
+            <state line="109" column="33" selection-start="4274" selection-end="4274" vertical-scroll-proportion="0.8068182" vertical-offset="1427" max-vertical-offset="3893">
               <folding />
             </state>
           </provider>
@@ -854,7 +854,11 @@
       <created>1392992702776</created>
       <updated>1392992702776</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <task id="LOCAL-00088" summary="Fixed wrong route.&#10;">
+      <created>1392992852257</created>
+      <updated>1392992852257</updated>
+    </task>
+    <option name="localTasksCounter" value="89" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -916,7 +920,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Removed non-taiko and non-standard maps from taiko view." />
     <MESSAGE value="Fixed taiko :/" />
     <MESSAGE value="Trying once again:&#10;- Removed non-standard non-taiko maps from taiko listing." />
     <MESSAGE value="Trying once again:&#10;- Removed non-standard non-taiko maps from taiko listing.&#10;" />
@@ -941,7 +944,8 @@
     <MESSAGE value="Changed the way results are shown." />
     <MESSAGE value="Added csv output" />
     <MESSAGE value="Fixed wrong route." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed wrong route." />
+    <MESSAGE value="Fixed wrong route.&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed wrong route.&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1225,7 +1229,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/ChartsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="107" column="126" selection-start="4159" selection-end="4159" vertical-scroll-proportion="0.6458333" vertical-offset="1478" max-vertical-offset="3893">
+        <state line="109" column="33" selection-start="4274" selection-end="4274" vertical-scroll-proportion="0.8068182" vertical-offset="1427" max-vertical-offset="3893">
           <folding />
         </state>
       </provider>
