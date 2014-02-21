@@ -152,11 +152,15 @@ class ChartsController extends BaseController {
     }
     public function removeVote($id){
         $vote = Vote::find($id);
-        $chart = $vote->chart_id;
-        $mode = array_flip($this->gamemode)[$vote->gamemode];
-        $beatmap_id = $vote->beatmap_id;
-        $vote->delete();
-        return $chart.",".$beatmap_id.",".$mode;
+        if (strtotime($vote->chart->end_time) >= time())
+        {
+            $chart = $vote->chart_id;
+            $mode = array_flip($this->gamemode)[$vote->gamemode];
+            $beatmap_id = $vote->beatmap_id;
+            $vote->delete();
+            return $chart.",".$beatmap_id.",".$mode;
+        }
+        return false;
     }
     public function AddBeatmap($id){
         $data = Input::get("beatmapids");

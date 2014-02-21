@@ -20,15 +20,18 @@ function VoteFunc(element,type, map, chart, mode){
     }
     else if (type == "remove"){
         $.get("/charts/vote/remove/"+map, function (data){
-            $(element).removeClass("btn-danger");
-            $(element).text("Vote");
-            $(element).removeClass("unvote");
-            $(element).addClass("vote");
-            var splitted = data.split(",");
-            $(element).attr("onclick","VoteFunc(this,'add',"+splitted[1]+","+splitted[0]+",'"+splitted[2]+"')");
-            var votes = parseInt($("#votes_available").text());
-            $("#votes_available").text(votes + 1);
-            checkIfFull();
+            if (data != "false")
+            {
+                $(element).removeClass("btn-danger");
+                $(element).text("Vote");
+                $(element).removeClass("unvote");
+                $(element).addClass("vote");
+                var splitted = data.split(",");
+                $(element).attr("onclick","VoteFunc(this,'add',"+splitted[1]+","+splitted[0]+",'"+splitted[2]+"')");
+                var votes = parseInt($("#votes_available").text());
+                $("#votes_available").text(votes + 1);
+                checkIfFull();
+            }
         });
     }
 }
