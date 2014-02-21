@@ -105,7 +105,7 @@ class ChartsController extends BaseController {
                 $csvoutput[] = "artist,title,creator,mapset_id,vote_amount,vote_names";
                 foreach ($beatmapsvar as $beatmap)
                 {
-                    $csvoutput[] = '"'.$beatmap->artist.'","'.$beatmap->title.'","'.$beatmap->creator.'",'.$beatmap->beatmapset_id.','.$beatmap->votes.',"'.$beatmap->vote_names.'"';
+                    $csvoutput[] = '"'.$beatmap->artist.'","'.$beatmap->title.'","'.$beatmap->creator.'",'.$beatmap->mapset_id.','.$beatmap->votes.',"'.$beatmap->vote_names.'"';
                 }
                 $headers = array(
                   "Content-Type" => "text/csv",

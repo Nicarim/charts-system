@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed63836d-738c-4746-a9e7-161be9a0bde1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes.php" afterPath="$PROJECT_DIR$/app/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/ChartsController.php" afterPath="$PROJECT_DIR$/app/controllers/ChartsController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="laravel.iws" />
@@ -26,10 +26,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ChartsController.php" pinned="true" current="false" current-in-tab="false">
+      <file leaf-file-name="ChartsController.php" pinned="true" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/ChartsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="107" column="76" selection-start="4109" selection-end="4109" vertical-scroll-proportion="-42.53846" vertical-offset="713" max-vertical-offset="3893">
+            <state line="107" column="126" selection-start="4159" selection-end="4159" vertical-scroll-proportion="0.6458333" vertical-offset="1478" max-vertical-offset="3893">
               <folding />
             </state>
           </provider>
@@ -89,10 +89,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routes.php" pinned="true" current="true" current-in-tab="true">
+      <file leaf-file-name="routes.php" pinned="true" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="76" column="55" selection-start="2297" selection-end="2297" vertical-scroll-proportion="0.8798521" vertical-offset="816" max-vertical-offset="1445">
+            <state line="76" column="55" selection-start="2297" selection-end="2297" vertical-scroll-proportion="-14.923077" vertical-offset="904" max-vertical-offset="1445">
               <folding />
             </state>
           </provider>
@@ -174,8 +174,8 @@
         <option value="$PROJECT_DIR$/public/js/main.js" />
         <option value="$PROJECT_DIR$/app/views/charts/vote.blade.php" />
         <option value="$PROJECT_DIR$/app/views/charts/results.blade.php" />
-        <option value="$PROJECT_DIR$/app/controllers/ChartsController.php" />
         <option value="$PROJECT_DIR$/app/routes.php" />
+        <option value="$PROJECT_DIR$/app/controllers/ChartsController.php" />
       </list>
     </option>
   </component>
@@ -850,7 +850,11 @@
       <created>1392992427386</created>
       <updated>1392992427386</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="Fixed wrong route.">
+      <created>1392992702776</created>
+      <updated>1392992702776</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -912,7 +916,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Removed non-standard beatmaps from standard voting page." />
     <MESSAGE value="Removed non-taiko and non-standard maps from taiko view." />
     <MESSAGE value="Fixed taiko :/" />
     <MESSAGE value="Trying once again:&#10;- Removed non-standard non-taiko maps from taiko listing." />
@@ -937,7 +940,8 @@
     <MESSAGE value="Removed voting buttons for already done charts." />
     <MESSAGE value="Changed the way results are shown." />
     <MESSAGE value="Added csv output" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added csv output" />
+    <MESSAGE value="Fixed wrong route." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed wrong route." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1163,13 +1167,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/UsersController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="31" selection-start="951" selection-end="951" vertical-scroll-proportion="34.76923" vertical-offset="1550" max-vertical-offset="2448">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/charts/view.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="18" selection-start="613" selection-end="613" vertical-scroll-proportion="-9.846154" vertical-offset="50" max-vertical-offset="578">
@@ -1212,16 +1209,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/ChartsController.php">
+    <entry file="file://$PROJECT_DIR$/app/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="107" column="76" selection-start="4109" selection-end="4109" vertical-scroll-proportion="-42.53846" vertical-offset="713" max-vertical-offset="3893">
+        <state line="76" column="55" selection-start="2297" selection-end="2297" vertical-scroll-proportion="-14.923077" vertical-offset="904" max-vertical-offset="1445">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes.php">
+    <entry file="file://$PROJECT_DIR$/app/controllers/UsersController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="55" selection-start="2297" selection-end="2297" vertical-scroll-proportion="0.8798521" vertical-offset="816" max-vertical-offset="1445">
+        <state line="38" column="31" selection-start="951" selection-end="951" vertical-scroll-proportion="34.76923" vertical-offset="1550" max-vertical-offset="2448">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/ChartsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="107" column="126" selection-start="4159" selection-end="4159" vertical-scroll-proportion="0.6458333" vertical-offset="1478" max-vertical-offset="3893">
           <folding />
         </state>
       </provider>
