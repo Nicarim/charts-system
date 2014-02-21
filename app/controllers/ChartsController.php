@@ -112,7 +112,7 @@ class ChartsController extends BaseController {
                   "Content-Disposition" => 'attachment; filename="ExportVotes.csv"'
                 );
 
-                return Response::make(rtrim($csvoutput,"\n"), 200, $headers);
+                return Response::make(rtrim(implode('\n',$csvoutput),'\n'), 200, $headers);
             }
         }
         else
