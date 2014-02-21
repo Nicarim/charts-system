@@ -104,7 +104,7 @@ class ChartsController extends BaseController {
             }elseif ($csv == "csv" && Auth::user()->isAdmin()){
                 $csvoutput = array();
                 $csvoutput[] = "artist,title,creator,mapset_id,vote_amount,vote_names";
-                $beatmapsvar = str_replace('"',"'",$beatmapsvar);
+                $beatmapsvar = str_replace("\"","'",$beatmapsvar);
                 foreach ($beatmapsvar as $beatmap)
                 {
                     $csvoutput[] = '"'.$beatmap['artist'].'","'.$beatmap['title'].'","'.$beatmap['creator'].'",'.$beatmap['mapset_id'].','.$beatmap['votes'].',"'.$beatmap['vote_names'].'"';
