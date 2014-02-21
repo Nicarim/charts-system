@@ -16,7 +16,7 @@
     @foreach ($beatmapslist as $key => $beatmap)
     <tr>
         <td>{{$key+1}}</td>
-        <td>{{$beatmap['name']}}</td>
+        <td>{{$beatmap['artist']." - ".$beatmap['title']." by".$beatmap['creator']}}</td>
         <td>{{$beatmap['votes']}}</td>
     </tr>
     @endforeach

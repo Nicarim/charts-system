@@ -59,7 +59,7 @@ class ChartsController extends BaseController {
                 ));
         }
     }
-    public function ViewResults($id,$mode="osu"){
+    public function ViewResults($id,$mode="osu",$csv=null){
         $beatmaps = Beatmap::where("chart_id","=",$id)->get();
         $chart = Chart::find($id);
         if (strtotime($chart->end_time) <= time() || Auth::user()->isAdmin())
@@ -67,7 +67,10 @@ class ChartsController extends BaseController {
             $beatmapsvar = array();
             foreach($beatmaps as $beatmap){
                 $beatmapsvar[] = array(
-                    "name" => $beatmap->artist." - ".$beatmap->title." by ".$beatmap->creator,
+
+                    "artist" => $beatmap->artist,
+                    "title" => $beatmap->title,
+                    "creator" => $beatmap->creator,
                     "votes" => $beatmap->votes()->mode($this->gamemode[$mode])->count()
                 );
             }
