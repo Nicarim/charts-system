@@ -65,7 +65,7 @@ Route::group(
         Route::get('/charts/vote/add/{beatmap}/{chart}/{mode}', 'ChartsController@addVote');
         Route::get('/charts/vote/remove/{vote}','ChartsController@removeVote');
         Route::post('/users/pass', 'UsersController@ChangePass');
-        Route::get("/charts/view/{id}/{mode?}/{csv?}", 'ChartsController@ViewVoting');
+        Route::get("/charts/view/{id}/{mode?}", 'ChartsController@ViewVoting');
         Route::get(
             "/logout",
             function () {
@@ -74,6 +74,6 @@ Route::group(
                 return Redirect::route("home");
             }
         );
-        Route::get('/charts/results/{id}/{mode?}','ChartsController@ViewResults');
+        Route::get('/charts/results/{id}/{mode?}/{csv?}','ChartsController@ViewResults');
     }
 );
