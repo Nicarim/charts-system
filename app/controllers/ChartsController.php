@@ -69,7 +69,8 @@ class ChartsController extends BaseController {
                 $votenames = array();
                 foreach($beatmap->votes as $vote)
                 {
-                    $votenames[] = $vote->user->username;
+                    if ($vote->gamemode == $this->gamemode[$mode])
+                        $votenames[] = $vote->user->username;
                 }
                 $beatmapsvar[] = array(
                     "mapset_id" => $beatmap->beatmapset_id,
