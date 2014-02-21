@@ -66,12 +66,18 @@ class ChartsController extends BaseController {
         {
             $beatmapsvar = array();
             foreach($beatmaps as $beatmap){
+                $votenames = array();
+                foreach($beatmap->votes as $vote)
+                {
+                    $votenames[] = $vote->user->username;
+                }
                 $beatmapsvar[] = array(
-
+                    "mapset_id" => $beatmap->beatmapset_id,
                     "artist" => $beatmap->artist,
                     "title" => $beatmap->title,
                     "creator" => $beatmap->creator,
-                    "votes" => $beatmap->votes()->mode($this->gamemode[$mode])->count()
+                    "votes" => $beatmap->votes()->mode($this->gamemode[$mode])->count(),
+                    "vote_names" => implode(",",$votenames)
                 );
             }
             $sortArray = array();
@@ -87,11 +93,27 @@ class ChartsController extends BaseController {
             $orderby = "votes"; //variable to sort by
 
             array_multisort($sortArray[$orderby],SORT_DESC,$beatmapsvar);
-            return View::make('charts/results')->with(array(
-                    "id" => $id,
-                    "mode" => $this->gamemode[$mode],
-                    "beatmapslist" => $beatmapsvar
-                ));
+            if($csv == null)
+            {
+                return View::make('charts/results')->with(array(
+                        "id" => $id,
+                        "mode" => $this->gamemode[$mode],
+                        "beatmapslist" => $beatmapsvar
+                    ));
+            }elseif ($csv == "csv" && Auth::user()->isAdmin()){
+                $csvoutput = array();
+                $csvoutput[] = "artist,title,creator,mapset_id,vote_amount,vote_names";
+                foreach ($beatmapsvar as $beatmap)
+                {
+                    $csvoutput[] = '"'.$beatmap->artist.'","'.$beatmap->title.'","'.$beatmap->creator.'",'.$beatmap->beatmapset_id.','.$beatmap->votes.',"'.$beatmap->vote_names.'"';
+                }
+                $headers = array(
+                  "Content-Type" => "text/csv",
+                  "Content-Disposition" => 'attachment; filename="ExportVotes.csv"'
+                );
+
+                return Response::make(rtrim($csvoutput,"\n"), 200, $headers);
+            }
         }
         else
             return Redirect::to("/");
