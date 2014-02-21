@@ -29,7 +29,7 @@
       <file leaf-file-name="ChartsController.php" pinned="true" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/ChartsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="76" column="49" selection-start="2811" selection-end="2811" vertical-scroll-proportion="0.80492425" vertical-offset="867" max-vertical-offset="3910">
+            <state line="108" column="123" selection-start="4227" selection-end="4227" vertical-scroll-proportion="0.48295453" vertical-offset="1581" max-vertical-offset="3910">
               <folding />
             </state>
           </provider>
@@ -870,7 +870,11 @@
       <created>1392993377498</created>
       <updated>1392993377499</updated>
     </task>
-    <option name="localTasksCounter" value="92" />
+    <task id="LOCAL-00092" summary="Fixed results returned for wrong gamemode (counted all before)">
+      <created>1392993710393</created>
+      <updated>1392993710393</updated>
+    </task>
+    <option name="localTasksCounter" value="93" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -932,7 +936,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Trying once again:&#10;- Removed non-standard non-modespecific maps from listing for these modes.&#10;" />
     <MESSAGE value="Added experimental support for results." />
     <MESSAGE value="Fixed typo in view." />
     <MESSAGE value="Tried to fix beatmap results list." />
@@ -957,7 +960,8 @@
     <MESSAGE value="Fixed wrong addressing of array (oh god i suck at programming)" />
     <MESSAGE value="Fixed array instead of string to output" />
     <MESSAGE value="Fixed new lines (wtf php)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed new lines (wtf php)" />
+    <MESSAGE value="Fixed results returned for wrong gamemode (counted all before)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed results returned for wrong gamemode (counted all before)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1241,7 +1245,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/ChartsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="49" selection-start="2811" selection-end="2811" vertical-scroll-proportion="0.80492425" vertical-offset="867" max-vertical-offset="3910">
+        <state line="108" column="123" selection-start="4227" selection-end="4227" vertical-scroll-proportion="0.48295453" vertical-offset="1581" max-vertical-offset="3910">
           <folding />
         </state>
       </provider>
