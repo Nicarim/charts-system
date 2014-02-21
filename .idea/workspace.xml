@@ -29,7 +29,7 @@
       <file leaf-file-name="ChartsController.php" pinned="true" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/ChartsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="114" column="69" selection-start="4496" selection-end="4496" vertical-scroll-proportion="0.4848485" vertical-offset="1682" max-vertical-offset="3893">
+            <state line="110" column="47" selection-start="4322" selection-end="4322" vertical-scroll-proportion="0.6458333" vertical-offset="1529" max-vertical-offset="3893">
               <folding />
             </state>
           </provider>
@@ -862,7 +862,11 @@
       <created>1392993041234</created>
       <updated>1392993041235</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00090" summary="Fixed array instead of string to output">
+      <created>1392993148682</created>
+      <updated>1392993148682</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -924,7 +928,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Trying once again:&#10;- Removed non-standard non-taiko maps from taiko listing." />
     <MESSAGE value="Trying once again:&#10;- Removed non-standard non-taiko maps from taiko listing.&#10;" />
     <MESSAGE value="Trying once again:&#10;- Removed non-standard non-modespecific maps from listing for these modes.&#10;" />
     <MESSAGE value="Added experimental support for results." />
@@ -949,7 +952,8 @@
     <MESSAGE value="Fixed wrong route." />
     <MESSAGE value="Fixed wrong route.&#10;" />
     <MESSAGE value="Fixed wrong addressing of array (oh god i suck at programming)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed wrong addressing of array (oh god i suck at programming)" />
+    <MESSAGE value="Fixed array instead of string to output" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed array instead of string to output" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1233,7 +1237,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/ChartsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="114" column="69" selection-start="4496" selection-end="4496" vertical-scroll-proportion="0.4848485" vertical-offset="1682" max-vertical-offset="3893">
+        <state line="110" column="47" selection-start="4322" selection-end="4322" vertical-scroll-proportion="0.6458333" vertical-offset="1529" max-vertical-offset="3893">
           <folding />
         </state>
       </provider>
