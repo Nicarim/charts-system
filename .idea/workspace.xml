@@ -29,7 +29,7 @@
       <file leaf-file-name="ChartsController.php" pinned="true" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/ChartsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="123" column="74" selection-start="5025" selection-end="5025" vertical-scroll-proportion="0.23106061" vertical-offset="1969" max-vertical-offset="4165">
+            <state line="123" column="32" selection-start="4983" selection-end="4983" vertical-scroll-proportion="0.5208333" vertical-offset="1816" max-vertical-offset="4165">
               <folding />
             </state>
           </provider>
@@ -826,7 +826,11 @@
       <created>1393086508171</created>
       <updated>1393086508171</updated>
     </task>
-    <option name="localTasksCounter" value="101" />
+    <task id="LOCAL-00101" summary="csv for votes count for each user.&#10;">
+      <created>1393087252348</created>
+      <updated>1393087252348</updated>
+    </task>
+    <option name="localTasksCounter" value="102" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1197,7 +1201,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/ChartsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="123" column="74" selection-start="5025" selection-end="5025" vertical-scroll-proportion="0.23106061" vertical-offset="1969" max-vertical-offset="4165">
+        <state line="123" column="32" selection-start="4983" selection-end="4983" vertical-scroll-proportion="0.5208333" vertical-offset="1816" max-vertical-offset="4165">
           <folding />
         </state>
       </provider>

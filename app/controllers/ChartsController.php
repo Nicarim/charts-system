@@ -121,7 +121,7 @@ class ChartsController extends BaseController {
                 $csvoutput[] = "playername,votes_amount";
                 $users = User::all();
                 foreach($users as $user){
-                    $csvoutput = "\"".$user->username."\",".$user->votes()->where("chart_id","=",$chart->id)->count();
+                    $csvoutput[] = "\"".$user->username."\",".$user->votes()->where("chart_id","=",$chart->id)->count();
                 }
                 $headers = array(
                     "Content-Type" => "text/csv",
