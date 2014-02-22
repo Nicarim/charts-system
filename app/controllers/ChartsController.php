@@ -118,10 +118,10 @@ class ChartsController extends BaseController {
                 return Response::make(rtrim(implode("\n",$csvoutput),"\n"), 200, $headers);
             }elseif ($csv == "users_csv" && Auth::user()->isAdmin()){
                 $csvoutput = array();
-                $csvoutput[] = "playername,votes_amount";
+                $csvoutput[] = "playername,group,votes_amount";
                 $users = User::all();
                 foreach($users as $user){
-                    $csvoutput[] = "\"".$user->username."\",".$user->votes()->where("chart_id","=",$chart->id)->count();
+                    $csvoutput[] = "\"".$user->username."\",\"".strtoupper($user->team)."\"".$user->votes()->where("chart_id","=",$chart->id)->count();
                 }
                 $headers = array(
                     "Content-Type" => "text/csv",
