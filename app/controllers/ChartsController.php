@@ -102,7 +102,7 @@ class ChartsController extends BaseController {
                         "mode" => $mode,
                         "beatmapslist" => $beatmapsvar
                     ));
-            }elseif ($csv == "csv" && Auth::user()->isAdmin()){
+            }elseif ($csv == "maps_csv" && Auth::user()->isAdmin()){
                 $csvoutput = array();
                 $csvoutput[] = "artist,title,creator,mapset_id,vote_amount,vote_names";
                 $beatmapsvar = str_replace("\"","'",$beatmapsvar);
@@ -113,6 +113,19 @@ class ChartsController extends BaseController {
                 $headers = array(
                   "Content-Type" => "text/csv",
                   "Content-Disposition" => 'attachment; filename="ExportVotes.csv"'
+                );
+
+                return Response::make(rtrim(implode("\n",$csvoutput),"\n"), 200, $headers);
+            }elseif ($csv == "users_csv" && Auth::user()->isAdmin()){
+                $csvoutput = array();
+                $csvoutput[] = "playername,votes_amount";
+                $users = User::all();
+                foreach($users as $user){
+                    $csvoutput = "\"".$user->username."\",".$user->ChartVotes($chart->id)->count();
+                }
+                $headers = array(
+                    "Content-Type" => "text/csv",
+                    "Content-Disposition" => 'attachment; filename="ExportUserVotes.csv"'
                 );
 
                 return Response::make(rtrim(implode("\n",$csvoutput),"\n"), 200, $headers);
