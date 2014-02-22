@@ -4,7 +4,6 @@
     <list default="true" id="ed63836d-738c-4746-a9e7-161be9a0bde1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/ChartsController.php" afterPath="$PROJECT_DIR$/app/controllers/ChartsController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/User.php" afterPath="$PROJECT_DIR$/app/models/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/charts/results.blade.php" afterPath="$PROJECT_DIR$/app/views/charts/results.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="laravel.iws" />
@@ -28,10 +27,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ChartsController.php" pinned="true" current="false" current-in-tab="false">
+      <file leaf-file-name="ChartsController.php" pinned="true" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/ChartsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="127" column="78" selection-start="5231" selection-end="5231" vertical-scroll-proportion="-17.115385" vertical-offset="1714" max-vertical-offset="4165">
+            <state line="120" column="57" selection-start="4870" selection-end="4870" vertical-scroll-proportion="0.23106061" vertical-offset="1918" max-vertical-offset="4165">
               <folding />
             </state>
           </provider>
@@ -40,7 +39,7 @@
       <file leaf-file-name="User.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="98" column="0" selection-start="1999" selection-end="1999" vertical-scroll-proportion="-13.692307" vertical-offset="1293" max-vertical-offset="1836">
+            <state line="97" column="5" selection-start="1998" selection-end="1998" vertical-scroll-proportion="-54.807693" vertical-offset="207" max-vertical-offset="1768">
               <folding />
             </state>
           </provider>
@@ -100,10 +99,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="results.blade.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="results.blade.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/charts/results.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="96" selection-start="656" selection-end="656" vertical-scroll-proportion="0.28867924" vertical-offset="0" max-vertical-offset="530">
+            <state line="9" column="96" selection-start="656" selection-end="656" vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="510">
               <folding />
             </state>
           </provider>
@@ -175,9 +174,9 @@
         <option value="$PROJECT_DIR$/public/js/main.js" />
         <option value="$PROJECT_DIR$/app/views/charts/vote.blade.php" />
         <option value="$PROJECT_DIR$/app/routes.php" />
-        <option value="$PROJECT_DIR$/app/models/User.php" />
-        <option value="$PROJECT_DIR$/app/controllers/ChartsController.php" />
         <option value="$PROJECT_DIR$/app/views/charts/results.blade.php" />
+        <option value="$PROJECT_DIR$/app/controllers/ChartsController.php" />
+        <option value="$PROJECT_DIR$/app/models/User.php" />
       </list>
     </option>
   </component>
@@ -820,7 +819,11 @@
       <created>1393000407931</created>
       <updated>1393000407931</updated>
     </task>
-    <option name="localTasksCounter" value="99" />
+    <task id="LOCAL-00099" summary="csv for votes count for each user.">
+      <created>1393086175708</created>
+      <updated>1393086175708</updated>
+    </task>
+    <option name="localTasksCounter" value="100" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -847,6 +850,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32247558" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32415903" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277439" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -862,7 +866,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32810047" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -882,7 +885,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="WRONG FILE LOL&#10;" />
     <MESSAGE value="Thanks chitose, fixed probably result list." />
     <MESSAGE value="Attempt to fix results." />
     <MESSAGE value="Attempt to fix results.&#10;" />
@@ -907,7 +909,8 @@
     <MESSAGE value="Fixed results for maps containing ' &quot; '&#10;" />
     <MESSAGE value="Added link for csv of results." />
     <MESSAGE value="Added link for csv of results.&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added link for csv of results.&#10;" />
+    <MESSAGE value="csv for votes count for each user." />
+    <option name="LAST_COMMIT_MESSAGE" value="csv for votes count for each user." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1175,23 +1178,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/ChartsController.php">
+    <entry file="file://$PROJECT_DIR$/app/views/charts/results.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="127" column="78" selection-start="5231" selection-end="5231" vertical-scroll-proportion="-17.115385" vertical-offset="1714" max-vertical-offset="4165">
+        <state line="9" column="96" selection-start="656" selection-end="656" vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="510">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="0" selection-start="1999" selection-end="1999" vertical-scroll-proportion="-13.692307" vertical-offset="1293" max-vertical-offset="1836">
+        <state line="97" column="5" selection-start="1998" selection-end="1998" vertical-scroll-proportion="-54.807693" vertical-offset="207" max-vertical-offset="1768">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/charts/results.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/controllers/ChartsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="96" selection-start="656" selection-end="656" vertical-scroll-proportion="0.28867924" vertical-offset="0" max-vertical-offset="530">
+        <state line="120" column="57" selection-start="4870" selection-end="4870" vertical-scroll-proportion="0.23106061" vertical-offset="1918" max-vertical-offset="4165">
           <folding />
         </state>
       </provider>

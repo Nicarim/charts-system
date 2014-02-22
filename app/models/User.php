@@ -96,8 +96,4 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
     public function getReminderEmail() {
         return $this->email;
     }
-
-    public function scopeChartVotes($query, $chart_id){
-        return $query->hasMany("Vote")->where("chart_id","=",$chart_id);
-    }
 }
