@@ -29,7 +29,7 @@
       <file leaf-file-name="ChartsController.php" pinned="true" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/ChartsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="43" selection-start="2408" selection-end="2408" vertical-scroll-proportion="0.22537878" vertical-offset="1020" max-vertical-offset="4165">
+            <state line="74" column="51" selection-start="2683" selection-end="2683" vertical-scroll-proportion="0.61174244" vertical-offset="935" max-vertical-offset="4267">
               <folding />
             </state>
           </provider>
@@ -842,7 +842,11 @@
       <created>1393087993872</created>
       <updated>1393087993872</updated>
     </task>
-    <option name="localTasksCounter" value="105" />
+    <task id="LOCAL-00105" summary="Attempt to fix strange error for results.">
+      <created>1393254279148</created>
+      <updated>1393254279148</updated>
+    </task>
+    <option name="localTasksCounter" value="106" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -869,6 +873,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32247558" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32415903" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277439" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -884,7 +889,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32810047" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -904,7 +908,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Attempt to fix results." />
     <MESSAGE value="Attempt to fix results.&#10;" />
     <MESSAGE value="Fixed vote model." />
     <MESSAGE value="Trying to fix critical bug, which allows access to admin-level functions" />
@@ -929,7 +932,8 @@
     <MESSAGE value="Added link for csv of results.&#10;" />
     <MESSAGE value="csv for votes count for each user." />
     <MESSAGE value="csv for votes count for each user.&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="csv for votes count for each user.&#10;" />
+    <MESSAGE value="Attempt to fix strange error for results." />
+    <option name="LAST_COMMIT_MESSAGE" value="Attempt to fix strange error for results." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1207,7 +1211,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/ChartsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="43" selection-start="2408" selection-end="2408" vertical-scroll-proportion="0.22537878" vertical-offset="1020" max-vertical-offset="4165">
+        <state line="74" column="51" selection-start="2683" selection-end="2683" vertical-scroll-proportion="0.61174244" vertical-offset="935" max-vertical-offset="4267">
           <folding />
         </state>
       </provider>
