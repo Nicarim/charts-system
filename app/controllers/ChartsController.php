@@ -208,7 +208,6 @@ class ChartsController extends BaseController {
     }
     public function addVote($beatmap, $chart, $mode){
         $chartmodel = Chart::find($chart);
-        $vote_id = 0;
         $votes = Vote::where("user_id", "=", Auth::user()->id)->where("gamemode", "=", $this->gamemode[$mode])->where("chart_id","=",$chart)->count();
         if (strtotime($chartmodel->end_time) >= time())
         {
@@ -289,7 +288,6 @@ class ChartsController extends BaseController {
             $beatmap->version = $jsondata[0]->version;
             $beatmap->beatmap_id = $jsondata[0]->beatmap_id;
             $mode = $beatmap->mode;
-            return $mode;
             if ($mode == "0"){
                 $beatmap->osumode = 1;
             }
