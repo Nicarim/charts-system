@@ -62,6 +62,10 @@ Route::group(
                 return View::make('manage/password');
             }
         );
+        Route::get('/charts/add_specific', function () {
+                return View::make('charts/add-specific');
+            }
+        );
         Route::get('/charts/vote/add/{beatmap}/{chart}/{mode}', 'ChartsController@addVote');
         Route::get('/charts/vote/remove/{vote}','ChartsController@removeVote');
         Route::post('/users/pass', 'UsersController@ChangePass');
