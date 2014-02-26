@@ -38,16 +38,16 @@
         <td><a href="https://osu.ppy.sh/s/{{$map->beatmapset_id}}" target="blank"> {{$map->artist}} - {{$map->title}} by {{$map->creator}} [{{$map->version}}]</a></td>
         <td>{{ucfirst($map->forcedmod)}}</td>
         <td>
-            <b class="osu {{{ !$map->osumode ? 'off' : '' }}}"></b>
+            <b class=" {{{ !$map->osumode ? 'off' : 'osu' }}}"></b>
         </td>
         <td>
-            <b class="taiko {{{ !$map->taikomode ? 'off' : '' }}}"></b>
+            <b class=" {{{ !$map->taikomode ? 'off' : 'taiko' }}}"></b>
         </td>
         <td>
-            <b class="ctb {{{ !$map->ctbmode ? 'off' : '' }}}"></b>
+            <b class=" {{{ !$map->ctbmode ? 'off' : 'ctb' }}}"></b>
         </td>
         <td>
-            <b class="mania {{{ !$map->maniamode ? 'off' : '' }}}"></b>
+            <b class=" {{{ !$map->maniamode ? 'off' : 'mania' }}}"></b>
         </td>
     </tr>
     @endforeach
