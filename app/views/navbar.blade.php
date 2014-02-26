@@ -4,19 +4,12 @@
         <ul class="nav navbar-nav">
             <li><a href="/charts">View Charts</a></li>
             @if (!Auth::guest())
-            @if (Auth::user()->isAdmin())
-            <li><a href="/charts/add">Create Chart</a></li>
+                @if (Auth::user()->isAdmin())
+                    <li><a href="/charts/add">Create Vote Chart</a></li>
+                @endif
+            <li><a href="/charts/add_specific">Create Difficulty Chart</a></li>
             @endif
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Current Votes <span style="color:red">({{Chart::count()}})</span><b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                    @yield ('active-charts')
-                    @foreach(Chart::all() as $chart)
-                    <li><a href="/charts/view/{{$chart->id}}">{{$chart->name}} Chart <span style="color:green"></span> </a></li> <!-- charts -->
-                    @endforeach
-                </ul>
-            </li>
-            @endif
+
 
         </ul>
         <ul class="nav navbar-nav navbar-right">
