@@ -62,6 +62,14 @@ class ChartsController extends BaseController {
                 ));
         }
     }
+    public function ViewSpecific($id){
+        $beatmaps = Beatmap::where("chart_id","=",$id)->get();
+        $chart = Chart::find($id)->first();
+        return View::make("charts/view-specific")->with(array(
+            "chart" => $chart,
+            "maps" => $beatmaps
+        ));
+    }
     public function ViewResults($id,$mode="osu",$csv=null){
         $beatmaps = Beatmap::where("chart_id","=",$id)->get();
         $chart = Chart::find($id);
