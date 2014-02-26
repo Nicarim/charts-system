@@ -64,7 +64,7 @@ class ChartsController extends BaseController {
     }
     public function ViewSpecific($id){
         $beatmaps = Beatmap::where("chart_id","=",$id)->get();
-        $chart = Chart::find($id)->first();
+        $chart = Chart::find($id);
         return View::make("charts/view-specific")->with(array(
             "chart" => $chart,
             "maps" => $beatmaps
