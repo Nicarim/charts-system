@@ -1,19 +1,21 @@
 @extends('master')
 @section('content')
-@if (Auth::user()->id == $chart->user_id)
+@if ($chart->user_id == Auth::user()->id)
 <form class="form-inline" method="post" action="/charts/add_specificbeatmap/{{$chart->id}}">
     <div class="form-group">
         <input type="text" name="beatmapids" class="form-control" placeholder="Beatmap Ids">
     </div>
     <input type="submit" class="btn btn-default" value="Add Beatmaps">
-
 </form>
 @endif
+{{$chart->user_id}}
+<br/>
+{{Auth::user()->id}}
 <h1>{{ucfirst($chart->type)}} Chart: {{$chart->name}}</h1>
 <table class="table table-hover">
     <tr>
         <th style="width:40px;">#</th>
-        <th>Map</th>
+        <th>Maps</th>
         <th style="width:10px;"></th>
     </tr>
     @foreach($maps as $key => $map)
