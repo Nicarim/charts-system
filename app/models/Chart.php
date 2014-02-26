@@ -35,7 +35,7 @@ class Chart extends Eloquent {
     public function votes() {
         return $this->hasMany('Vote');
     }
-    public function owner(){
+    public function user(){
         return $this->belongsTo("User");
     }
 } 

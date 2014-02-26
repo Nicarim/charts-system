@@ -20,7 +20,7 @@
             <a href="/charts/view-specific/{{$chart->id}}">{{ucfirst($chart->type)}} Chart - {{$chart->name}}</a>
             @endif
         </td>
-        <td>By <b>{{$chart->owner->username}}</b></td>
+        <td>By <b>{{$chart->user->username}}</b></td>
 		<td>
             @if (!Auth::guest())
 			    @if (Auth::user()->isAdmin())
