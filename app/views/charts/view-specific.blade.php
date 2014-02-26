@@ -29,12 +29,14 @@
     <tr>
         <th style="width:40px;">#</th>
         <th>Maps</th>
+        <th>Forced Mod</th>
         <th style="width:10px;"></th>
     </tr>
     @foreach($maps as $key => $map)
     <tr>
         <td>{{$key+1}}</td>
         <td><a href="https://osu.ppy.sh/s/{{$map->beatmapset_id}}" target="blank"> {{$map->artist}} - {{$map->title}} by {{$map->creator}} [{{$map->version}}]</a></td>
+        <td>{{ucfirst($map->forcedmod)}}</td>
         <td>
             <b class="osu {{{ !$map->osumode ? 'off' : '' }}}"></b>
         </td>
