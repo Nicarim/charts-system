@@ -153,6 +153,7 @@ class ChartsController extends BaseController {
         $chart->user_id = Auth::user()->id;
         $chart->name = $data['name'];
         $chart->type = $data['type'];
+        $chart->creation_type = "Diff-specific";
         $chart->max_votes = 0;
         $chart->save();
     }
