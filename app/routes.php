@@ -9,7 +9,10 @@ Route::get(
         }
     )
 );
-Route::get("/charts/list/{status?}", 'ChartsController@View');
+Route::get("/charts/list/{status?}", array(
+    "uses" => 'ChartsController@View',
+    "as" => 'listing'
+));
 
 Route::group(
     array('before' => 'access'),

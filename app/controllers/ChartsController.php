@@ -187,7 +187,7 @@ class ChartsController extends BaseController {
             }
 		}
 		$chart->delete();
-        return Redirect::to("/charts");
+        return Redirect::route("listing");
 	}
     public function View($status = -1) {
         if($status == -1)
