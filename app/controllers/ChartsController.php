@@ -253,6 +253,11 @@ class ChartsController extends BaseController {
         return Redirect::to('/charts/view-specific/'.$id);
 
     }
+    public function RemoveSpecificBeatmap($id){
+        $beatmap = Beatmap::find($id);
+        $beatmap->delete();
+        return Redirect::back();
+    }
     private function AddBeatmapModel ($beatmapid, $chartid, $type=0, $forcedmod="freemod"){
         $beatmap = new Beatmap;
 
