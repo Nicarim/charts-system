@@ -15,9 +15,9 @@
         <td>{{$key+1}}</td>
         <td>
             @if($chart->creation_type == "Voting")
-            <a href="/charts/view/{{$chart->id}}">{{ucfirst($chart->type)}} Chart - {{$chart->name}}</a>
+            <b>{{ucfirst($chart->type)}} Chart - </b><a href="/charts/view/{{$chart->id}}">{{$chart->name}}</a>
             @elseif ($chart->creation_type == "Diff-specific")
-            <a href="/charts/view-specific/{{$chart->id}}">{{ucfirst($chart->type)}} Chart - {{$chart->name}}</a>
+            <b>{{ucfirst($chart->type)}} Chart - </b><a href="/charts/view-specific/{{$chart->id}}">{{$chart->name}}</a>
             @endif
         </td>
         <td>By <b>{{$chart->user->username}}</b></td>
@@ -30,7 +30,9 @@
 		</td>
         <td>{{$chart->creation_type}}</td>
         <td>
-            @if ($chart->status == 1)
+            @if ($chart->status == 0)
+
+            @elseif ($chart->status == 1)
                 <b>Pending</b>
             @elseif ($chart->status == 2)
                 <b>Nominated</b>
