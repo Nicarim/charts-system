@@ -248,12 +248,12 @@ class ChartsController extends BaseController {
         $data = Input::get("beatmapids");
         $beatmaps = explode(',',$data);
         foreach($beatmaps as $beatmap){
-            $this->AddBeatmapModel($beatmap, $id, 1);
+            $this->AddBeatmapModel($beatmap, $id, 1, Input::get("mod"));
         }
         return Redirect::to('/charts/view-specific/'.$id);
 
     }
-    private function AddBeatmapModel ($beatmapid, $chartid, $type=0){
+    private function AddBeatmapModel ($beatmapid, $chartid, $type=0, $forcedmod="freemod"){
         $beatmap = new Beatmap;
 
         if ($type == 0)
@@ -300,8 +300,9 @@ class ChartsController extends BaseController {
             if ($mode == "3"){
                 $beatmap->maniamode = 1;
             }
-
+            $beatmap->forcedmod = $forcedmod;
         }
+
 
 
         $beatmap->save();

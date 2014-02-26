@@ -5,12 +5,25 @@
     <div class="form-group">
         <input type="text" name="beatmapids" class="form-control" placeholder="Beatmap Ids">
     </div>
+    <div class="form-group">
+        <label for="freemod">FreeMod</label>
+        <input id="freemod" type="radio" name="mod" class="radio-inline" value="freemod"/>
+        <label for="easy">Easy</label>
+        <input id="easy" type="radio" name="mod" class="radio-inline" value="easy"/>
+        <label for="halftime">HalfTime</label>
+        <input id="halftime" type="radio" name="mod" class="radio-inline" value="halftime"/>
+        <label for="hardrock">Hardrock</label>
+        <input id="hardrock" type="radio" name="mod" class="radio-inline" value="hardrock"/>
+        <label for="doubletime">DoubleTime</label>
+        <input id="doubletime" type="radio" name="mod" class="radio-inline" value="doubletime"/>
+        <label for="hidden">Hidden</label>
+        <input id="hidden" type="radio" name="mod" class="radio-inline" value="hidden"/>
+        <label for="flashlight">Flashlight</label>
+        <input id="flashlight" type="radio" name="mod" class="radio-inline" value="flashlight"/>
+    </div>
     <input type="submit" class="btn btn-default" value="Add Beatmaps">
 </form>
 @endif
-{{$chart->user_id}}
-<br/>
-{{Auth::user()->id}}
 <h1>{{ucfirst($chart->type)}} Chart: {{$chart->name}}</h1>
 <table class="table table-hover">
     <tr>
