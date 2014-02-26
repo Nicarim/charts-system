@@ -237,13 +237,22 @@ class ChartsController extends BaseController {
         }
         return Redirect::to("/charts/view/".$id);
     }
+    public function AddSpecificBeatmap($id){
+        $data = Input::get("beatmapids");
+        $beatmaps = explode(',',$data);
+        foreach($beatmaps as $beatmap){
+            $this->AddBeatmapModel($beatmap, $id, 1);
+        }
+        return Redirect::to('/charts/view-specific/'.$id);
+
+    }
     private function AddBeatmapModel ($beatmapid, $chartid, $type=0){
         $beatmap = new Beatmap;
 
         if ($type == 0)
             $jsondata = json_decode(file_get_contents("https://osu.ppy.sh/api/get_beatmaps?k=".$this->apikey."&s=".$beatmapid));
         elseif ($type == 1)
-            $jsondata = json_decode(file_get_contents("https://osu.ppy.sh/api/get_beatmaps?k=".$this->apikey."&s=".$beatmapid));
+            $jsondata = json_decode(file_get_contents("https://osu.ppy.sh/api/get_beatmaps?k=".$this->apikey."&b=".$beatmapid));
 
         $beatmap->beatmapset_id = $jsondata[0]->beatmapset_id;
         $beatmap->artist = $jsondata[0]->artist;

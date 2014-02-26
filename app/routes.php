@@ -73,6 +73,8 @@ Route::group(
         Route::get('/charts/vote/add/{beatmap}/{chart}/{mode}', 'ChartsController@addVote');
         Route::get('/charts/vote/remove/{vote}','ChartsController@removeVote');
         Route::post('/users/pass', 'UsersController@ChangePass');
+        Route::get('/charts/view-specific/{id}', 'ChartsController@ViewSpecific');
+        Route::post('/charts/add_specific-beatmap/{id}', 'ChartsController@AddSpecificBeatmap');
         Route::get("/charts/view/{id}/{mode?}", 'ChartsController@ViewVoting');
         Route::get(
             "/logout",
