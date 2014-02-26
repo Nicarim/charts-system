@@ -289,16 +289,16 @@ class ChartsController extends BaseController {
             $beatmap->version = $jsondata[0]->version;
             $beatmap->beatmap_id = $jsondata[0]->beatmap_id;
             $mode = $beatmap->mode;
-            if ($mode->mode == "0"){
+            if ($mode == "0"){
                 $beatmap->osumode = 1;
             }
-            if ($mode->mode == "1"){
+            if ($mode == "1"){
                 $beatmap->taikomode = 1;
             }
-            if ($mode->mode == "2"){
+            if ($mode == "2"){
                 $beatmap->ctbmode = 1;
             }
-            if ($mode->mode == "3"){
+            if ($mode == "3"){
                 $beatmap->maniamode = 1;
             }
 
