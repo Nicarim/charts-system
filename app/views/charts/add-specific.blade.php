@@ -1,8 +1,6 @@
-
 @extends('master')
 
 @section('content')
-
 <h1>Create new difficulty chart!</h1>
 <div class="input-group">
     <form role="form" name="input" method="post">
