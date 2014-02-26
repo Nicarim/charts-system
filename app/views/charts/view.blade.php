@@ -6,6 +6,7 @@
         <th style="width:40px">#</th>
         <th>Chart name</th>
 		<th></th>
+		<th>Type</th>
         <th>Status</th>
     </tr>
     @foreach ($charts as $key => $chart)
@@ -19,7 +20,16 @@
 			    @endif
             @endif
 		</td>
-        <td></td>
+        <td>{{$chart->creation_type}}</td>
+        <td>
+            @if ($chart->status == 1)
+                <b>Pending</b>
+            @elseif ($chart->status == 2)
+                <b>Nominated</b>
+            @elseif ($chart->status == 3)
+                <b>Approved</b>
+            @endif
+        </td>
     </tr>
     @endforeach
 </table>

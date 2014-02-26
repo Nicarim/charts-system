@@ -1,7 +1,7 @@
 @extends('master')
 
 @section('content')
-<h1>Create new chart!</h1>
+<h1>Create new vote chart!</h1>
 <div class="input-group">
     <form role="form" name="input" method="post">
         <div class="form-group">
@@ -34,6 +34,7 @@
         <div class="form-group">
             <button type="submit" class="btn btn-default">Add</button>
         </div>
+        <input type="hidden" name="charttype" value="0"/>
     </form>
 </div>
 @stop

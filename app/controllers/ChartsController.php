@@ -221,15 +221,41 @@ class ChartsController extends BaseController {
         }
         return Redirect::to("/charts/view/".$id);
     }
-    private function AddBeatmapModel ($beatmapid, $chartid){
+    private function AddBeatmapModel ($beatmapid, $chartid, $type=0){
         $beatmap = new Beatmap;
-        $jsondata = json_decode(file_get_contents("https://osu.ppy.sh/api/get_beatmaps?k=".$this->apikey."&s=".$beatmapid));
+
+        if ($type == 0)
+            $jsondata = json_decode(file_get_contents("https://osu.ppy.sh/api/get_beatmaps?k=".$this->apikey."&s=".$beatmapid));
+        elseif ($type == 1)
+            $jsondata = json_decode(file_get_contents("https://osu.ppy.sh/api/get_beatmaps?k=".$this->apikey."&s=".$beatmapid));
+
         $beatmap->beatmapset_id = $jsondata[0]->beatmapset_id;
         $beatmap->artist = $jsondata[0]->artist;
         $beatmap->title = $jsondata[0]->title;
         $beatmap->creator = $jsondata[0]->creator;
         $beatmap->chart_id = $chartid;
-        foreach($jsondata as $mode){
+        if ($type == 0)
+        {
+            foreach($jsondata as $mode){
+                if ($mode->mode == "0"){
+                    $beatmap->osumode = 1;
+                }
+                if ($mode->mode == "1"){
+                    $beatmap->taikomode = 1;
+                }
+                if ($mode->mode == "2"){
+                    $beatmap->ctbmode = 1;
+                }
+                if ($mode->mode == "3"){
+                    $beatmap->maniamode = 1;
+                }
+            }
+        }
+        elseif ($type == 1)
+        {
+            $beatmap->version = $jsondata[0]->version;
+            $beatmap->beatmap_id = $jsondata[0]->beatmap_id;
+            $mode = $beatmap->mode;
             if ($mode->mode == "0"){
                 $beatmap->osumode = 1;
             }
@@ -242,7 +268,10 @@ class ChartsController extends BaseController {
             if ($mode->mode == "3"){
                 $beatmap->maniamode = 1;
             }
+
         }
+
+
         $beatmap->save();
 
     }
