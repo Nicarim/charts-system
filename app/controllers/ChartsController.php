@@ -174,8 +174,12 @@ class ChartsController extends BaseController {
 		$chart->delete();
         return Redirect::to("/charts");
 	}
-    public function View() {
-        $charts = Chart::all();
+    public function View($status = -1) {
+        if($status == -1)
+            $charts = Chart::all();
+        else
+            $charts = Chart::where("status","=",$status);
+
         return View::make('charts/view')->with("charts",$charts);
     }
     public function addVote($beatmap, $chart, $mode){

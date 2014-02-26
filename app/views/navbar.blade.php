@@ -2,12 +2,12 @@
     <div class="container" id="bs-example-navbar-collapse-1">
         <a class="navbar-brand" href="/">Charts Management</a>
         <ul class="nav navbar-nav">
-            <li><a href="/charts">View Charts</a></li>
+            <li><a href="/charts/list">View Charts</a></li>
             @if (!Auth::guest())
                 @if (Auth::user()->isAdmin())
                     <li><a href="/charts/add">Create Vote Chart</a></li>
                 @endif
-            <li><a href="/charts/add_specific">Create Difficulty Chart</a></li>
+            <li><a href="/charts/add_specific">Create Diff-specific Chart</a></li>
             @endif
 
 
@@ -19,9 +19,9 @@
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Accounts <b class="caret"></b></a>
                 <ul class="dropdown-menu">
                     @if (Auth::user()->isAdmin())
-                    <li><a href="/users/list">List of users</a></li>
-                    <li><a href="/users/add">Add user</a></li>
-                    <li class="divider"></li>
+                        <li><a href="/users/list">List of users</a></li>
+                        <li><a href="/users/add">Add user</a></li>
+                        <li class="divider"></li>
                     @endif
                     <li><a href="/users/pass">Change Password</a></li>
                 </ul>

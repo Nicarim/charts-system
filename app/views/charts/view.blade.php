@@ -6,7 +6,7 @@
         <th style="width:40px">#</th>
         <th>Chart name</th>
 		<th></th>
-        <th style="width:40px">Votes</th>
+        <th>Status</th>
     </tr>
     @foreach ($charts as $key => $chart)
     <tr>
@@ -14,12 +14,12 @@
         <td><a href="/charts/view/{{$chart->id}}">{{ucfirst($chart->type)}} Chart - {{$chart->name}}</a></td>
 		<td>
             @if (!Auth::guest())
-			@if (Auth::user()->isAdmin())
-				<button type="button" onclick="window.location.href='/charts/delete/{{$chart->id}}'" class="btn btn-danger">Remove?</button> 
-			@endif
+			    @if (Auth::user()->isAdmin())
+				    <button type="button" onclick="window.location.href='/charts/delete/{{$chart->id}}'" class="btn btn-danger">Remove?</button>
+			    @endif
             @endif
 		</td>
-        <td><a href="/charts/results/{{$chart->id}}">{{$chart->votes->count()}}</a></td>
+        <td></td>
     </tr>
     @endforeach
 </table>
