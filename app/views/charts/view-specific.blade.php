@@ -1,6 +1,6 @@
 @extends('master')
 @section('content')
-@if (Auth::user()->id == $chart->user->id)
+@if (Auth::user()->id == $chart->user_id)
 <form class="form-inline" method="post" action="/charts/add_specificbeatmap/{{$chart->id}}">
     <div class="form-group">
         <input type="text" name="beatmapids" class="form-control" placeholder="Beatmap Ids">
