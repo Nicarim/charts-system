@@ -66,6 +66,7 @@ Route::group(
                 return View::make('charts/add-specific');
             }
         );
+        Route::post('/charts/add_specific', 'ChartsController@CreateSpecific');
         Route::get('/charts/vote/add/{beatmap}/{chart}/{mode}', 'ChartsController@addVote');
         Route::get('/charts/vote/remove/{vote}','ChartsController@removeVote');
         Route::post('/users/pass', 'UsersController@ChangePass');

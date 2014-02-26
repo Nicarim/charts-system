@@ -5,6 +5,7 @@
     <tr>
         <th style="width:40px">#</th>
         <th>Chart name</th>
+        <th>Creator</th>
 		<th></th>
 		<th>Type</th>
         <th>Status</th>
@@ -12,7 +13,14 @@
     @foreach ($charts as $key => $chart)
     <tr>
         <td>{{$key+1}}</td>
-        <td><a href="/charts/view/{{$chart->id}}">{{ucfirst($chart->type)}} Chart - {{$chart->name}}</a></td>
+        <td>
+            @if($chart->creation_type == "Voting")
+            <a href="/charts/view/{{$chart->id}}">{{ucfirst($chart->type)}} Chart - {{$chart->name}}</a>
+            @elseif ($chart->creation_type == "Diff-specific")
+            <a href="/charts/view-specific/{{$chart->id}}">{{ucfirst($chart->type)}} Chart - {{$chart->name}}</a>
+            @endif
+        </td>
+        <td>By <b>{{$chart->owner->username}}</b></td>
 		<td>
             @if (!Auth::guest())
 			    @if (Auth::user()->isAdmin())

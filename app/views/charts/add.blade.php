@@ -34,7 +34,6 @@
         <div class="form-group">
             <button type="submit" class="btn btn-default">Add</button>
         </div>
-        <input type="hidden" name="charttype" value="0"/>
     </form>
 </div>
 @stop

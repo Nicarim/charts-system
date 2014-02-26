@@ -23,6 +23,9 @@ class ChartsController extends BaseController {
             return Redirect::to('/');
         Auth::user()->touch(); //activity check
         $chart = Chart::find($id);
+        if ($chart->creation_type != "Voting")
+            return Redirect::to("/"); //Make sure you can't view non-voting charts in voting view
+
         $votes = Vote::where("gamemode", "=", $this->gamemode[$mode])->where('user_id', '=', Auth::user()->id)->where("chart_id",'=',$id)->get();
         $voteskv = array();
         foreach ($votes as $vote){
@@ -141,7 +144,18 @@ class ChartsController extends BaseController {
             return Redirect::to("/");
     }
 
-
+    public function CreateSpecific(){
+        $data = array(
+            "name" => Input::get("title"),
+            "type" => Input::get('type'),
+        );
+        $chart = new Chart;
+        $chart->user_id = Auth::user()->id;
+        $chart->name = $data['name'];
+        $chart->type = $data['type'];
+        $chart->max_votes = 0;
+        $chart->save();
+    }
     public function Create() {
         $data = array(
             "name" => Input::get("title"),

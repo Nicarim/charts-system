@@ -3,7 +3,7 @@
 @section('content')
 <h1>Create new difficulty chart!</h1>
 <div class="input-group">
-    <form <!--role="form" name="input" method="post"-->>
+    <form role="form" name="input" method="post">
         <div class="form-group">
             <label for="chart-name">Chart Name:</label>
             <input type="text" class="form-control" id="chart-name" name="title" placeholder="Input name of chart...">
@@ -19,7 +19,6 @@
         <div class="form-group">
             <button type="submit" class="btn btn-default">Create</button>
         </div>
-        <input type="hidden" name="charttype" value="1"/>
     </form>
 </div>
 @stop
