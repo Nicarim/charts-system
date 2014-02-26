@@ -156,6 +156,7 @@ class ChartsController extends BaseController {
         $chart->creation_type = "Diff-specific";
         $chart->max_votes = 0;
         $chart->save();
+        return Redirect::back();
     }
     public function Create() {
         $data = array(
