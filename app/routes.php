@@ -9,10 +9,7 @@ Route::get(
         }
     )
 );
-Route::get("/charts/list/{status?}", array(
-    "uses" => 'ChartsController@View',
-    "as" => 'listing'
-));
+
 
 Route::group(
     array('before' => 'access'),
@@ -85,5 +82,9 @@ Route::group(
             }
         );
         Route::get('/charts/results/{id}/{mode?}/{csv?}','ChartsController@ViewResults');
+        Route::get("/charts/list/{status?}", array(
+            "uses" => 'ChartsController@View',
+            "as" => 'listing'
+        ));
     }
 );
