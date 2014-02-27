@@ -245,10 +245,18 @@ class ChartsController extends BaseController {
         return Redirect::to("/charts/view/".$id);
     }
     public function AddSpecificBeatmap($id){
-        $data = Input::get("beatmapids");
-        $beatmaps = explode(',',$data);
+        $data = array(
+            "ids" => Input::get("beatmapids"),
+            "mods" => Input::get("mod")
+        );
+        $beatmaps = explode(',',$data['ids']);
         foreach($beatmaps as $beatmap){
-            $this->AddBeatmapModel($beatmap, $id, 1, Input::get("mod"));
+            $modbits = 0;
+            foreach($data['mods'] as $key => $value){
+                $modbits += $value;
+            }
+            return var_dump($modbits).var_dump($data['mods']);
+            $this->AddBeatmapModel($beatmap, $id, 1, $modbits);
         }
         return Redirect::to('/charts/view-specific/'.$id);
 
