@@ -255,7 +255,6 @@ class ChartsController extends BaseController {
             foreach($data['mods'] as $key => $value){
                 $modbits += $value;
             }
-            return var_dump($modbits).var_dump($data['mods']);
             $this->AddBeatmapModel($beatmap, $id, 1, $modbits);
         }
         return Redirect::to('/charts/view-specific/'.$id);
