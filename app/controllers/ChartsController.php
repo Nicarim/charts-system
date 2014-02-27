@@ -164,7 +164,7 @@ class ChartsController extends BaseController {
         $chart->creation_type = "Diff-specific";
         $chart->max_votes = 0;
         $chart->save();
-        return Redirect::back();
+        return Redirect::to('/charts/view-specific/'.$chart->id);
     }
     public function Create() {
         $data = array(
@@ -183,19 +183,23 @@ class ChartsController extends BaseController {
         return Redirect::to("/charts/add");
     }
 	public function Delete($id){
+
 		$chart = Chart::find($id);
-		$maps = Chart::where("chart_id", "=", $id);
-		foreach ($maps as $map)
-		{
-			$map->delete();
-            $votes = Vote::where("beatmap_id", "=", $map->id);
-            if (count($votes) > 0){
-                foreach ($votes as $vote){
-                    $vote->delete();
+        if(Auth::user()->id == $chart->user_id|| Auth::user()->isAdmin())
+        {
+            $maps = Chart::where("chart_id", "=", $id);
+            foreach ($maps as $map)
+            {
+                $map->delete();
+                $votes = Vote::where("beatmap_id", "=", $map->id);
+                if (count($votes) > 0){
+                    foreach ($votes as $vote){
+                        $vote->delete();
+                    }
                 }
             }
-		}
-		$chart->delete();
+            $chart->delete();
+        }
         return Redirect::route("listing");
 	}
     public function View($status = -1) {
@@ -249,20 +253,24 @@ class ChartsController extends BaseController {
             "ids" => Input::get("beatmapids"),
             "mods" => Input::get("mod")
         );
-        $beatmaps = explode(',',$data['ids']);
-        foreach($beatmaps as $beatmap){
-            $modbits = 0;
-            foreach($data['mods'] as $key => $value){
-                $modbits += $value;
+        $chart_userid = Chart::find($id)->user_id;
+        if ($chart_userid == Auth::user()->id || Auth::user()->isAdmin()){
+            $beatmaps = explode(',',$data['ids']);
+            foreach($beatmaps as $beatmap){
+                $modbits = 0;
+                foreach($data['mods'] as $key => $value){
+                    $modbits += $value;
+                }
+                $this->AddBeatmapModel($beatmap, $id, 1, $modbits);
             }
-            $this->AddBeatmapModel($beatmap, $id, 1, $modbits);
         }
         return Redirect::to('/charts/view-specific/'.$id);
 
     }
     public function RemoveSpecificBeatmap($id){
         $beatmap = Beatmap::find($id);
-        $beatmap->delete();
+        if ($beatmap->chart->user_id == Auth::user()->id || Auth::user()->isAdmin())
+            $beatmap->delete();
         return Redirect::back();
     }
     private function AddBeatmapModel ($beatmapid, $chartid, $type=0, $forcedmod="freemod"){

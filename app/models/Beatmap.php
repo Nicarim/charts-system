@@ -13,4 +13,7 @@ class Beatmap extends Eloquent {
     public function votes(){
         return $this->hasMany('Vote');
     }
+    public function chart(){
+        return $this->belongsTo('Chart');
+    }
 } 

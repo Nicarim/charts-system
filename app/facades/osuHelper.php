@@ -12,7 +12,7 @@ namespace osu\Helper;
 class osuHelper {
     public static function modsAvailable(){
         return $array = array(
-            "None"           => 0,
+            "None"           => 16384,
             "NoFail"         => 1,
             "Easy"           => 2,
             "Hidden"         => 8,
