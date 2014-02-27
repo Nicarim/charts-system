@@ -2,7 +2,7 @@
 @section('content')
 @if ($chart->user_id == Auth::user()->id)
 <div class="panel-group" id="accordin">
-    <div class="panel panel-default">
+    <div class="panel panel-danger">
         <div class="panel-heading">
             <h4 class="panel-title">
                 <a data-toggle="collapse" data-parent="#accordion" href="#chartmanager">
