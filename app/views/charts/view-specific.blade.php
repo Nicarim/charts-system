@@ -1,20 +1,31 @@
 @extends('master')
 @section('content')
 @if ($chart->user_id == Auth::user()->id)
-<form role="form" method="post" action="/charts/add_specific-beatmap/{{$chart->id}}">
-    <div class="form-group">
-        <input type="text" name="beatmapids" class="form-control" placeholder="Beatmap Ids">
+<div class="panel-heading">
+    <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#chartmanager">
+            Chart Management Tool
+        </a>
+    </h4>
+</div>
+<div id="collapseOne" class="panel-collapse collapse in">
+    <div class="panel-body">
+        <form role="form" method="post" action="/charts/add_specific-beatmap/{{$chart->id}}">
+            <div class="form-group">
+                <input type="text" name="beatmapids" class="form-control" placeholder="Beatmap Ids">
+            </div>
+            <div class="form-group">
+                @foreach(osuHelper::modsAvailable() as $key => $value)
+                    <label class="checkbox">
+                    <input type="checkbox" name="mod[{{strtolower($key)}}]" value="{{$value}}" {{$value == 0 ? 'checked' : ''}}>{{$key}}
+                    </label>
+                @endforeach
+            </div>
+            <input type="submit" class="btn btn-default" value="Add Beatmaps">
+            <button type="button" onclick="window.location.href='/charts/delete/{{$chart->id}}'" class="btn btn-danger">Remove WHOLE chart (don't click it D:)?</button>
+        </form>
     </div>
-    <div class="form-group">
-        @foreach(osuHelper::modsAvailable() as $key => $value)
-            <label class="checkbox">
-            <input type="checkbox" name="mod[{{strtolower($key)}}]" value="{{$value}}" {{$value == 0 ? 'checked' : ''}}>{{$key}}
-            </label>
-        @endforeach
-    </div>
-    <input type="submit" class="btn btn-default" value="Add Beatmaps">
-    <button type="button" onclick="window.location.href='/charts/delete/{{$chart->id}}'" class="btn btn-danger">Remove WHOLE chart (don't click it D:)?</button>
-</form>
+</div>
 @endif
 <h1>[{{osuHelper::gamemodeString($chart->gamemode_id)}}] {{ucfirst($chart->type)}} Chart: {{$chart->name}}</h1>
 <table class="table table-hover">
