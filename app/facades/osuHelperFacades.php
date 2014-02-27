@@ -7,8 +7,7 @@
  */
 
 use Illuminate\Support\Facades\Facade;
-//random comment
+
 class osuHelperFacade extends Facade{
     protected static function getFacadeAccessor() { return 'osuHelper'; }
-//asd
 } 
