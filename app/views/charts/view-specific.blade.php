@@ -8,7 +8,7 @@
         </a>
     </h4>
 </div>
-<div id="collapseOne" class="panel-collapse collapse in">
+<div id="chartmanager" class="panel-collapse collapse in">
     <div class="panel-body">
         <form role="form" method="post" action="/charts/add_specific-beatmap/{{$chart->id}}">
             <div class="form-group">
