@@ -35,7 +35,7 @@
     @foreach($maps as $key => $map)
     <tr>
         <td>{{$key+1}}</td>
-        <td><a href="https://osu.ppy.sh/s/{{$map->beatmapset_id}}" target="blank"> {{$map->artist}} - {{$map->title}} by {{$map->creator}} [{{$map->version}}]</a></td>
+        <td><a href="https://osu.ppy.sh/b/{{$map->beatmapset_id}}" target="blank"> {{$map->artist}} - {{$map->title}} by {{$map->creator}} [{{$map->version}}]</a></td>
         <td>{{ucfirst($map->forcedmod)}}</td>
         @if ($chart->user_id == Auth::user()->id)
         <td><a href="/charts/remove_specific-beatmap/{{$map->id}}" class="btn btn-danger">Remove</a></td>
