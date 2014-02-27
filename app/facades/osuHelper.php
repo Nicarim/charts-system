@@ -51,6 +51,7 @@ class osuHelper {
                     $string = $key;
             }
         }
+        return $string;
     }
     public static function statusString($id){
         switch($id){
