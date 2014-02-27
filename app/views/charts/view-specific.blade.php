@@ -6,7 +6,7 @@
         <input type="text" name="beatmapids" class="form-control" placeholder="Beatmap Ids">
     </div>
     <div class="form-group">
-        @foreach(osuHelper::availableMods() as $key => $value)
+        @foreach(osuHelper::modsAvailable() as $key => $value)
             <label for="{{strtolower($key)}}">{{$key}}</label>
             <input id="{{strtolower($key)}}" type="checkbox" name="mod[{{strtolower($key)}}]" class="checkbox" value="{{$value}}"/>
         @endforeach
