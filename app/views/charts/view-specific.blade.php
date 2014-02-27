@@ -13,6 +13,7 @@
         @endforeach
     </div>
     <input type="submit" class="btn btn-default" value="Add Beatmaps">
+    <button type="button" onclick="window.location.href='/charts/delete/{{$chart->id}}'" class="btn btn-danger">Remove?</button>
 </form>
 @endif
 <h1>{{ucfirst($chart->type)}} Chart: {{$chart->name}}</h1>
