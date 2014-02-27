@@ -7,8 +7,9 @@
     </div>
     <div class="form-group">
         @foreach(osuHelper::modsAvailable() as $key => $value)
-            <label for="{{strtolower($key)}}">{{$key}}</label>
-            <input id="{{strtolower($key)}}" type="checkbox" name="mod[{{strtolower($key)}}]" class="checkbox" value="{{$value}}"/>
+            <label class="checkbox" >{{$key}}
+            <input type="checkbox" name="mod[{{strtolower($key)}}]" value="{{$value}}"/>
+            </label>
         @endforeach
     </div>
     <input type="submit" class="btn btn-default" value="Add Beatmaps">
