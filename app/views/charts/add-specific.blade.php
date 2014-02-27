@@ -16,6 +16,19 @@
         <label class="checkbox">
             <input type="radio" value="special" name="type"> Special
         </label>
+        <div class="form-group">Gamemode of Chart</div>
+        <label class="checkbox">
+            <input type="radio" value="0" name="gamemode"> osu!Standard
+        </label>
+        <label class="checkbox">
+            <input type="radio" value="1" name="gamemode"> Taiko
+        </label>
+        <label class="checkbox">
+            <input type="radio" value="2" name="gamemode"> Catch the Beat
+        </label>
+        <label class="checkbox">
+            <input type="radio" value="3" name="gamemode"> osu!mania
+        </label>
         <div class="form-group">
             <button type="submit" class="btn btn-default">Create</button>
         </div>

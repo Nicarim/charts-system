@@ -156,9 +156,11 @@ class ChartsController extends BaseController {
         $data = array(
             "name" => Input::get("title"),
             "type" => Input::get('type'),
+            "gamemode" => Input::get('gamemode'),
         );
         $chart = new Chart;
         $chart->user_id = Auth::user()->id;
+        $chart->gamemode_id = $data['gamemode'];
         $chart->name = $data['name'];
         $chart->type = $data['type'];
         $chart->creation_type = "Diff-specific";
