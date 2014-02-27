@@ -185,7 +185,8 @@ class ChartsController extends BaseController {
 	public function Delete($id){
 
 		$chart = Chart::find($id);
-        if(Auth::user()->id == $chart->user_id|| Auth::user()->isAdmin())
+        return var_dump(Auth::user()->id.$chart->user->id);
+        if(Auth::user()->id == $chart->user->id|| Auth::user()->isAdmin())
         {
             $maps = Chart::where("chart_id", "=", $id);
             foreach ($maps as $map)
