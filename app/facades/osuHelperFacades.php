@@ -8,6 +8,6 @@
 
 use Illuminate\Support\Facades\Facade;
 
-class osuHelperFacade extends Facade{
+class osuHelperFacades extends Facade{
     protected static function getFacadeAccessor() { return 'osuHelper'; }
 } 
