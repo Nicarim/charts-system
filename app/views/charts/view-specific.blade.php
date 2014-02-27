@@ -7,8 +7,8 @@
     </div>
     <div class="form-group">
         @foreach(osuHelper::modsAvailable() as $key => $value)
-            <label class="checkbox" >{{$key}}
-            <input type="checkbox" name="mod[{{strtolower($key)}}]" value="{{$value}}"/>
+            <label class="checkbox">
+            <input type="checkbox" name="mod[{{strtolower($key)}}]" value="{{$value}}"/>{{$key}}
             </label>
         @endforeach
     </div>
