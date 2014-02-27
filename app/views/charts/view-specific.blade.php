@@ -2,29 +2,31 @@
 @section('content')
 @if ($chart->user_id == Auth::user()->id)
 <div class="panel-group" id="accordin">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-            <a data-toggle="collapse" data-parent="#accordion" href="#chartmanager">
-                Chart Management Tool
-            </a>
-        </h4>
-    </div>
-    <div id="chartmanager" class="panel-collapse collapse">
-        <div class="panel-body">
-            <form role="form" method="post" action="/charts/add_specific-beatmap/{{$chart->id}}">
-                <div class="form-group">
-                    <input type="text" name="beatmapids" class="form-control" placeholder="Beatmap Ids">
-                </div>
-                <div class="form-group">
-                    @foreach(osuHelper::modsAvailable() as $key => $value)
-                        <label class="checkbox">
-                        <input type="checkbox" name="mod[{{strtolower($key)}}]" value="{{$value}}" {{$value == 0 ? 'checked' : ''}}>{{$key}}
-                        </label>
-                    @endforeach
-                </div>
-                <input type="submit" class="btn btn-default" value="Add Beatmaps">
-                <button type="button" onclick="window.location.href='/charts/delete/{{$chart->id}}'" class="btn btn-danger">Remove WHOLE chart (don't click it D:)?</button>
-            </form>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#chartmanager">
+                    Chart Management Tool
+                </a>
+            </h4>
+        </div>
+        <div id="chartmanager" class="panel-collapse collapse">
+            <div class="panel-body">
+                <form role="form" method="post" action="/charts/add_specific-beatmap/{{$chart->id}}">
+                    <div class="form-group">
+                        <input type="text" name="beatmapids" class="form-control" placeholder="Beatmap Ids">
+                    </div>
+                    <div class="form-group">
+                        @foreach(osuHelper::modsAvailable() as $key => $value)
+                            <label class="checkbox">
+                            <input type="checkbox" name="mod[{{strtolower($key)}}]" value="{{$value}}" {{$value == 0 ? 'checked' : ''}}>{{$key}}
+                            </label>
+                        @endforeach
+                    </div>
+                    <input type="submit" class="btn btn-default" value="Add Beatmaps">
+                    <button type="button" onclick="window.location.href='/charts/delete/{{$chart->id}}'" class="btn btn-danger">Remove WHOLE chart (don't click it D:)?</button>
+                </form>
+            </div>
         </div>
     </div>
 </div>
