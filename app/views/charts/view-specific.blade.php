@@ -16,7 +16,7 @@
     <button type="button" onclick="window.location.href='/charts/delete/{{$chart->id}}'" class="btn btn-danger">Remove WHOLE chart (don't click it D:)?</button>
 </form>
 @endif
-<h1>{{ucfirst($chart->type)}} Chart: {{$chart->name}}</h1>
+<h1>[{{osuHelper::gamemodeString($chart->gamemode_id)}}] {{ucfirst($chart->type)}} Chart: {{$chart->name}}</h1>
 <table class="table table-hover">
     <tr>
         <th style="width:40px;">#</th>
