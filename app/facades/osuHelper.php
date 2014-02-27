@@ -45,7 +45,10 @@ class osuHelper {
         $string = "";
         foreach($array as $key => $value){
             if (($bit & $value) == $value){
-                $string += $key;
+                if ($string != "")
+                    $string = $string.' '.$key;
+                else
+                    $string = $key;
             }
         }
     }
