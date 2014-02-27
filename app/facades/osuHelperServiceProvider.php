@@ -6,7 +6,7 @@ class osuHelperServiceProvider extends ServiceProvider {
 
     public function register() {
         $this->app->bind('osuHelper', function(){
-            return new osu\osuHelper;
+            return new osu\Helper\osuHelper();
         });
     }
 

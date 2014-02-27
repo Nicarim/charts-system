@@ -6,7 +6,7 @@
  * Time: 18:17
  */
 
-namespace osu;
+namespace osu\Helper;
 
 
 class osuHelper {
