@@ -30,15 +30,7 @@
 		</td>
         <td>{{$chart->creation_type}}</td>
         <td>
-            @if ($chart->status == 0)
-
-            @elseif ($chart->status == 1)
-                <b>Pending</b>
-            @elseif ($chart->status == 2)
-                <b>Nominated</b>
-            @elseif ($chart->status == 3)
-                <b>Approved</b>
-            @endif
+            {{osuHelper::statusString($chart->status)}}
         </td>
     </tr>
     @endforeach
