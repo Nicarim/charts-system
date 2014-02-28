@@ -266,11 +266,15 @@ class ChartsController extends BaseController {
                 }
                 $result = $this->AddBeatmapModel($beatmap, $id, 1, $modbits);
                 if ($result != true)
+                {
                     array_push($beatmaperror, $result);
+                    return var_dump($beatmaperror);
+                }
+
 
             }
         }
-        return var_dump($beatmaperror);
+
         return Redirect::to('/charts/view-specific/'.$id.'')->with("beatmaperror",implode("<br/>",$beatmaperror));
 
     }
