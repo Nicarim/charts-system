@@ -43,10 +43,10 @@
     <tr>
         <td>{{$key+1}}</td>
         <td>
-            {{{ $map->osumode ? '<b class="osu"></b>' : '' }}}
-            {{{ $map->taikomode ? '<b class="taiko"></b>' : '' }}}
-            {{{ $map->ctbmode ? '<b class="ctb"></b>' : '' }}}
-            {{{ $map->maniamode ? '<b class="mania"></b>' : '' }}}
+            {{ $map->osumode ? '<b class="osu"></b>' : '' }}
+            {{ $map->taikomode ? '<b class="taiko"></b>' : '' }}
+            {{ $map->ctbmode ? '<b class="ctb"></b>' : '' }}
+            {{ $map->maniamode ? '<b class="mania"></b>' : '' }}
             <a href="https://osu.ppy.sh/b/{{$map->beatmap_id}}" target="blank"> {{$map->artist}} - {{$map->title}} by {{$map->creator}} [{{$map->version}}]</a>
         </td>
         <td>{{osuHelper::modString($map->forcedmod)}}</td>
