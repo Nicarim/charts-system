@@ -270,6 +270,7 @@ class ChartsController extends BaseController {
                     array_push($beatmaperror, $result);
                     return var_dump($beatmaperror);
                 }
+                return $result;
 
 
             }
