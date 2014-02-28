@@ -56,14 +56,28 @@ class osuHelper {
     }
     public static function statusString($id){
         switch($id){
+            case -1:
+                return "Completed";
             case 0:
                 return "Pending";
             case 1:
                 return "Nominated";
             case 2:
                 return "Approved";
-            case 3:
-                return "";
+            default:
+                return "Wrong Type";
+        }
+    }
+    public static function statusCss($id){
+        switch($id){
+            case -1:
+                return "label-success";
+            case 0:
+                return "label-info";
+            case 1:
+                return "label-warning";
+            case 2:
+                return "label-danger";
             default:
                 return "Wrong Type";
         }
