@@ -205,11 +205,11 @@ class ChartsController extends BaseController {
         return Redirect::route("listing");
 	}
     public function View($status = -1) {
-        if($status == -1)
-            $charts = Chart::all();
-        else
-            $charts = Chart::where("status","=",$status);
-
+        $gamemodeGET = Input::get("gamemode");
+        $charts = new Chart;
+        if (!empty($gamemodeGET))
+            $charts = $charts->where("gamemode","=",$status);
+        $charts = $charts->get();
         return View::make('charts/view')->with("charts",$charts);
     }
     public function addVote($beatmap, $chart, $mode){
