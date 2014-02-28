@@ -3,13 +3,16 @@
 @section('content')
 <div class="panel panel-success">
     <div class="panel-body">
-        <span>Filters:</span>
-        <a class="label label-success" href="{{URL::current().'?gamemode=0'}}">osu!</a>
-        <a class="label label-success" href="{{URL::current().'?gamemode=1'}}">Taiko</a>
-        <a class="label label-success" href="{{URL::current().'?gamemode=2'}}">Catch the Beat</a>
-        <a class="label label-success" href="{{URL::current().'?gamemode=3'}}">osu!mania</a>
-        <br/>
-        <a class="label label-primary" href="{{URL::current()}}">Clear Filters</a>
+        <div>
+            <span>Filters:</span>
+            <a class="label label-success" href="{{URL::current().'?gamemode=0'}}">osu!</a>
+            <a class="label label-success" href="{{URL::current().'?gamemode=1'}}">Taiko</a>
+            <a class="label label-success" href="{{URL::current().'?gamemode=2'}}">Catch the Beat</a>
+            <a class="label label-success" href="{{URL::current().'?gamemode=3'}}">osu!mania</a>
+        </div>
+        <div>
+            <a class="label label-primary" href="{{URL::current()}}">Clear Filters</a>
+        </div>
     </div>
 </div>
 <table class="table table-hover">
