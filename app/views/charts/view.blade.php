@@ -44,7 +44,7 @@
 		</td>
         <td>{{$chart->creation_type}}</td>
         <td>
-            <span class="label {{osuHelper::statusCss($chart->status)}}"><b class="{{osuHelper::statusIcon($chart->status+1)}}"></b>{{osuHelper::statusString($chart->status)}}</span>
+            <span class="label {{osuHelper::statusCss($chart->status)}}"><b class="{{osuHelper::statusIcon($chart->status)}}"></b>{{osuHelper::statusString($chart->status)}}</span>
         </td>
     </tr>
     @endforeach
