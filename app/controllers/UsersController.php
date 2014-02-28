@@ -100,7 +100,6 @@ class UsersController extends BaseController {
             else
                 $user = Auth::user();
             $user->password = Hash::make($data['password']);
-            return $user->username;
             $user->save();
 
             return Redirect::to('/users/pass')->with('error', 'Password changed!');
