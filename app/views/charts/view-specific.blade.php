@@ -94,5 +94,16 @@
                 <p>Some random comment</p>
             </div>
         </div>
+        <div class="panel panel-info">
+            <div class="panel-heading">Add comment:</div>
+            <div class="panel-body">
+                <form role="form">
+                    <textarea class="form-control" rows="20">
+
+                    </textarea>
+                </form>
+            </div>
+        </div>
+
     </div>
 @stop
