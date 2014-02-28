@@ -35,3 +35,6 @@
     @endforeach
 </table>
 @stop
+@section('title')
+<title>List of users</title>
+@stop

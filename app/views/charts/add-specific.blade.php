@@ -35,3 +35,6 @@
     </form>
 </div>
 @stop
+@section('title')
+<title>Create new difficulty chart!</title>
+@stop

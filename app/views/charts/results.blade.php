@@ -23,3 +23,6 @@
     @endforeach
 </table>
 @stop
+@section('title')
+<title>{{ucfirst($chart->type)}} Chart: {{$chart->name}} - results</title>
+@stop

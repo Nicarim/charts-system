@@ -15,3 +15,6 @@
         <p>Don't have an account? Contact <a href="https://osu.ppy.sh/u/71366">Loctav</a> or <a href="https://osu.ppy.sh/u/722665">Marcin</a>!</p>
     </form>
 @stop
+@section('title')
+<title>Log in</title>
+@stop

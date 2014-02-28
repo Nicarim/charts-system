@@ -1,4 +1,7 @@
 @extends('master')
+@section('title')
+<title>{{ucfirst($chart->type)}} Chart: {{$chart->name}}</title>
+@stop
 @section('content')
 @if ($chart->user_id == Auth::user()->id)
 <div class="panel-group" id="accordin">

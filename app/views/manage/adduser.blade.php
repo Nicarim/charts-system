@@ -29,3 +29,6 @@
     <button class="btn btn-lg btn-primary btn-block" type="submit">Add user</button>
 </form>
 @stop
+@section('title')
+<title>Add new user</title>
+@stop

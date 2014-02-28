@@ -37,3 +37,6 @@
     </form>
 </div>
 @stop
+@section('title')
+<title>Create new vote chart!</title>
+@stop

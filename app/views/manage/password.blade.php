@@ -13,3 +13,6 @@
     <button class="btn btn-lg btn-primary btn-block" type="submit">Change</button>
 </form>
 @stop
+@section('title')
+<title>Change password</title>
+@stop
