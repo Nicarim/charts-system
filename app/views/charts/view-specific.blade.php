@@ -15,6 +15,11 @@
                 <form role="form" method="post" action="/charts/add_specific-beatmap/{{$chart->id}}">
                     <div class="form-group">
                         <input type="text" name="beatmapids" class="form-control" placeholder="Beatmap Ids">
+                        @if (Session::has('beatmaperror'))
+                            @foreach (Session::get('beatmaperror') as $error))
+                                <span style="color: darkred;">{{$error}}</span>
+                            @endforeach
+                        @endif
                     </div>
                     <div class="form-group">
                         @foreach(osuHelper::modsAvailable() as $key => $value)

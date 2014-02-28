@@ -255,6 +255,7 @@ class ChartsController extends BaseController {
             "ids" => Input::get("beatmapids"),
             "mods" => Input::get("mod")
         );
+        $beatmaperror = array();
         $chart_userid = Chart::find($id)->user_id;
         if ($chart_userid == Auth::user()->id || Auth::user()->isAdmin()){
             $beatmaps = explode(',',$data['ids']);
@@ -263,10 +264,13 @@ class ChartsController extends BaseController {
                 foreach($data['mods'] as $key => $value){
                     $modbits += $value;
                 }
-                $this->AddBeatmapModel($beatmap, $id, 1, $modbits);
+                $result = $this->AddBeatmapModel($beatmap, $id, 1, $modbits);
+                if ($result != true)
+                    $beatmaperror[] = $result;
+
             }
         }
-        return Redirect::to('/charts/view-specific/'.$id);
+        return Redirect::to('/charts/view-specific/'.$id)->with("beatmaperror",$beatmaperror);
 
     }
     public function RemoveSpecificBeatmap($id){
@@ -282,11 +286,18 @@ class ChartsController extends BaseController {
             $jsondata = json_decode(file_get_contents("https://osu.ppy.sh/api/get_beatmaps?k=".$this->apikey."&s=".$beatmapid));
         elseif ($type == 1)
             $jsondata = json_decode(file_get_contents("https://osu.ppy.sh/api/get_beatmaps?k=".$this->apikey."&b=".$beatmapid));
-
-        $beatmap->beatmapset_id = $jsondata[0]->beatmapset_id;
-        $beatmap->artist = $jsondata[0]->artist;
-        $beatmap->title = $jsondata[0]->title;
-        $beatmap->creator = $jsondata[0]->creator;
+        try
+        {
+            $beatmapdata = $jsondata[0];
+        }
+        catch (ErrorException $e)
+        {
+            return "Couldn't add ".$beatmapid." id, make sure you use ID not WHOLE LINK";
+        }
+        $beatmap->beatmapset_id = $beatmapdata->beatmapset_id;
+        $beatmap->artist = $beatmapdata->artist;
+        $beatmap->title = $beatmapdata->title;
+        $beatmap->creator = $beatmapdata->creator;
         $beatmap->chart_id = $chartid;
         if ($type == 0)
         {
@@ -307,9 +318,9 @@ class ChartsController extends BaseController {
         }
         elseif ($type == 1)
         {
-            $beatmap->version = $jsondata[0]->version;
-            $beatmap->beatmap_id = $jsondata[0]->beatmap_id;
-            $mode = $jsondata[0]->mode;
+            $beatmap->version = $beatmapdata->version;
+            $beatmap->beatmap_id = $beatmapdata->beatmap_id;
+            $mode = $beatmapdata->mode;
             if ($mode == "0"){
                 $beatmap->osumode = 1;
             }
@@ -328,6 +339,7 @@ class ChartsController extends BaseController {
 
 
         $beatmap->save();
+        return true;
 
     }
 }
