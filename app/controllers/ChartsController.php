@@ -271,7 +271,7 @@ class ChartsController extends BaseController {
             }
         }
 
-        return Redirect::to('/charts/view-specific/'.$id.'')->with("beatmaperror",implode("<br/>",$beatmaperror));
+        return Redirect::to('/charts/view-specific/'.$id.'#chartmanager')->with("beatmaperror",implode("<br/>",$beatmaperror));
 
     }
     public function RemoveSpecificBeatmap($id){
