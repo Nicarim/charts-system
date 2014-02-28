@@ -270,6 +270,7 @@ class ChartsController extends BaseController {
 
             }
         }
+        return var_dump($beatmaperror);
         return Redirect::to('/charts/view-specific/'.$id.'')->with("beatmaperror",implode("<br/>",$beatmaperror));
 
     }
