@@ -37,7 +37,7 @@
     </div>
 </div>
 @endif
-<h1>[{{osuHelper::gamemodeString($chart->gamemode_id)}}] {{ucfirst($chart->type)}} Chart: {{$chart->name}}</h1>
+<h1>[{{osuHelper::gamemodeString($chart->gamemode_id)}}] {{ucfirst($chart->type)}} Chart: {{$chart->name}}<b class="{{osuHelper::statusIcon($chart->status)}}"></b></h1>
 <table class="table table-hover">
     <tr>
         <th>Maps</th>
@@ -62,4 +62,10 @@
     @endforeach
 
 </table>
+@if(Auth::user()->team == "bat")
+<div class="btn-group">
+    <a class="btn btn-warning" href="#"><b class="{{osuHelper::statusIcon($chart->status)}}"></b>Qualify</a>
+
+</div>
+@endif
 @stop

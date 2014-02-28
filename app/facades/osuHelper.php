@@ -82,6 +82,20 @@ class osuHelper {
                 return "Wrong Type";
         }
     }
+    public static function statusIcon($id){
+        switch($id){
+            case -1:
+                return "glyphicon glyphicon-ok";
+            case 0:
+                return "glyphicon glyphicon-search";
+            case 1:
+                return "glyphicon glyphicon-plus";
+            case 2:
+                return "glyphicon glyphicon-heart";
+            default:
+                return "Wrong Type";
+        }
+    }
     public static function gamemodeCss($id){
         switch ($id){
             case 0:
