@@ -3,7 +3,7 @@
 <title>{{ucfirst($chart->type)}} Chart: {{$chart->name}}</title>
 @stop
 @section('content')
-@if ($chart->user_id == Auth::user()->id)
+@if ($chart->user_id == Auth::user()->id || Auth::user()->isAdmin())
 <div class="panel-group" id="accordin">
     <div class="panel panel-danger">
         <div class="panel-heading">
