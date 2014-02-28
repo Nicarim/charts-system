@@ -68,7 +68,7 @@
 
         </div>
     @endif
-    <div class="panel-group">
+    <div class="panel-group" style="padding-bottom:30px;">
         <div class="panel panel-warning">
             <div class="panel-heading">
                 <h2>Comments</h2>
@@ -98,9 +98,10 @@
             <div class="panel-heading">Add comment:</div>
             <div class="panel-body">
                 <form role="form">
-                    <textarea class="form-control" rows="20">
+                    <textarea class="form-control" rows="10">
 
                     </textarea>
+                    <button type="submit" class="btn btn-info">Add comment</button>
                 </form>
             </div>
         </div>
