@@ -267,6 +267,7 @@ class ChartsController extends BaseController {
                 $result = $this->AddBeatmapModel($beatmap, $id, 1, $modbits);
                 if ($result != true)
                     $beatmaperror[] = $result;
+                return $result;
 
             }
         }
