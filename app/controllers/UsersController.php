@@ -96,10 +96,11 @@ class UsersController extends BaseController {
         );
         if ($data['password'] == $data['confirm_password']) {
             if (Auth::user()->isAdmin() && !empty($data['username']))
-                $user = User::where("username","=",$data['username'])->get();
+                $user = User::where("username","=",$data['username'])->first();
             else
                 $user = Auth::user();
             $user->password = Hash::make($data['password']);
+            return $user->username;
             $user->save();
 
             return Redirect::to('/users/pass')->with('error', 'Password changed!');
