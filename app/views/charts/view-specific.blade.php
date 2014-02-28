@@ -34,14 +34,12 @@
 <h1>[{{osuHelper::gamemodeString($chart->gamemode_id)}}] {{ucfirst($chart->type)}} Chart: {{$chart->name}}</h1>
 <table class="table table-hover">
     <tr>
-        <th style="width:40px;">#</th>
         <th>Maps</th>
         <th>Forced Mod</th>
         <th style="width:10px;"></th>
     </tr>
-    @foreach($maps as $key => $map)
+    @foreach($maps as $map)
     <tr>
-        <td>{{$key+1}}</td>
         <td>
             {{ $map->osumode ? '<b class="osu"></b>' : '' }}
             {{ $map->taikomode ? '<b class="taiko"></b>' : '' }}
