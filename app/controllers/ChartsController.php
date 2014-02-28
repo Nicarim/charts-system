@@ -265,12 +265,7 @@ class ChartsController extends BaseController {
                     $modbits += $value;
                 }
                 $result = $this->AddBeatmapModel($beatmap, $id, 1, $modbits);
-                if ($result != true)
-                {
-                    array_push($beatmaperror, $result);
-                    return var_dump($beatmaperror);
-                }
-                return $result;
+                array_push($beatmaperror, $result);
 
 
             }
@@ -345,7 +340,7 @@ class ChartsController extends BaseController {
 
 
         $beatmap->save();
-        return true;
+        return "Added $beatmap->artist - $beatmap->title";
 
     }
 }
