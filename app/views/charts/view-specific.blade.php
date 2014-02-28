@@ -16,9 +16,7 @@
                     <div class="form-group">
                         <input type="text" name="beatmapids" class="form-control" placeholder="Beatmap Ids">
                         @if (Session::has('beatmaperror'))
-                            @foreach (Session::get('beatmaperror') as $error))
-                                <span style="color: darkred;">{{$error}}</span>
-                            @endforeach
+                            <span style="color: darkred;">{{Session::get('beatmaperror')}}</span>
                         @endif
                     </div>
                     <div class="form-group">
