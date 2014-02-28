@@ -57,13 +57,13 @@ class osuHelper {
     public static function statusString($id){
         switch($id){
             case 0:
-                return "";
-            case 1:
                 return "Pending";
-            case 2:
+            case 1:
                 return "Nominated";
-            case 3:
+            case 2:
                 return "Approved";
+            case 3:
+                return "";
             default:
                 return "Wrong Type";
         }
