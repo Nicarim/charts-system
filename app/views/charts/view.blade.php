@@ -31,7 +31,7 @@
             @if($chart->creation_type == "Voting")
             <b>{{ucfirst($chart->type)}} Chart - </b><a href="/charts/view/{{$chart->id}}">{{$chart->name}}</a>
             @elseif ($chart->creation_type == "Diff-specific")
-            [{{osuHelper::gamemodeString($chart->gamemode_id)}}] <b>{{ucfirst($chart->type)}} Chart - </b><a href="/charts/view-specific/{{$chart->id}}">{{$chart->name}}</a>
+            <b class="{{osuHelper::gamemodeCss($chart->gamemode_id)}}"></b> <b>{{ucfirst($chart->type)}} Chart - </b><a href="/charts/view-specific/{{$chart->id}}">{{$chart->name}}</a>
             @endif
         </td>
         <td>By <b>{{$chart->user->username}}</b></td>
