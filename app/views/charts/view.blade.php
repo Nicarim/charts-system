@@ -9,7 +9,7 @@
         <a class="label label-success" href="{{URL::current().'?gamemode=2'}}">Catch the Beat</a>
         <a class="label label-success" href="{{URL::current().'?gamemode=3'}}">osu!mania</a>
         <br/>
-        <a class="label label-primary" href="{{URL::current()">Clear Filters</a>
+        <a class="label label-primary" href="{{URL::current()}}">Clear Filters</a>
     </div>
 </div>
 <table class="table table-hover">
