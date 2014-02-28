@@ -91,10 +91,14 @@ class UsersController extends BaseController {
     public function ChangePass() {
         $data = array(
             "password" => Input::get("password"),
+            "username" => Input::get("usertochange"),
             "confirm_password" => Input::get("confirm_password")
         );
         if ($data['password'] == $data['confirm_password']) {
-            $user = Auth::user();
+            if (Auth::user()->isAdmin() && !empty($data['username']))
+                $user = User::where("username","=",$data['username'])->get();
+            else
+                $user = Auth::user();
             $user->password = Hash::make($data['password']);
             $user->save();
 
