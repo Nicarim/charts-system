@@ -12,6 +12,7 @@ namespace osu\Helper;
 class osuHelper {
     public static function modsAvailable(){
         return $array = array(
+            "Freemod"        => 8192,
             "None"           => 16384,
             "NoFail"         => 1,
             "Easy"           => 2,
@@ -23,7 +24,7 @@ class osuHelper {
             "Nightcore"      => 512,
             "Flashlight"     => 1024,
             "SpunOut"        => 4096,
-            "Freemod"        => 8192,
+
         );
     }
     public static function gamemodeString($id){
