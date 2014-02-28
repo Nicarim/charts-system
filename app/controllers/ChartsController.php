@@ -207,8 +207,8 @@ class ChartsController extends BaseController {
     public function View($status = -1) {
         $gamemodeGET = Input::get("gamemode");
         $charts = new Chart;
-        if (!empty($gamemodeGET))
-            $charts = $charts->where("gamemode","=",$status);
+        if (isset($gamemodeGET))
+            $charts = $charts->where("gamemode_id","=",$gamemodeGET);
         $charts = $charts->get();
         return View::make('charts/view')->with("charts",$charts);
     }
