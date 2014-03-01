@@ -109,4 +109,24 @@ class osuHelper {
 
         }
     }
+    public static function urlGenerator($variable, $value){
+        $string = "?";
+        if (Input::has('gamemode'))
+        {
+            if ($variable == "gamemode")
+                $string = $string."gamemode=".$value;
+            else
+                $string = $string."gamemode=".Input::get('gamemode');
+        }
+        if (Input::has('status'))
+        {
+            if ($variable == "status")
+                $string = $string."status=".$value;
+            else
+                $string = $string."status=".Input::get('status');
+        }
+
+        return $string;
+
+    }
 } 
