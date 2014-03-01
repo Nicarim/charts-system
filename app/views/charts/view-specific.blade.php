@@ -88,9 +88,7 @@
             <div class="panel-heading">Add comment:</div>
             <div class="panel-body">
                 <form role="form" method="post" action="/charts/add_comment/{{$chart->id}}">
-                    <textarea class="form-control" rows="10" name="content">
-
-                    </textarea>
+                    <textarea class="form-control" rows="10" name="content"></textarea>
                     <button type="submit" class="btn btn-info">Add comment</button>
                     <!--<button class="btn btn-warning" href="#"><b class="{{osuHelper::statusIcon($chart->status + 1)}}"></b>Comment & Qualify</button>-->
                 </form>
