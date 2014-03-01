@@ -4,6 +4,9 @@
         <link rel="stylesheet" href="/css/bootstrap-theme.min.css" />
         <link rel="stylesheet" href="/css/signin.css" />
         <link rel="stylesheet" href="/css/main.css" />
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="/js/jquery-2.0.3.min.js"></script>
         <script src="/js/jquery.timeago.js"></script>
         <script src="/js/main.js"></script>
