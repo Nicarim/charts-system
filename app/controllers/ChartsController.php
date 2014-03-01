@@ -208,8 +208,8 @@ class ChartsController extends BaseController {
         $gamemodeGET = Input::get("gamemode");
         $charts = new Chart;
         if (isset($gamemodeGET))
-            $charts = $charts->where("gamemode_id","=",$gamemodeGET)->orderBy("created_at","asc");
-        $charts = $charts->get();
+            $charts = $charts->where("gamemode_id","=",$gamemodeGET);
+        $charts = $charts->orderBy("created_at","desc")->get();
         return View::make('charts/view')->with("charts",$charts);
     }
     public function addVote($beatmap, $chart, $mode){
