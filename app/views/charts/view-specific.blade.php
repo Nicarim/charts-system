@@ -76,7 +76,7 @@
         </div>
         <div class="panel panel-default">
             <div class="panel-heading">
-                <b class="glyphicon {{osuHelper::statusIcon(0)}}"></b><b>Someone</b>
+                <b class="glyphicon glyphicon-comment"></b><b>Someone</b>
             </div>
             <div class="panel-body">
                 <p>Some random comment</p>
@@ -87,7 +87,7 @@
                 <b class="glyphicon {{osuHelper::statusIcon(1)}}"></b><b>Someone</b>
             </div>
             <div class="panel-body">
-                <p>Some random comment</p>
+                <p>Qualifying comment</p>
             </div>
         </div>
         <div class="panel panel-default">
@@ -95,7 +95,7 @@
                 <b class="glyphicon {{osuHelper::statusIcon(2)}}"></b><b>Someone</b>
             </div>
             <div class="panel-body">
-                <p>Some random comment</p>
+                <p>Approving comment.</p>
             </div>
         </div>
         <div class="panel panel-info">
