@@ -5,7 +5,9 @@
  * Date: 01.03.14
  * Time: 12:11
  */
-
+use \HTMLPurifier;
+use \HTMLPurifier_Config;
+use \Ciconia;
 class Comment extends Eloquent {
     protected $table = "comments";
     protected $guarded = array();
@@ -14,5 +16,13 @@ class Comment extends Eloquent {
     }
     public function chart(){
         return $this->belongsTo("Chart");
+    }
+    public function parsedComment(){
+        $content = $this->content;
+        $parser = Ciconia();
+        $config = HTMLPurifier_Config::createDefault();
+        $purifier = new HTMLPurifier($config);
+        $htmltopurify = $parser->render($content);
+        return $purifier->purify($htmltopurify);
     }
 } 
