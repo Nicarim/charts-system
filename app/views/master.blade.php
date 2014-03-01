@@ -3,7 +3,7 @@
         <link rel="stylesheet" href="/css/bootstrap.min.css" />
         <link rel="stylesheet" href="/css/bootstrap-theme.min.css" />
         <link rel="stylesheet" href="/css/signin.css" />
-        <link rel="stylesheet" href="/css/icons.css" />
+        <link rel="stylesheet" href="/css/main.css" />
         <script src="/js/jquery-2.0.3.min.js"></script>
         <script src="/js/jquery.timeago.js"></script>
         <script src="/js/main.js"></script>

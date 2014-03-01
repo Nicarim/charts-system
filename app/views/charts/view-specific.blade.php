@@ -71,7 +71,7 @@
     <div class="panel-group" style="padding-bottom:30px;">
         <div class="panel panel-warning">
             <div class="panel-heading">
-                <h3>Comments</h3>
+                <h3 class="smaller-margin">Comments ({{$chart->comments->count()}})</h3>
             </div>
         </div>
         @foreach ($chart->comments as $comment)

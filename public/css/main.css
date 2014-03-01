@@ -37,3 +37,13 @@
 .ctb.off{
 	background-image:url("../icons/ctb-b.gif");
 }
+.smaller-margin{
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.padding-filters{
+    padding-bottom: 8px;
+}
+.glyphicon{
+    margin-right: 5px;
+}
