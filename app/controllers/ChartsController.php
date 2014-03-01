@@ -253,6 +253,13 @@ class ChartsController extends BaseController {
         $comment->save();
         return Redirect::back();
     }
+    public function RemoveComment($id){
+        $comment = Comment::find($id);
+        if (Auth::user()->id == $comment->user->id){
+            $comment->delete();
+        }
+        return Redirect::back();
+    }
     public function AddBeatmap($id){
         $data = Input::get("beatmapids");
         $beatmaps = explode(',',$data);

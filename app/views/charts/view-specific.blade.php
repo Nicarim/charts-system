@@ -78,6 +78,9 @@
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <b class="glyphicon glyphicon-comment"></b><b>{{$comment->user->username}}</b>
+                    @if ($comment->user->id == Auth::user()->id)
+                        <a class="label label-warning pull-right" href="/charts/remove_comment/{{$comment->id}}">Remove Comment</a>
+                    @endif
                 </div>
                 <div class="panel-body">
                     <p>{{$comment->content}}</p>

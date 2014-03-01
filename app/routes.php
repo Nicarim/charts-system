@@ -73,6 +73,7 @@ Route::group(
         Route::get('/charts/view-specific/{id}', 'ChartsController@ViewSpecific');
         Route::post('/charts/add_specific-beatmap/{id}', 'ChartsController@AddSpecificBeatmap');
         Route::post('/charts/add_comment/{id}', 'ChartsController@AddComment');
+        Route::get('/charts/remove_comment/{id}', 'ChartsController@RemoveComment');
         Route::get('/charts/remove_specific-beatmap/{id}', 'ChartsController@RemoveSpecificBeatmap');
         Route::get("/charts/view/{id}/{mode?}", 'ChartsController@ViewVoting');
         Route::get(
