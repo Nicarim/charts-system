@@ -44,6 +44,9 @@
 .padding-filters{
     padding-bottom: 8px;
 }
+.last{
+    padding-top: 8px;
+}
 .glyphicon{
     margin-right: 5px;
 }

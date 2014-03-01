@@ -17,7 +17,7 @@
             <a class="label label-success" href="{{URL::current().'?status=1'}}">Qualified</a>
             <a class="label label-success" href="{{URL::current().'?status=2'}}">Approved</a>
         </div>
-        <div class="padding-filters">
+        <div class="padding-filters last">
             <a class="label label-primary" href="{{URL::current()}}">Clear Filters</a>
         </div>
     </div>
