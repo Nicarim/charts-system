@@ -64,7 +64,7 @@
     </table>
     @if(Auth::user()->team == "bat")
         <div class="btn-group">
-            <a class="btn btn-warning" href="#"><b class="{{osuHelper::statusIcon($chart->status + 1)}}"></b>Qualify</a>
+
 
         </div>
     @endif
@@ -106,6 +106,7 @@
 
                     </textarea>
                     <button type="submit" class="btn btn-info">Add comment</button>
+                    <button class="btn btn-warning" href="#"><b class="{{osuHelper::statusIcon($chart->status + 1)}}"></b>Comment & Qualify</button>
                 </form>
             </div>
         </div>
