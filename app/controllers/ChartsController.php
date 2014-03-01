@@ -205,10 +205,11 @@ class ChartsController extends BaseController {
         return Redirect::route("listing");
 	}
     public function View($status = -1) {
-        $gamemodeGET = Input::get("gamemode");
         $charts = new Chart;
-        if (isset($gamemodeGET))
-            $charts = $charts->where("gamemode_id","=",$gamemodeGET);
+        if (Input::has("gamemode"))
+            $charts = $charts->where("gamemode_id","=",Input::get("gamemode"));
+        if (Input::has("status"))
+            $charts = $charts->where("status","=",Input::get("status"));
         $charts = $charts->orderBy("created_at","desc")->get();
         return View::make('charts/view')->with("charts",$charts);
     }

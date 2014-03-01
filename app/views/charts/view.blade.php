@@ -6,16 +6,16 @@
         <h4>Filters:</h4>
         <div class="padding-filters">
             <span>Gamemode:</span>
-            <a class="label label-success" href="{{URL::current().osuHelper::urlGenerator('gamemode',0)}}">osu!</a>
-            <a class="label label-success" href="{{URL::current().osuHelper::urlGenerator('gamemode',1)}}">Taiko</a>
-            <a class="label label-success" href="{{URL::current().osuHelper::urlGenerator('gamemode',2)}}">Catch the Beat</a>
-            <a class="label label-success" href="{{URL::current().osuHelper::urlGenerator('gamemode',3)}}">osu!mania</a>
+            <a class="label label-success" href="{{URL::current().'?gamemode=0'}}">osu!</a>
+            <a class="label label-success" href="{{URL::current().'?gamemode=1'}}">Taiko</a>
+            <a class="label label-success" href="{{URL::current().'?gamemode=2'}}">Catch the Beat</a>
+            <a class="label label-success" href="{{URL::current().'?gamemode=3'}}">osu!mania</a>
         </div>
         <div class="padding-filters">
             <span>Status:</span>
-            <a class="label label-success" href="{{URL::current().osuHelper::urlGenerator('status',0)}}">Pending</a>
-            <a class="label label-success" href="{{URL::current().osuHelper::urlGenerator('status',1)}}">Qualified</a>
-            <a class="label label-success" href="{{URL::current().osuHelper::urlGenerator('status',2)}}">Approved</a>
+            <a class="label label-success" href="{{URL::current().'?status=0'}}">Pending</a>
+            <a class="label label-success" href="{{URL::current().'?status=1'}}">Qualified</a>
+            <a class="label label-success" href="{{URL::current().'?status=2'}}">Approved</a>
         </div>
         <div class="padding-filters">
             <a class="label label-primary" href="{{URL::current()}}">Clear Filters</a>

@@ -108,25 +108,4 @@ class osuHelper {
 
         }
     }
-    public static function urlGenerator($variable, $value){
-        $request = new \Illuminate\Http\Request;
-        $string = "?";
-        if ($request->has('gamemode'))
-        {
-            if ($variable == "gamemode")
-                $string = $string."gamemode=".$value;
-            else
-                $string = $string."gamemode=".$request->input('gamemode');
-        }
-        if ($request->has('status'))
-        {
-            if ($variable == "status")
-                $string = $string."status=".$value;
-            else
-                $string = $string."status=".$request->input('status');
-        }
-
-        return $string;
-
-    }
 } 
