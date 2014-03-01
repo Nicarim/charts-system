@@ -71,42 +71,28 @@
     <div class="panel-group" style="padding-bottom:30px;">
         <div class="panel panel-warning">
             <div class="panel-heading">
-                <h2>Comments</h2>
+                <h3>Comments</h3>
             </div>
         </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <b class="glyphicon glyphicon-comment"></b><b>Someone</b>
+        @foreach ($chart->comments as $comment)
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <b class="glyphicon glyphicon-comment"></b><b>{{$comment->user->username}}</b>
+                </div>
+                <div class="panel-body">
+                    <p>{{$comment->content}}</p>
+                </div>
             </div>
-            <div class="panel-body">
-                <p>Some random comment</p>
-            </div>
-        </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <b class="glyphicon {{osuHelper::statusIcon(1)}}"></b><b>Someone</b>
-            </div>
-            <div class="panel-body">
-                <p>Qualifying comment</p>
-            </div>
-        </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <b class="glyphicon {{osuHelper::statusIcon(2)}}"></b><b>Someone</b>
-            </div>
-            <div class="panel-body">
-                <p>Approving comment.</p>
-            </div>
-        </div>
+        @endforeach
         <div class="panel panel-info">
             <div class="panel-heading">Add comment:</div>
             <div class="panel-body">
-                <form role="form">
-                    <textarea class="form-control" rows="10">
+                <form role="form" method="post" action="/charts/add_comment/{{$chart->id}}">
+                    <textarea class="form-control" rows="10" name="content">
 
                     </textarea>
                     <button type="submit" class="btn btn-info">Add comment</button>
-                    <button class="btn btn-warning" href="#"><b class="{{osuHelper::statusIcon($chart->status + 1)}}"></b>Comment & Qualify</button>
+                    <!--<button class="btn btn-warning" href="#"><b class="{{osuHelper::statusIcon($chart->status + 1)}}"></b>Comment & Qualify</button>-->
                 </form>
             </div>
         </div>

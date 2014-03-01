@@ -242,6 +242,17 @@ class ChartsController extends BaseController {
         }
         return false;
     }
+    public function AddComment($id){
+        $data = array(
+            "content" => Input::get("content")
+        );
+        $comment = new Comment;
+        $comment->user_id = Auth::user()->id;
+        $comment->chart_id = Chart::find($id)->id;
+        $comment->content = $data['content'];
+        $comment->save();
+        return Redirect::back();
+    }
     public function AddBeatmap($id){
         $data = Input::get("beatmapids");
         $beatmaps = explode(',',$data);
