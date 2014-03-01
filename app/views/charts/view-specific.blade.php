@@ -83,7 +83,7 @@
                     @endif
                 </div>
                 <div class="panel-body">
-                    <p>{{$comment->content}}</p>
+                    <p>{{$comment->parsedComment()}}</p>
                 </div>
             </div>
         @endforeach
