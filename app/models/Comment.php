@@ -7,7 +7,7 @@
  */
 use \HTMLPurifier;
 use \HTMLPurifier_Config;
-use \Ciconia;
+use Ciconia\Ciconia;
 class Comment extends Eloquent {
     protected $table = "comments";
     protected $guarded = array();
