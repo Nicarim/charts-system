@@ -19,7 +19,7 @@ class Comment extends Eloquent {
     }
     public function parsedComment(){
         $content = $this->content;
-        $parser = Ciconia();
+        $parser = new Ciconia();
         $config = HTMLPurifier_Config::createDefault();
         $purifier = new HTMLPurifier($config);
         $htmltopurify = $parser->render($content);
