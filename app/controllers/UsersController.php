@@ -14,7 +14,7 @@ class UsersController extends BaseController {
             'password' => Input::get('password')
         );
         if (Auth::attempt($user)) {
-            return Redirect::route('home');
+            return Redirect::intended('home');
         }
 
         return Redirect::route('login')->with(
