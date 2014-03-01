@@ -90,7 +90,7 @@
         <div class="panel panel-info">
             <div class="panel-heading">Add comment:</div>
             <div class="panel-body">
-                <a href="http://daringfireball.net/projects/markdown/basics">Comments allow markdown usage! Check syntax here</a>
+                <a href="http://daringfireball.net/projects/markdown/basics">Comments allow <b>markdown</b> usage! Check syntax here</a>
                 <form role="form" method="post" action="/charts/add_comment/{{$chart->id}}">
                     <textarea class="form-control" rows="10" name="content"></textarea>
                     <button type="submit" class="btn btn-info">Add comment</button>
