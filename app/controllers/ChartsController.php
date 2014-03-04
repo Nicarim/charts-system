@@ -115,6 +115,7 @@ class ChartsController extends BaseController {
             {
                 return View::make('charts/results')->with(array(
                         "id" => $id,
+                        "chart" => $chart,
                         "modeid" => $this->gamemode[$mode],
                         "mode" => $mode,
                         "beatmapslist" => $beatmapsvar
