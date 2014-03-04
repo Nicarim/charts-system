@@ -7,7 +7,10 @@
     <a class="btn btn-default {{{ $mode == '2' ? 'active' : '' }}}" href='/charts/results/{{$id}}/ctb'>Catch the Beat</a>
     <a class="btn btn-default {{{ $mode == '3' ? 'active' : '' }}}" href='/charts/results/{{$id}}/mania'>osu!mania</a>
 </div>
-@if(Auth::user()->isAdmin()) <a class="pull-right" href="/charts/results/{{$id}}/{{$mode}}/maps_csv">Click here to get *.csv file for this results</a> @endif
+@if(Auth::user()->isAdmin())
+<a class="pull-right" href="/charts/results/{{$id}}/{{$mode}}/maps_csv">Click here to get *.csv file for this results</a>
+<a class="pull-right" href="/charts/results/{{$id}}/{{$mode}}/users_csv">Or, click here for *.csv of users list activity</a>
+@endif
 <table class="table table-hover">
     <tr>
         <th style="width:40px">#</th>
