@@ -201,7 +201,7 @@ class ChartsController extends BaseController {
 		$chart = Chart::find($id);
         if(Auth::user()->id == $chart->user->id || Auth::user()->isAdmin())
         {
-            $maps = Chart::where("chart_id", "=", $id);
+            $maps = $chart->maps;
             foreach ($maps as $map)
             {
                 $map->delete();
