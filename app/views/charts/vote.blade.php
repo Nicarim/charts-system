@@ -38,8 +38,8 @@
         <tr>
             <td>{{$key+1}}</td>
             <td><a href="https://osu.ppy.sh/s/{{$map->beatmapset_id}}" target="blank"> {{$map->artist}} - {{$map->title}} by {{$map->creator}}</a></td>
-            @if ($chart->user_id == Auth::user()->id)
-            <td><a href="/charts/remove_specific-beatmap/{{$map->id}}" class="btn btn-danger">Remove</a></td>
+            @if ($chart->user_id == Auth::user()->id || Auth::user()->isAdmin())
+                <td><a href="/charts/remove_specific-beatmap/{{$map->id}}" class="btn btn-danger">Remove</a></td>
             @endif
             <td>
                 <b class="osu {{{ !$map->osumode ? 'off' : '' }}}"></b>
