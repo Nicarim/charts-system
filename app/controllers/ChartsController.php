@@ -188,6 +188,7 @@ class ChartsController extends BaseController {
         $chart->creation_type = $data['creation_type'];
         $chart->max_votes = $data['max_votes'];
         $chart->type = $data['type'];
+        $chart->end_time = $data['end_time'];
         $chart->save();
         $beatmaps = explode(",",$data['beatmapids']);
         foreach($beatmaps as $beatmapid)
