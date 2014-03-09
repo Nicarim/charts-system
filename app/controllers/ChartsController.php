@@ -173,6 +173,8 @@ class ChartsController extends BaseController {
         $data = array(
             "name" => Input::get("title"),
             "type" => Input::get('type'),
+            "user_id" => Auth::user()->id,
+            "creation_type" => "Voting",
             "beatmapids" => Input::get("beatmapsetids"),
             "max_votes" => Input::get("votescount"),
             "end_time" => Input::get("date")
