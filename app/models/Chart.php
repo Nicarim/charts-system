@@ -10,26 +10,25 @@ class Chart extends Eloquent {
 
     protected $table = "charts";
 
-    protected $fillable = array("name", "type", "max_votes", "end_time");
-
+    protected $guarded = array();
 
     public function osumaps() {
-        return $this->hasMany('Beatmap')->where("osumode","=","1")->orderBy("osumode", 'desc');
+        return $this->hasMany('Beatmap')->where("osumode","=","1")->where("chart_id","=",$this->id)->orderBy("osumode", 'desc');
     }
 
 
     public function taikomaps() {
-        return $this->hasMany('Beatmap')->where("taikomode","=","1")->orderBy("taikomode", 'desc');
+        return $this->hasMany('Beatmap')->where("taikomode","=","1")->where("chart_id","=",$this->id)->orderBy("taikomode", 'desc');
     }
 
 
     public function ctbmaps() {
-        return $this->hasMany('Beatmap')->whereRaw("beatmaps.osumode = 1 or beatmaps.ctbmode = 1")->orderBy("ctbmode", 'desc');
+        return $this->hasMany('Beatmap')->whereRaw("beatmaps.osumode = 1 or beatmaps.ctbmode = 1")->where("chart_id","=",$this->id)->orderBy("ctbmode", 'desc');
     }
 
 
     public function ommaps() {
-        return $this->hasMany('Beatmap')->whereRaw("beatmaps.osumode = 1 or beatmaps.maniamode = 1")->orderBy("maniamode", 'desc');
+        return $this->hasMany('Beatmap')->whereRaw("beatmaps.osumode = 1 or beatmaps.maniamode = 1")->where("chart_id","=",$this->id)->orderBy("maniamode", 'desc');
     }
 
     public function votes() {

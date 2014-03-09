@@ -5,6 +5,10 @@
 <div class="input-group">
     <form role="form" name="input" method="post">
         <div class="form-group">
+            <label for="chart-id-overwrite">Overwrite chart_id</label>
+            <input type="number" class="form-control" id="chart-id-overwrite" name="overwrite" placeholder="overwrite chart id">
+        </div>
+        <div class="form-group">
             <label for="chart-name">Chart Name:</label>
             <input type="text" class="form-control" id="chart-name" name="title" placeholder="Input name of chart...">
         </div>

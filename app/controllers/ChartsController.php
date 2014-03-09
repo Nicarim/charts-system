@@ -173,13 +173,22 @@ class ChartsController extends BaseController {
         $data = array(
             "name" => Input::get("title"),
             "type" => Input::get('type'),
+            "id" => Input::get('overwrite'),
             "user_id" => Auth::user()->id,
             "creation_type" => "Voting",
             "beatmapids" => Input::get("beatmapsetids"),
             "max_votes" => Input::get("votescount"),
             "end_time" => Input::get("date")
         );
-        $chart = Chart::create($data);
+        $chart = new Chart;
+        if ($data['overwrite'] != 0)
+            $chart->id = $data['id'];
+        $chart->name = $data['name'];
+        $chart->user_id = $data['user_id'];
+        $chart->creation_type = $data['creation_type'];
+        $chart->max_votes = $data['max_votes'];
+        $chart->type = $data['type'];
+        $chart->save();
         $beatmaps = explode(",",$data['beatmapids']);
         foreach($beatmaps as $beatmapid)
         {
