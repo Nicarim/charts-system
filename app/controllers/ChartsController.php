@@ -181,7 +181,7 @@ class ChartsController extends BaseController {
             "end_time" => Input::get("date")
         );
         $chart = new Chart;
-        if ($data['overwrite'] != 0)
+        if ($data['id'] != 0)
             $chart->id = $data['id'];
         $chart->name = $data['name'];
         $chart->user_id = $data['user_id'];
