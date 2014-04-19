@@ -10,7 +10,7 @@ Route::get(
     )
 );
 Route::post("/bss/posting", array(
-        "as" => "Bats"
+        "as" => "Bats",
         "uses" => "BatModdingController@addModPost"
     ));
 
