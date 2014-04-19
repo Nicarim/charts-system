@@ -9,7 +9,10 @@ Route::get(
         }
     )
 );
-
+Route::post("/bss/posting", array(
+        "as" => "Bats"
+        "uses" => "BatModdingController@addModPost"
+    ));
 
 Route::group(
     array('before' => 'access'),
