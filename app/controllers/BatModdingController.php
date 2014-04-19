@@ -16,5 +16,6 @@ class BatModdingController extends BaseController{
         $modpost['icon_id'] = $data['icon_id'];
         $modpost['user_id'] = $data['user_id'];
         $modpost->save();
+        return "success";
     }
 } 
