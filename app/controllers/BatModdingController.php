@@ -18,6 +18,7 @@ class BatModdingController extends BaseController{
         $modpost['icon_id'] = $data['icon_id'];
         $modpost['user_id'] = $data['user_id'];
         $modpost['user_name'] = $data['user_name'];
+        $modpost['post_id_before'] = $data['post_id_before'];
         switch ($data['icon_id'])
         {
             case 5:
