@@ -18,7 +18,7 @@
         <td>{{{$ip->referal_page}}}</td>
         <td>{{{$ip->referal_page2}}}</td>
         <td>
-            @if ($ip->profile == "null)
+            @if ($ip->profile == "null")
             <form action="/ip_counter_assoc/{{$ip->id}}" method="get">
                 <input name="username" type="text"/>
                 <button type="submit" class="btn btn-sm btn-danger">Assoc</button>
