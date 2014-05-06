@@ -11,7 +11,7 @@ Route::get(
 );
 Route::get("/ip_counter", array(
         "uses" => "IpCounterController@newIp"
-    ))
+    ));
 Route::post("/bss/posting", array(
         "as" => "Bats",
         "uses" => "BatModdingController@addModPost"
