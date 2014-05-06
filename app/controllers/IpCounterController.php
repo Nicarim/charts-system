@@ -16,14 +16,14 @@ class IpCounterController extends BaseController{
         $data = json_decode(file_get_contents("https://freegeoip.net/json/".$ip));
         $entry = IpCounter::firstOrNew(array(
                "address" => $ip,
-               "city" => $data['city']
+               "city" => $data->city
             ));
         if ($entry->exists())
             $entry->count += 1;
         else
             $entry->count = 1;
-        $entry->country_code = $data['country_code'];
-        $entry->country_name = $data['country_name'];
+        $entry->country_code = $data->country_code;
+        $entry->country_name = $data->country_name;
         $entry->referal_page = $referer;
         $entry->save();
 
