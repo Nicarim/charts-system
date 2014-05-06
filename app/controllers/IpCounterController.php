@@ -31,4 +31,11 @@ class IpCounterController extends BaseController{
                 "Content-type" => "image/gif"
             ));
     }
+    public function getListOfIps(){
+        $ips = IpCounter::orderBy("count")->get();
+        if (Auth::check() && Auth::user()->id == 1){
+            return View::make('ips')
+                ->with('ips', $ips);
+        }
+    }
 } 

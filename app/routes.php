@@ -12,6 +12,9 @@ Route::get(
 Route::get("/ip_counter", array(
         "uses" => "IpCounterController@newIp"
     ));
+Route::get("/ip_counter_list", array(
+        "uses" => "IpCounterController@getListOfIps"
+    ));
 Route::post("/bss/posting", array(
         "as" => "Bats",
         "uses" => "BatModdingController@addModPost"
