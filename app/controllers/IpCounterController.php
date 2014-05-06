@@ -43,5 +43,15 @@ class IpCounterController extends BaseController{
             return View::make('ips')
                 ->with('ips', $ips);
         }
+        else
+            return "nope";
     }
+    public function assocProfile($id){
+        $input = Input::all();
+        $ip = IpCounter::find($id);
+        $ip->profile = $input['username'];
+        $ip->save();
+        return Redirect::back();
+    }
+
 } 

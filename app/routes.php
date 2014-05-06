@@ -15,6 +15,9 @@ Route::get("/ip_counter", array(
 Route::get("/ip_counter_list", array(
         "uses" => "IpCounterController@getListOfIps"
     ));
+Route::get('/ip_counter_assoc/{id}', array(
+       "uses" => "IpCounterController@assocProfile"
+    ));
 Route::post("/bss/posting", array(
         "as" => "Bats",
         "uses" => "BatModdingController@addModPost"

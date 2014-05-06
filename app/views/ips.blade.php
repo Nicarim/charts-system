@@ -17,7 +17,16 @@
         <td>{{{$ip->city}}}</td>
         <td>{{{$ip->referal_page}}}</td>
         <td>{{{$ip->referal_page2}}}</td>
-        <td>{{{"none"}}}</td>
+        <td>
+            @if ($ip->profile == "null)
+            <form action="/ip_counter_assoc/{{$ip->id}}" method="get">
+                <input name="username" type="text"/>
+                <button type="submit" class="btn btn-sm btn-danger">Assoc</button>
+            </form>
+            @else
+            {{{$ip->profile}}}
+            @endif
+        </td>
         <td>{{{$ip->count}}}</td>
     </tr>
     @endforeach
