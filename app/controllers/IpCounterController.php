@@ -9,8 +9,8 @@
 class IpCounterController extends BaseController{
     public function newIp(){
         $ip = $_SERVER['REMOTE_ADDR'];
-        if (isset($_SERVER['HTTP_REFERER']))
-            $referer = $_SERVER['HTTP_REFERER'];
+        if (isset($_SERVER['REQUEST_URI']))
+            $referer = $_SERVER['REQUEST_URI'];
         else
             $referer = "none";
         $data = json_decode(file_get_contents("https://freegeoip.net/json/".$ip));
@@ -26,7 +26,6 @@ class IpCounterController extends BaseController{
         $entry->country_name = $data->country_name;
         $entry->referal_page = $referer;
         $entry->save();
-
         return Response::make(File::get(public_path()."/icons/ctb.gif"), 200, array(
                 "Content-type" => "image/gif"
             ));
