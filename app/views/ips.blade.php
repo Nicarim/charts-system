@@ -9,6 +9,7 @@
         <th>Referal2</th>
         <th>Assosciated</th>
         <th>Count</th>
+        <th>Last</th>
     </tr>
     @foreach ($ips as $ip)
     <tr>
@@ -28,7 +29,7 @@
             @endif
         </td>
         <td>{{{$ip->count}}}</td>
-        <td><time class="timeago" datetime="{{{$ip->updated_at}}}"></time></td>
+        <td><time class="timeago" datetime="{{{date('Y-m-d H:m:s', strtotime('-2 hours', $ip->updated_at))}}}"></time></td>
     </tr>
     @endforeach
 </table>
