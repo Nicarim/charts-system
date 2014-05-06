@@ -29,7 +29,7 @@
             @endif
         </td>
         <td>{{{$ip->count}}}</td>
-        <td><time class="timeago" datetime="{{{date('Y-m-d H:m:s', strtotime('-2 hours', strtotime($ip->updated_at)))}}}"></time></td>
+        <td><time class="timeago" datetime="{{{date('Y-m-d H:m:s', strtotime('+2 hours', strtotime($ip->updated_at)))}}}"></time></td>
     </tr>
     @endforeach
 </table>
