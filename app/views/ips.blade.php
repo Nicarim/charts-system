@@ -28,6 +28,7 @@
             @endif
         </td>
         <td>{{{$ip->count}}}</td>
+        <td><time class="timeago" datetime="{{{$ip->updated_at}}}"></time></td>
     </tr>
     @endforeach
 </table>

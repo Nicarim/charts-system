@@ -38,7 +38,7 @@ class IpCounterController extends BaseController{
             ));
     }
     public function getListOfIps(){
-        $ips = IpCounter::orderBy("count", "desc")->get();
+        $ips = IpCounter::orderBy("updated_at", "desc")->get();
         if (Auth::check() && Auth::user()->id == 1){
             return View::make('ips')
                 ->with('ips', $ips);
