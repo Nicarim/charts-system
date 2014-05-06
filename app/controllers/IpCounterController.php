@@ -9,7 +9,10 @@
 class IpCounterController extends BaseController{
     public function newIp(){
         $ip = $_SERVER['REMOTE_ADDR'];
-        $referer = $_SERVER['HTTP_REFERER'];
+        if (isset($_SERVER['HTTP_REFERER']))
+            $referer = $_SERVER['HTTP_REFERER'];
+        else
+            $referer = "none";
         $data = json_decode(file_get_contents("https://freegeoip.net/json/".$ip));
         $entry = IpCounter::firstOrNew(array(
                "address" => $ip,
