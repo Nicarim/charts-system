@@ -9,7 +9,7 @@
     @if (Auth::user()->isAdmin()) <p><b>You have administrator access!</b></p> @endif
     @if (Auth::user()->team == "bat") <p>You are part of the Beatmap Appreciation Team!</p> @endif
     @if (Auth::user()->team == "cat") <p>You are part of the Chart Assembly Team!</p> @endif
-    <p><small>If the above information is not correct, please contact <url="https://osu.ppy.sh/forum/ucp.php?i=pm&mode=compose&u=722665">the charts administration immediately!</url></small></p>
+    <p><small>If the above information is not correct, please contact <a href="https://osu.ppy.sh/forum/ucp.php?i=pm&mode=compose&u=722665">the charts administration immediately!</a></small></p>
     
     <p>Here you can vote for the currently ongoing Monthly Ranking Charts elections or create difficulty-specific Ranking Charts. Latter are still work in progress, but we need them for the point of finally releasing them. So do not hesitate to create as much as possible! 
     <br/>
