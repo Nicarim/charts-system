@@ -33,6 +33,7 @@
     </tr>
     @foreach ($charts as $key => $chart)
     <tr>
+        @if (isset($chart->user)
         <td>{{$key+1}}</td>
         <td>
             @if($chart->creation_type == "Voting")
@@ -53,6 +54,7 @@
         <td>
             <span class="label {{osuHelper::statusCss($chart->status)}}"><b class="{{osuHelper::statusIcon($chart->status)}}"></b>{{osuHelper::statusString($chart->status)}}({{$chart->comments->count()}})</span>
         </td>
+        @endif
     </tr>
     @endforeach
 </table>
