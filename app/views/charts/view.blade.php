@@ -33,7 +33,7 @@
     </tr>
     @foreach ($charts as $key => $chart)
     <tr>
-        @if (isset($chart->user))
+        @if (isset($chart->user->username))
         <td>{{$key+1}}</td>
         <td>
             @if($chart->creation_type == "Voting")
