@@ -81,7 +81,9 @@ App::down(
 | definitions instead of putting them all in the main routes file.
 |
 */
-function lastModified($path) {
+
+require app_path() . '/filters.php';
+function last_modified($path) {
     $mtime = Cache::tags("mtime")->get($path, false);
 
     if (!$mtime || Config::get('app.debug')) {
@@ -91,5 +93,3 @@ function lastModified($path) {
 
     return $path . "?" . $mtime;
 }
-
-require app_path() . '/filters.php';
