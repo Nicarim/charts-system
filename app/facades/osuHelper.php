@@ -8,8 +8,8 @@
 
 namespace osu\Helper;
 
-use Illuminate\Cache;
-use Illuminate\Config;
+use Illuminate\Cache\CacheManager;
+use Illuminate\Config\Repository;
 
 class osuHelper {
     public static function modsAvailable(){
@@ -110,15 +110,5 @@ class osuHelper {
                 return "mania";
 
         }
-    }
-    public static function lastModified($path) {
-        $mtime = Cache::tags("mtime")->get($path, false);
-
-        if (!$mtime || Config::get('app.debug')) {
-            $mtime = filemtime(public_path() . $path);
-            Cache::tags("mtime")->put($path, $mtime, 5);
-        }
-
-        return $path . "?" . $mtime;
     }
 } 

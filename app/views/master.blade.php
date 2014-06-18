@@ -9,7 +9,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="/js/jquery-2.0.3.min.js"></script>
         <script src="/js/jquery.timeago.js"></script>
-        <script src="{{osuHelper::lastModified('/js/main.js')}}"></script>
+        <script src="{{lastModified('/js/main.js')}}"></script>
         <script src="/js/bootstrap.min.js"></script>
         <script src="/js/bootstrap.datepicker.js"></script>
         <script>
