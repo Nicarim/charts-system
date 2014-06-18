@@ -8,9 +8,6 @@
 
 namespace osu\Helper;
 
-use Illuminate\Cache\CacheManager;
-use Illuminate\Config\Repository;
-
 class osuHelper {
     public static function modsAvailable(){
         return $array = array(
