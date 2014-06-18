@@ -27,9 +27,9 @@
         <td><b>{{strtoupper($user->team)}}</b></td>
         <td>{{$user->updated_at}}</td>
         @if ($user->trashed())
-        <td><button type="button" onclick="window.location.href='/users/delete/{{$user->id}}/restore'" class="btn btn-success">Restore?</button></td>
+        <td><button type="button" onclick="removeUser(this,'/users/delete/{{$user->id}}/restore')" class="btn btn-success">Restore?</button></td>
         @else
-        <td><button type="button" onclick="window.location.href='/users/delete/{{$user->id}}/delete'" class="btn btn-danger">Delete?</button></td>
+        <td><button type="button" onclick="removeUser(this,'/users/delete/{{$user->id}}/delete')" class="btn btn-danger">Delete?</button></td>
         @endif
     </tr>
     @endforeach

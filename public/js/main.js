@@ -35,6 +35,12 @@ function VoteFunc(element,type, map, chart, mode){
         });
     }
 }
+function removeUser(element, link)
+{
+    $.get(link, function(){
+        $(element).parent().parent().fadeOut();
+    });
+}
 function checkIfFull(){
     var votes = parseInt($("#votes_available").text());
     if (votes == 0){
