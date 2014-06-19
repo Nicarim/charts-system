@@ -269,7 +269,7 @@ class ChartsController extends BaseController {
     }
     public function RemoveComment($id){
         $comment = Comment::find($id);
-        if (Auth::user()->id == $comment->user->id){
+        if (Auth::user()->id == $comment->user->id || Auth::user()->power == 3){
             $comment->delete();
         }
         return Redirect::back();
