@@ -7,10 +7,10 @@
         <input type="text" name="beatmapids" class="form-control" placeholder="Beatmapset Ids">
     </div>
     <input type="submit" class="btn btn-default" value="Add Beatmaps">
-
 </form>
 @endif
 <h1>{{ucfirst($chart->type)}} Chart: {{$chart->name}} - {{$nameshelper[$mode]}}</h1>
+@include('charts/comments')
 @if (!$theend)
     <h2 class="text-center"><b>Deadline:</b> <time class="timeago" datetime="{{$chart->end_time}}"></time></h2>
 @else
@@ -74,5 +74,4 @@
     @endforeach
 
 </table>
-@include('charts/comments')
 @stop
