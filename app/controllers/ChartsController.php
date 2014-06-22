@@ -210,6 +210,8 @@ class ChartsController extends BaseController {
             $charts = $charts->where("gamemode_id","=",Input::get("gamemode"));
         if (Input::has("status"))
             $charts = $charts->where("status","=",Input::get("status"));
+        else
+            $charts = $charts->where("status","=", 0);
         $charts = $charts->orderBy("created_at","desc")->get();
         return View::make('charts/view')->with("charts",$charts);
     }
