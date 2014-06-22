@@ -39,28 +39,14 @@ class ChartsController extends BaseController {
             $maps = $chart->ctbmaps;
         else if ($mode == "mania")
             $maps = $chart->ommaps;
-        if (strtotime($chart->end_time) <= time())
-        {
-            return View::make('charts/vote')->with(array(
+        return View::make('charts/vote')->with(array(
                     "chart" => $chart,
                     "mode" => $mode,
                     "nameshelper" => $gamemodenames,
                     "votes" => $voteskv,
                     "maps" => $maps,
-                    "theend" => true
+                    "theend" => $chart->isEnded()
                 ));
-        }
-        else
-        {
-            return View::make('charts/vote')->with(array(
-                    "chart" => $chart,
-                    "mode" => $mode,
-                    "nameshelper" => $gamemodenames,
-                    "votes" => $voteskv,
-                    "maps" => $maps,
-                    "theend" => false
-                ));
-        }
     }
     public function ViewSpecific($id){
         $beatmaps = Beatmap::where("chart_id","=",$id)->get();

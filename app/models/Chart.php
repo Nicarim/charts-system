@@ -42,4 +42,8 @@ class Chart extends Eloquent {
     public function comments(){
         return $this->hasMany("Comment")->orderBy("id", "desc");
     }
+    public function isEnded()
+    {
+       return strtotime($this->end_time) <= time();
+    }
 } 
