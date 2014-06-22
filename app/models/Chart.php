@@ -48,7 +48,7 @@ class Chart extends Eloquent {
     }
     public function getStatus()
     {
-        if ($this->isEnded() && $this->type == "Voting")
+        if ($this->isEnded() && $this->creation_type == "Voting")
         {
             $this->status = -1;
             $this->save();
