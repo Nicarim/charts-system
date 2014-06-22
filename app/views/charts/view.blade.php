@@ -13,6 +13,7 @@
         </div>
         <div class="padding-filters">
             <span>Status:</span>
+            <a class="label label-success" href="{{URL::current().'?status=-1'}}">Completed</a>
             <a class="label label-success" href="{{URL::current().'?status=0'}}">Pending</a>
             <a class="label label-success" href="{{URL::current().'?status=1'}}">Qualified</a>
             <a class="label label-success" href="{{URL::current().'?status=2'}}">Approved</a>
