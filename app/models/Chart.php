@@ -46,4 +46,13 @@ class Chart extends Eloquent {
     {
        return strtotime($this->end_time) <= time();
     }
+    public function getStatus()
+    {
+        if ($this->isEnded() && $this->type == "voting")
+        {
+            $this->status = -1;
+            $this->save();
+        }
+        return $this->status;
+    }
 } 

@@ -31,6 +31,7 @@ class ChartsController extends BaseController {
         foreach ($votes as $vote){
             $voteskv[$vote->beatmap_id] = $vote->id;
         }
+
         if ($mode == "osu")
             $maps = $chart->osumaps;
         else if ($mode == "taiko")

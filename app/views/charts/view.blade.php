@@ -52,7 +52,7 @@
 		</td>
         <td>{{$chart->creation_type}}</td>
         <td>
-            <span class="label {{osuHelper::statusCss($chart->status)}}"><b class="{{osuHelper::statusIcon($chart->status)}}"></b>{{osuHelper::statusString($chart->status)}}({{$chart->comments->count()}})</span>
+            <span class="label {{osuHelper::statusCss($chart->getStatus())}}"><b class="{{osuHelper::statusIcon($chart->getStatus())}}"></b>{{osuHelper::statusString($chart->getStatus())}}({{$chart->comments->count()}})</span>
         </td>
         @endif
     </tr>
