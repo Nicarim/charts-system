@@ -42,17 +42,22 @@ class Chart extends Eloquent {
     public function comments(){
         return $this->hasMany("Comment")->orderBy("id", "desc");
     }
-    public function isEnded()
-    {
-       return strtotime($this->end_time) <= time();
-    }
-    public function getStatus()
+    public function checkStatus()
     {
         if ($this->isEnded() && $this->creation_type == "Voting")
         {
             $this->status = -1;
             $this->save();
         }
+    }
+    public function isEnded()
+    {
+       $this->checkStatus();
+       return strtotime($this->end_time) <= time();
+    }
+    public function getStatus()
+    {
+        $this->checkStatus();
         return $this->status;
     }
 } 
