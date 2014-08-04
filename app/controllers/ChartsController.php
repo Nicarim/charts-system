@@ -223,11 +223,12 @@ class ChartsController extends BaseController {
         if (strtotime($chartmodel->end_time) >= time())
         {
             if ($votes < $chartmodel->max_votes){
-                $vote = new Vote;
-                $vote->user_id = Auth::user()->id;
-                $vote->chart_id = $chart;
-                $vote->beatmap_id = $beatmap;
-                $vote->gamemode = $this->gamemode[$mode];
+            	$vote = Vote::firstOrNew(array(
+            		"user_id" => Auth::user()->id,
+            		"chart_id" => $chart,
+            		"beatmap_id" => $beatmap,
+            		"gamemode" => $this->gamemode[$mode]
+            	));
                 $vote->save();
                 $vote_id = $vote->id;
                 return $vote_id;
